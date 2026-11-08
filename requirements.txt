@@ -1,2 +1,1 @@
-# Default: portable CPU inference. GPU research environment is separate.
 -r requirements-runtime.txt
