@@ -1,0 +1,85 @@
+{
+  "protocol": "fresnel_png_v2_peak",
+  "model_input_protocol": "fresnel_png_v2_peak",
+  "checkpoint": "solution.pt",
+  "checkpoint_sha256": "803a8039f0173d6b85db10c108a8ea91eaeacc5e71e6ecb5604e0ee7e91918b5",
+  "checkpoint_step": 5000,
+  "device": "cpu",
+  "inputs": [
+    {
+      "path": "image1.png",
+      "copy": "target_1.png",
+      "sha256": "032fd296493a1b0baad442e8601cc34f9d94ef3181127c61ec067c69c658138c"
+    },
+    {
+      "path": "image2.png",
+      "copy": "target_2.png",
+      "sha256": "d110cc6756b02d9f47fb7df6836e0f48c6d8180b004f6b123d69f6c5c9fea8b9"
+    },
+    {
+      "path": "image3.png",
+      "copy": "target_3.png",
+      "sha256": "f8a36e0167817c5cf1981db575b0667595207a628b4af4b80bdf016a517accb5"
+    },
+    {
+      "path": "image4.png",
+      "copy": "target_4.png",
+      "sha256": "41f3a0888591e23fbef5574faeed7de935ba2e65df7dde1e27e188e5eedbc0a7"
+    }
+  ],
+  "phase_png": "phase.png",
+  "phase_sha256": "2f4d6f0ea3724d4fb792222b6cb21422e5014994e2e7f25c10f183a5e55cd838",
+  "amplitude_scales": [
+    0.4411385953426361,
+    0.4631040692329407,
+    0.4850694537162781,
+    0.5070348381996155
+  ],
+  "per_plane": [
+    {
+      "plane": 1,
+      "distance_m": 0.0241,
+      "pearson": 0.7678534984588623,
+      "pearson_valid": true,
+      "ssim": 0.15527692437171936,
+      "global_ssim": 0.4372856914997101,
+      "mse": 0.12447936832904816
+    },
+    {
+      "plane": 2,
+      "distance_m": 0.0253,
+      "pearson": 0.43240272998809814,
+      "pearson_valid": true,
+      "ssim": 0.4384148120880127,
+      "global_ssim": 0.4046953320503235,
+      "mse": 0.0591689758002758
+    },
+    {
+      "plane": 3,
+      "distance_m": 0.0265,
+      "pearson": 0.6098929047584534,
+      "pearson_valid": true,
+      "ssim": 0.06702060252428055,
+      "global_ssim": 0.2599199414253235,
+      "mse": 0.10080207139253616
+    },
+    {
+      "plane": 4,
+      "distance_m": 0.0277,
+      "pearson": 0.6625633239746094,
+      "pearson_valid": true,
+      "ssim": 0.2279878556728363,
+      "global_ssim": 0.47007378935813904,
+      "mse": 0.10242006182670593
+    }
+  ],
+  "mean": {
+    "pearson": 0.618178129196167,
+    "ssim": 0.22217503190040588,
+    "global_ssim": 0.3929937183856964,
+    "mse": 0.09671761840581894
+  },
+  "invalid_pearson_count": 0,
+  "clipped_fraction": 0.0,
+  "excess_energy": 0.0
+}

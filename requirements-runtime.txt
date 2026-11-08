@@ -1,0 +1,6 @@
+--extra-index-url https://download.pytorch.org/whl/cpu
+
+# Portable inference environment: CPython 3.11, Linux/Windows x86-64, CPU.
+torch==2.6.0+cpu
+numpy==1.26.4
+Pillow==11.3.0

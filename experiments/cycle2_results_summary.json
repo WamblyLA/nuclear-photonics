@@ -1,0 +1,114 @@
+{
+  "scope": "validation_cycle2",
+  "quadruples": 512,
+  "reconstructions_per_model": 2048,
+  "test_used": false,
+  "groups": {
+    "previous_tanh_0.1": {
+      "runs": [
+        "r08_fourier_xy_3000",
+        "r14_fourier_xy_seed43"
+      ],
+      "seeds": [
+        42,
+        43
+      ],
+      "mean": {
+        "ssim": 0.26888859272003174,
+        "pearson": 0.47177569568157196,
+        "global_ssim": 0.24145540595054626,
+        "mse": 0.10418082401156425
+      },
+      "selected_steps": [
+        3000,
+        3000
+      ]
+    },
+    "tanh_ssim_0.25": {
+      "runs": [
+        "r24_tanh_ssim",
+        "r27_tanh_ssim_seed43"
+      ],
+      "seeds": [
+        42,
+        43
+      ],
+      "mean": {
+        "ssim": 0.27555741369724274,
+        "pearson": 0.4589788615703583,
+        "global_ssim": 0.238293819129467,
+        "mse": 0.10402495786547661
+      },
+      "selected_steps": [
+        3000,
+        3000
+      ]
+    },
+    "circular_ssim_0.25": {
+      "runs": [
+        "r20_circular_ssim",
+        "r26_circular_ssim_seed43"
+      ],
+      "seeds": [
+        42,
+        43
+      ],
+      "mean": {
+        "ssim": 0.2694501429796219,
+        "pearson": 0.5120023488998413,
+        "global_ssim": 0.3059225529432297,
+        "mse": 0.09440848231315613
+      },
+      "selected_steps": [
+        3000,
+        3000
+      ]
+    },
+    "wrapped_ssim_0.25": {
+      "runs": [
+        "r23_wrapped_ssim",
+        "r28_wrapped_ssim_seed43"
+      ],
+      "seeds": [
+        42,
+        43
+      ],
+      "mean": {
+        "ssim": 0.2650362700223923,
+        "pearson": 0.5369571149349213,
+        "global_ssim": 0.34855639934539795,
+        "mse": 0.08823312073945999
+      },
+      "selected_steps": [
+        3000,
+        2000
+      ]
+    },
+    "circular_light_ranking": {
+      "runs": [
+        "r29_circular_rank_light",
+        "r30_circular_rank_light_seed43"
+      ],
+      "seeds": [
+        42,
+        43
+      ],
+      "mean": {
+        "ssim": 0.27026887238025665,
+        "pearson": 0.5143775939941406,
+        "global_ssim": 0.3068467676639557,
+        "mse": 0.09538467973470688
+      },
+      "selected_steps": [
+        3000,
+        3000
+      ]
+    }
+  },
+  "training": {
+    "cycle2_runs": 15,
+    "cycle2_updates": 42500,
+    "total_runs": 30,
+    "total_updates": 71500
+  }
+}

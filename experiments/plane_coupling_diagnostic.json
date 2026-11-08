@@ -1,0 +1,272 @@
+{
+  "purpose": "Data-independent forward operator diagnostic; no mask synthesis, training or input fitting.",
+  "size": 128,
+  "samples": 32,
+  "seed": 20261108,
+  "device": "cpu",
+  "distances_mm": [
+    24.1,
+    25.3,
+    26.5,
+    27.7
+  ],
+  "output_pitch_um": [
+    10.016562500000001,
+    10.5153125,
+    11.014062500000001,
+    11.5128125
+  ],
+  "operator": "Q_ji = P_j P_i*, where P uses both Fresnel chirps and orthonormal centered FFT; positive prefactors omitted.",
+  "random_probe": "Uniform independent phase in [-pi,pi] with unit amplitude in the DOE plane, same field propagated to every plane.",
+  "coarse_statistic": "Pearson of valid stride1 local mean intensity, no peak normalization; coordinate indices correspond to different physical pitches at different planes.",
+  "pairs": [
+    {
+      "from_plane": 1,
+      "to_plane": 2,
+      "total_energy": 1.0000000000000002,
+      "central_energy": 0.014270594985759473,
+      "radius_50_pixels": 2.23606797749979,
+      "radius_50_micrometers": 23.512953554653258,
+      "radius_90_pixels": 3.605551275463989,
+      "radius_90_micrometers": 37.913498396277426,
+      "radius_95_pixels": 4.123105625617661,
+      "radius_95_micrometers": 43.355744123877706,
+      "radius_99_pixels": 6.082762530298219,
+      "radius_99_micrometers": 63.9621488693765,
+      "energy_in_3x3": 0.415645713283489,
+      "energy_in_7x7": 0.939095123770627,
+      "energy_in_15x15": 0.9962217163839305,
+      "energy_in_31x31": 0.9995591567498748,
+      "rms_radius_pixels": 2.4913565709984105,
+      "impulse_energy_translation_max_error": 2.7755575615628914e-17,
+      "random_amplitude_pearson": {
+        "mean": 0.014250377620394277,
+        "std_across_random_fields": 0.008532340588068465
+      },
+      "random_local_intensity_pearson_1x1": {
+        "mean": 0.01528515872483438,
+        "std_across_random_fields": 0.008037142645983507
+      },
+      "random_local_intensity_pearson_7x7": {
+        "mean": 0.6417074605885454,
+        "std_across_random_fields": 0.018822964417864844
+      },
+      "random_local_intensity_pearson_15x15": {
+        "mean": 0.8189417727389781,
+        "std_across_random_fields": 0.02188801659851067
+      },
+      "random_local_intensity_pearson_31x31": {
+        "mean": 0.8952763782129445,
+        "std_across_random_fields": 0.022485531352720425
+      }
+    },
+    {
+      "from_plane": 1,
+      "to_plane": 3,
+      "total_energy": 1.0000000000000002,
+      "central_energy": 0.014106705463373904,
+      "radius_50_pixels": 4.242640687119285,
+      "radius_50_micrometers": 46.72870969297475,
+      "radius_90_pixels": 6.4031242374328485,
+      "radius_90_micrometers": 70.52441054635024,
+      "radius_95_pixels": 7.211102550927978,
+      "radius_95_micrometers": 79.42353418983019,
+      "radius_99_pixels": 10.0,
+      "radius_99_micrometers": 110.14062500000001,
+      "energy_in_3x3": 0.060529576948293515,
+      "energy_in_7x7": 0.48234836652240776,
+      "energy_in_15x15": 0.9742536480326889,
+      "energy_in_31x31": 0.9982008360567125,
+      "rms_radius_pixels": 4.7570421155590275,
+      "impulse_energy_translation_max_error": 8.673617379884035e-18,
+      "random_amplitude_pearson": {
+        "mean": 0.01397252075566282,
+        "std_across_random_fields": 0.00893097485842123
+      },
+      "random_local_intensity_pearson_1x1": {
+        "mean": 0.014351792114071362,
+        "std_across_random_fields": 0.008831277201156777
+      },
+      "random_local_intensity_pearson_7x7": {
+        "mean": 0.36701379716368765,
+        "std_across_random_fields": 0.029729071245195835
+      },
+      "random_local_intensity_pearson_15x15": {
+        "mean": 0.6590869170159311,
+        "std_across_random_fields": 0.037709922548512555
+      },
+      "random_local_intensity_pearson_31x31": {
+        "mean": 0.7994503581962915,
+        "std_across_random_fields": 0.04068235788594999
+      }
+    },
+    {
+      "from_plane": 1,
+      "to_plane": 4,
+      "total_energy": 0.9999999999999999,
+      "central_energy": 0.003064579605531566,
+      "radius_50_pixels": 6.324555320336759,
+      "radius_50_micrometers": 72.81341954891454,
+      "radius_90_pixels": 9.219544457292887,
+      "radius_90_micrometers": 106.14288667222728,
+      "radius_95_pixels": 10.295630140987,
+      "radius_95_micrometers": 118.5316593825319,
+      "radius_99_pixels": 13.601470508735444,
+      "radius_99_micrometers": 156.5911796913508,
+      "energy_in_3x3": 0.034100432679832184,
+      "energy_in_7x7": 0.16536543338027096,
+      "energy_in_15x15": 0.8663993316958337,
+      "energy_in_31x31": 0.9955236037801367,
+      "rms_radius_pixels": 6.826359573515726,
+      "impulse_energy_translation_max_error": 6.071532165918825e-18,
+      "random_amplitude_pearson": {
+        "mean": 0.0018846077400235142,
+        "std_across_random_fields": 0.007949330056017764
+      },
+      "random_local_intensity_pearson_1x1": {
+        "mean": 0.0027815302410206487,
+        "std_across_random_fields": 0.00832949163094802
+      },
+      "random_local_intensity_pearson_7x7": {
+        "mean": 0.18981599882727823,
+        "std_across_random_fields": 0.03227478796254304
+      },
+      "random_local_intensity_pearson_15x15": {
+        "mean": 0.5230784510145213,
+        "std_across_random_fields": 0.047742010499639866
+      },
+      "random_local_intensity_pearson_31x31": {
+        "mean": 0.7170160294626986,
+        "std_across_random_fields": 0.05404537446508938
+      }
+    },
+    {
+      "from_plane": 2,
+      "to_plane": 3,
+      "total_energy": 1.0,
+      "central_energy": 0.02751938263945325,
+      "radius_50_pixels": 1.4142135623730951,
+      "radius_50_micrometers": 15.57623656432492,
+      "radius_90_pixels": 3.1622776601683795,
+      "radius_90_micrometers": 34.829523791448295,
+      "radius_95_pixels": 3.605551275463989,
+      "radius_95_micrometers": 39.711767094915096,
+      "radius_99_pixels": 5.385164807134504,
+      "radius_99_micrometers": 59.312541758579876,
+      "energy_in_3x3": 0.5098375657289586,
+      "energy_in_7x7": 0.9553080010160035,
+      "energy_in_15x15": 0.9969837718640912,
+      "energy_in_31x31": 0.9996379212727277,
+      "rms_radius_pixels": 2.2657254796591015,
+      "impulse_energy_translation_max_error": 5.551115123125783e-17,
+      "random_amplitude_pearson": {
+        "mean": 0.027010336756571485,
+        "std_across_random_fields": 0.006595726113462522
+      },
+      "random_local_intensity_pearson_1x1": {
+        "mean": 0.029166044773924673,
+        "std_across_random_fields": 0.007077612210640651
+      },
+      "random_local_intensity_pearson_7x7": {
+        "mean": 0.6775272041256851,
+        "std_across_random_fields": 0.017545392010668917
+      },
+      "random_local_intensity_pearson_15x15": {
+        "mean": 0.8395124868358173,
+        "std_across_random_fields": 0.016203312570519462
+      },
+      "random_local_intensity_pearson_31x31": {
+        "mean": 0.908081097085648,
+        "std_across_random_fields": 0.01813864459853139
+      }
+    },
+    {
+      "from_plane": 2,
+      "to_plane": 4,
+      "total_energy": 1.0000000000000002,
+      "central_energy": 0.01740243811001896,
+      "radius_50_pixels": 3.605551275463989,
+      "radius_50_micrometers": 41.51003579355276,
+      "radius_90_pixels": 5.830951894845301,
+      "radius_90_micrometers": 67.13065586187368,
+      "radius_95_pixels": 6.708203932499369,
+      "radius_95_micrometers": 77.2302940866279,
+      "radius_99_pixels": 9.219544457292887,
+      "radius_99_micrometers": 106.14288667222728,
+      "energy_in_3x3": 0.06449070790657803,
+      "energy_in_7x7": 0.5974320595986625,
+      "energy_in_15x15": 0.9817246217208984,
+      "energy_in_31x31": 0.9985462977068951,
+      "rms_radius_pixels": 4.3351132815360645,
+      "impulse_energy_translation_max_error": 1.3877787807814457e-17,
+      "random_amplitude_pearson": {
+        "mean": 0.016174826593001845,
+        "std_across_random_fields": 0.007390069822308443
+      },
+      "random_local_intensity_pearson_1x1": {
+        "mean": 0.017841987042076363,
+        "std_across_random_fields": 0.00778884238613399
+      },
+      "random_local_intensity_pearson_7x7": {
+        "mean": 0.4173262098885239,
+        "std_across_random_fields": 0.029736974988514738
+      },
+      "random_local_intensity_pearson_15x15": {
+        "mean": 0.6886430470090237,
+        "std_across_random_fields": 0.032265922468545136
+      },
+      "random_local_intensity_pearson_31x31": {
+        "mean": 0.8201531368856185,
+        "std_across_random_fields": 0.034549942381601244
+      }
+    },
+    {
+      "from_plane": 3,
+      "to_plane": 4,
+      "total_energy": 1.0000000000000002,
+      "central_energy": 0.049690852355184875,
+      "radius_50_pixels": 1.4142135623730951,
+      "radius_50_micrometers": 16.2815755785585,
+      "radius_90_pixels": 3.0,
+      "radius_90_micrometers": 34.5384375,
+      "radius_95_pixels": 3.1622776601683795,
+      "radius_95_micrometers": 36.40670977445727,
+      "radius_99_pixels": 5.0990195135927845,
+      "radius_99_micrometers": 58.70405559383493,
+      "energy_in_3x3": 0.5936161955357708,
+      "energy_in_7x7": 0.9662862676658666,
+      "energy_in_15x15": 0.9975520799237659,
+      "energy_in_31x31": 0.9996995987560203,
+      "rms_radius_pixels": 2.0694180049162294,
+      "impulse_energy_translation_max_error": 2.7755575615628914e-17,
+      "random_amplitude_pearson": {
+        "mean": 0.042831400934869694,
+        "std_across_random_fields": 0.0074035861041978485
+      },
+      "random_local_intensity_pearson_1x1": {
+        "mean": 0.04681992042282645,
+        "std_across_random_fields": 0.0076957335577558855
+      },
+      "random_local_intensity_pearson_7x7": {
+        "mean": 0.7103746301982081,
+        "std_across_random_fields": 0.016808887335970295
+      },
+      "random_local_intensity_pearson_15x15": {
+        "mean": 0.8553767383562401,
+        "std_across_random_fields": 0.014834452201561208
+      },
+      "random_local_intensity_pearson_31x31": {
+        "mean": 0.9165408530218256,
+        "std_across_random_fields": 0.017424640710907446
+      }
+    }
+  ],
+  "seconds": 0.9892223000060767,
+  "limitations": [
+    "The relation constrains complex fields; desired target magnitudes leave their phases free.",
+    "The impulse radius is not a support bound: coherent phase interference and sidelobes can redistribute power beyond it.",
+    "Random-field correlations are not a bound on learned holograms or on attainable SSIM/Pearson.",
+    "Independent per-image peak normalization changes displayed brightness and does not remove physical field coupling.",
+    "Finite periodic discrete grids and z-dependent pitches are those of the task implementation; this is not an independent continuous-optics convergence study."
+  ]
+}

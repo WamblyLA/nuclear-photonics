@@ -1,0 +1,55 @@
+{
+  "scope": "Same32selectionquad/group,128quad/model,CPU; two seeds; not the fresh reserve",
+  "runs": {
+    "r20_circular_ssim": {
+      "diagonal_mean_over_valid": 0.5086687356233597,
+      "off_diagonal_mean_over_valid": 0.47576696425676346,
+      "diagonal_minus_off_diagonal": 0.03290177136659622,
+      "raw_mse": 0.09421690553426743,
+      "local_ssim": 0.27716326899826527,
+      "background_reconstruction_mean": 0.2796005420386791
+    },
+    "r29_circular_rank_light": {
+      "diagonal_mean_over_valid": 0.5123669803142548,
+      "off_diagonal_mean_over_valid": 0.4641951099038124,
+      "diagonal_minus_off_diagonal": 0.04817187041044235,
+      "raw_mse": 0.0953297121450305,
+      "local_ssim": 0.27790468372404575,
+      "background_reconstruction_mean": 0.2827933207154274
+    },
+    "r26_circular_ssim_seed43": {
+      "diagonal_mean_over_valid": 0.5098478496074677,
+      "off_diagonal_mean_over_valid": 0.4780813902616501,
+      "diagonal_minus_off_diagonal": 0.031766459345817566,
+      "raw_mse": 0.09362633246928453,
+      "local_ssim": 0.27699383720755577,
+      "background_reconstruction_mean": 0.27818675339221954
+    },
+    "r30_circular_rank_light_seed43": {
+      "diagonal_mean_over_valid": 0.5104272365570068,
+      "off_diagonal_mean_over_valid": 0.462871715426445,
+      "diagonal_minus_off_diagonal": 0.04755552113056183,
+      "raw_mse": 0.09447754919528961,
+      "local_ssim": 0.2780853658914566,
+      "background_reconstruction_mean": 0.28152502328157425
+    }
+  },
+  "two_seed_means": {
+    "no_rank": {
+      "diagonal_mean_over_valid": 0.5092582926154137,
+      "off_diagonal_mean_over_valid": 0.47692417725920677,
+      "diagonal_minus_off_diagonal": 0.032334115356206894,
+      "raw_mse": 0.09392161900177598,
+      "local_ssim": 0.2770785531029105,
+      "background_reconstruction_mean": 0.27889364771544933
+    },
+    "rank_weight_0_1": {
+      "diagonal_mean_over_valid": 0.5113971084356308,
+      "off_diagonal_mean_over_valid": 0.4635334126651287,
+      "diagonal_minus_off_diagonal": 0.04786369577050209,
+      "raw_mse": 0.09490363067016006,
+      "local_ssim": 0.2779950248077512,
+      "background_reconstruction_mean": 0.2821591719985008
+    }
+  }
+}

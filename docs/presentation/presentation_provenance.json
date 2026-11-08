@@ -1,0 +1,56 @@
+{
+  "draft": false,
+  "slides": 8,
+  "speaking_seconds": 300,
+  "final_run": "r72_spatial_frequency_control",
+  "checkpoint_sha256": "803a8039f0173d6b85db10c108a8ea91eaeacc5e71e6ecb5604e0ee7e91918b5",
+  "offline_cpu_tests": 173,
+  "full_host_cpu_tests": 190,
+  "docker_ci": {
+    "sets": 5,
+    "status": "configured",
+    "url": null
+  },
+  "benchmark_cpu": "experiments/final/benchmark_cpu.json",
+  "evaluation_splits": {
+    "selection": "experiments/final/selection/r72_spatial_frequency_control/metrics.json",
+    "reserve": "experiments/final/reserve/r72_spatial_frequency_control/metrics.json",
+    "official_test": "experiments/final/test/r72_spatial_frequency_control/metrics.json"
+  },
+  "repository_url": "https://github.com/memily0/neural-holography/tree/dzprht/neural-holography-20261108",
+  "readme_url": "https://github.com/memily0/neural-holography/blob/dzprht/neural-holography-20261108/README.md",
+  "generator_sha256": "fafaa4cdb285d1587a191f04fd2c326287c742bb9a5a077d456ae726d73e6bd8",
+  "sources": {
+    "experiments/night_hotspot_diagnostics.json": "c8305ef03c3c2a5906b63d0393ea51d6ce9160be011e278147d28de177cd246e",
+    "experiments/moment_compatibility_diagnostic.json": "f98c040da5ecb249aff331502338e352d74213616a277fed766964d6bc7a9756",
+    ".github/workflows/docker-smoke.yml": "5c22c2afdd2c85bce9043ecff9a4b7ed1582dbd56ab3b2bfd5505d0d65a972e1",
+    "scripts/run_offline_tests.py": "84636d55c014dc18c1bc3f0b7fc3f28ba3e86f1b3b4d39ea397c07244f3252cd",
+    "experiments/final/selection/r72_spatial_frequency_control/metrics.json": "e03457158d3c05173928a6b68d730de2866574beebb7a24d88d110894d6175a7",
+    "experiments/final/selected_training_config.json": "03a928d81677534b7229c9de7f30aed1e4a2b40640a714fea57094b56057a349",
+    "experiments/final/reserve/r72_spatial_frequency_control/metrics.json": "5f7659d5a43f8495f5873842db946537995a1ba3be89cad18ed0c40859d19285",
+    "experiments/final/test/r72_spatial_frequency_control/metrics.json": "fbe868dd5f82616e6d07cb1819f31b6c2672ff99f56748f326b76ffefbbb41ee",
+    "experiments/final/test/r31_peak_fourier/metrics.json": "5b66d0e67818977fe1d55cd178401151ecf45a1324cc37b112d9229c017b4954",
+    "experiments/final/benchmark_cpu.json": "c032e787894fbdb9ca8fb33b6b9aee5a77ff89dd7336d5eb1ffd4b3756452c1b",
+    "experiments/final/host_verification.json": "b85c31facec26fb83543e90b86c94c11594095777c96790d94259bfc05d61280"
+  },
+  "demo_assets_sha256": {
+    "docs/demo/input_set1/target_display_1.png": "81a25537de02c145bababcc7fd95cdfc6b725a43cbe40efca409e8fb6363db5b",
+    "docs/demo/input_set1/target_display_2.png": "96f6751f5551338a89dc5240cf82bb238e31fd256a117f2c1aeb8777f5d17aec",
+    "docs/demo/input_set1/target_display_3.png": "4b146d9f420fa81048426c564b4d7649d59de1a47454b5108dc6474def170f11",
+    "docs/demo/input_set1/target_display_4.png": "264805c05a1acd423e57bb463fee9fa60a3d85da58cad30d771b11249fddb855",
+    "docs/demo/input_set1/reconstruction_1.png": "4c2b3d65203bb1b6ac4f1c3cae34c02b64fbcc813a5d3064374fd24a4f8f8e52",
+    "docs/demo/input_set1/reconstruction_2.png": "1b1a061afab3a088f48f1e7fac76d5b01ada0f941c3dfb91c8e70c4366b2afec",
+    "docs/demo/input_set1/reconstruction_3.png": "766651a4edf0dada4cc119cae26e0fc3963a6c62cf5bb22050fed9a9101797f6",
+    "docs/demo/input_set1/reconstruction_4.png": "df179ea3da48be730572411c45e8fb12f45c91c07b05fa268a5b0b96d8cf1dcc",
+    "docs/demo/input_set1/phase.png": "70d7c7d47937200b0006a5edacbb3ac86d2854ea0d5b5b4e986f7e83242504bb",
+    "examples/manifest.json": "6ef102e4d9a3df2e558893e3172cf28f353f92b07b2ec528e1921ce5c0cdf5d2"
+  },
+  "test_manifest_comparison": {
+    "identical": true,
+    "runs": [
+      "r72_spatial_frequency_control",
+      "r31_peak_fourier"
+    ],
+    "canonical_json_sha256": "c4e41308b62d4f2a66c599a3bda9546c88c8fede77e0e67dc52e788132bc08cc"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "selected_run": "r72_spatial_frequency_control",
+  "checkpoint": "models/solution.pt",
+  "checkpoint_sha256": "803a8039f0173d6b85db10c108a8ea91eaeacc5e71e6ecb5604e0ee7e91918b5",
+  "source_checkpoint_sha256": "ccb7f7cddccfd31ab85830f5ee20744d56389d31bccc825e9306463345ae361a",
+  "selection": {
+    "ssim": 0.33884570002555847,
+    "pearson": 0.5527191162109375,
+    "global_ssim": 0.4545890986919403
+  },
+  "reserve": {
+    "ssim": 0.33606818318367004,
+    "pearson": 0.553650975227356,
+    "global_ssim": 0.45681387186050415
+  },
+  "test": {
+    "ssim": 0.3380025029182434,
+    "pearson": 0.562046468257904,
+    "global_ssim": 0.4629335403442383
+  },
+  "test_baseline": {
+    "ssim": 0.2561184763908386,
+    "pearson": 0.524573564529419,
+    "global_ssim": 0.29724177718162537
+  },
+  "test_quartets": 1024,
+  "test_difference": {
+    "pearson": {
+      "bootstrap_std": 0.0009635574011023486,
+      "candidate_mean": 0.5620464819594524,
+      "ci_high": 0.039416657862330326,
+      "ci_low": 0.03553970946557357,
+      "difference": 0.037472955647626094,
+      "reference_mean": 0.5245735263118263
+    },
+    "ssim": {
+      "bootstrap_std": 0.0013868539773351412,
+      "candidate_mean": 0.33800249285377504,
+      "ci_high": 0.08469051300783122,
+      "ci_low": 0.07924276073342754,
+      "difference": 0.08188401275174328,
+      "reference_mean": 0.25611848010203175
+    }
+  },
+  "quality_limitation": "Substantial cross-depth blending remains; the result is improved but is not a high-quality separation of all four independent objects",
+  "training_lineage": "experiments/final/training_lineage.json",
+  "runtime": "experiments/final/benchmark_cpu.json",
+  "all_training_completed_before_fresh_reserve": true,
+  "test_used_for_selection": false
+}

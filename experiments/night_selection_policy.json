@@ -1,0 +1,14 @@
+{
+  "created_utc": "2026-11-07T23:56:24Z",
+  "scope": "Predeclared quality guards for the longer overnight experiments; not an organizer scoring formula",
+  "protocol": "fresnel_png_v2_peak",
+  "primary_metric": "Gaussian 11x11 local SSIM after saved phase/reconstruction PNG roundtrips",
+  "secondary_metrics": ["Pearson", "global SSIM", "foreground brightness", "depth cross-correlation", "amplitude concentration"],
+  "minimum_selection_mean_pearson": 0.5173273682594299,
+  "pearson_reference": "R31 same peak-normalized protocol and selection quadruples",
+  "minimum_mnist_foreground_brightness_ratio": 0.5,
+  "foreground_definition": "Target normalized amplitude > 0.1; ratio of mean predicted foreground amplitude to mean target foreground amplitude, same images",
+  "decision": "Prefer highest selection SSIM among candidates passing both numerical guards and visual review; confirm shortlisted candidates on source-disjoint validation, then freeze one model before opening official dataset test splits",
+  "limitations": "These guards exclude known dark-peak failure modes; passing them does not imply high reconstruction quality or strong depth separation. Report failures and all candidate results. Do not tune after final test.",
+  "excluded_from_release": ["fixed_train_quartets > 0", "nonfinite phase or metrics", "per-input optimization", "classical phase teachers or synthesis fallback"]
+}

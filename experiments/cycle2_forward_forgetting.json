@@ -1,0 +1,301 @@
+{
+  "device": "cpu",
+  "torch": "2.14.0+cu130",
+  "numpy": "2.5.4",
+  "pillow": "13.0.0",
+  "seed": 99042,
+  "samples": 128,
+  "batch_size": 16,
+  "amplitude_scales": [
+    0.4411385953426361,
+    0.4631040692329407,
+    0.4850694537162781,
+    0.5070348381996155
+  ],
+  "target_uint8_sha256": "7f2e94c002f3cc6c07af382222921db7611554d1d98f0622af4b4a997d112735",
+  "generation_repeat_identical": true,
+  "generation_statistics": {
+    "synthetic_clipped_fraction": 0.006331920623779297,
+    "synthetic_png_mse": 0.00011666022692224942,
+    "synthetic_target_rms": 0.43888595327734947
+  },
+  "actual_target_rms": 0.43888601660728455,
+  "source_hashes": {
+    "src/evaluate_forward.py": "1c0fd0daa88782de34286c4c9e08ee9b4d462de84e9ac4bcb569cafb8a1d5b14",
+    "src\\curriculum.py": "623becd4aa3ab593a49388098079e6404dec0fcf2bb60bc487f424e9021f7d5a",
+    "src\\models\\networks.py": "66218831d509004c1d847029689489603706252615c5c2b426ca6370d2421100",
+    "src\\metrics.py": "70a0e4df536c79b5c0b9fb7bfb2595d47c51e63b244dfeda1a5f0723a7d96798",
+    "src\\physics\\fresnel.py": "c7bfa47bd89af6ec167b72b27b3cdfeb6745f60738bd802feeb2ee921e561326",
+    "src\\train.py": "c41332e55052c1ba70a4b5238d4ba7ff5e085351600d75295e127f4bf652009f"
+  },
+  "scope": "New synthetic forward-only targets, generated on CPU with a distinct seed. No real validation/test data or phase labels. Same saved-PNG evaluator. Synthetic raw fields are physically realizable before clipping/rounding; clipped PNG targets need not be exactly realizable. CPU and CUDA random streams are not identical.",
+  "runs": [
+    {
+      "run": "untrained_r08_fourier_xy_3000",
+      "training_steps": 0,
+      "initialization_config": {
+        "run": "r08_fourier_xy_3000",
+        "model": "fourier",
+        "width": 16,
+        "phase_head": "tanh",
+        "position": "xy",
+        "steps": 3000,
+        "batch_size": 16,
+        "lr": 0.0002,
+        "seed": 42,
+        "data_seed": 42,
+        "domain": "mixed",
+        "val_per_group": 64,
+        "eval_every": 1000,
+        "ssim_weight": 0.1,
+        "pearson_weight": 0.1,
+        "worst_weight": 0.0,
+        "contrast_weight": 0.0,
+        "quantize_train": false,
+        "blur_start": 0.0,
+        "resume": "",
+        "device": "cuda",
+        "target_rms": 0.44040920456627175,
+        "amplitude_scales": [
+          0.4411385953426361,
+          0.4631040692329407,
+          0.4850694537162781,
+          0.5070348381996155
+        ],
+        "parameters": 139361,
+        "torch": "2.14.0+cu130",
+        "numpy": "2.5.4",
+        "python": "3.14.7 | packaged by Anaconda, Inc. | (main, Aug 14 2026, 10:12:46) [MSC v.1942 64 bit (AMD64)]",
+        "gpu": "NVIDIA GeForce RTX 5060 Ti",
+        "cuda": "13.0",
+        "protocol": "fresnel_png_v1",
+        "resume_mode": null
+      },
+      "metrics": {
+        "pearson": 0.02890947461128235,
+        "pearson_per_plane": [
+          0.004303007386624813,
+          0.017085323110222816,
+          0.03595440462231636,
+          0.05829514563083649
+        ],
+        "pearson_p10": 0.00478445366024971,
+        "invalid_pearson_count": 0,
+        "ssim": 0.0189750287681818,
+        "ssim_per_plane": [
+          0.016946176066994667,
+          0.019647125154733658,
+          0.01960115320980549,
+          0.01970565877854824
+        ],
+        "ssim_p10": 0.010811235755681992,
+        "global_ssim": 0.04073821008205414,
+        "global_ssim_per_plane": [
+          0.017250187695026398,
+          0.0293419286608696,
+          0.0473736934363842,
+          0.06898704916238785
+        ],
+        "global_ssim_p10": 0.0171884223818779,
+        "mse": 0.0687357485294342,
+        "mse_per_plane": [
+          0.0677017867565155,
+          0.06803960353136063,
+          0.06904283910989761,
+          0.07015877217054367
+        ],
+        "mse_p10": 0.06511600315570831,
+        "raw_mse": 0.06876678764820099,
+        "raw_mse_per_plane": [
+          0.0677197277545929,
+          0.06806246936321259,
+          0.06907657533884048,
+          0.0702083557844162
+        ],
+        "raw_mse_p10": 0.06513174623250961,
+        "clipped_fraction": 0.0005234479904174805,
+        "clipped_fraction_per_plane": [
+          0.0003337860107421875,
+          0.00040531158447265625,
+          0.0005559921264648438,
+          0.0007987022399902344
+        ],
+        "clipped_fraction_p10": 0.0003616333124227822
+      }
+    },
+    {
+      "run": "r08_fourier_xy_3000",
+      "training_steps": 3000,
+      "selected_step": 3000,
+      "synthetic_steps": 0,
+      "checkpoint_sha256": "121e5828b87faaa7e05ca04b449545bb2afea98195c6b3d86e3198a2cb55d798",
+      "metrics": {
+        "pearson": 0.1952504813671112,
+        "pearson_per_plane": [
+          0.16055673360824585,
+          0.20488254725933075,
+          0.2088598757982254,
+          0.20670275390148163
+        ],
+        "pearson_p10": 0.07183875888586044,
+        "invalid_pearson_count": 0,
+        "ssim": 0.06139509007334709,
+        "ssim_per_plane": [
+          0.056647732853889465,
+          0.06215345859527588,
+          0.06348128616809845,
+          0.06329785287380219
+        ],
+        "ssim_p10": 0.032793011516332626,
+        "global_ssim": 0.16880369186401367,
+        "global_ssim_per_plane": [
+          0.1391124576330185,
+          0.15946844220161438,
+          0.17944476008415222,
+          0.19718901813030243
+        ],
+        "global_ssim_p10": 0.06358859688043594,
+        "mse": 0.04332001507282257,
+        "mse_per_plane": [
+          0.043823979794979095,
+          0.041444081813097,
+          0.0424531064927578,
+          0.04555889591574669
+        ],
+        "mse_p10": 0.03751039877533913,
+        "raw_mse": 0.04332534968852997,
+        "raw_mse_per_plane": [
+          0.04382379353046417,
+          0.04144512489438057,
+          0.04245882108807564,
+          0.0455736480653286
+        ],
+        "raw_mse_p10": 0.037571486085653305,
+        "clipped_fraction": 0.00030803680419921875,
+        "clipped_fraction_per_plane": [
+          9.822845458984375e-05,
+          0.00019168853759765625,
+          0.00035190582275390625,
+          0.0005903244018554688
+        ],
+        "clipped_fraction_p10": 0.0
+      }
+    },
+    {
+      "run": "r17_forward_curriculum",
+      "training_steps": 3000,
+      "selected_step": 3000,
+      "synthetic_steps": 500,
+      "checkpoint_sha256": "5b6b5bf8dd5072a53b786019f7bda039300d2fcd8086cc3fa05cc592142fe6be",
+      "metrics": {
+        "pearson": 0.2209014594554901,
+        "pearson_per_plane": [
+          0.1929706633090973,
+          0.24797092378139496,
+          0.2270737886428833,
+          0.21559056639671326
+        ],
+        "pearson_p10": 0.10131935030221939,
+        "invalid_pearson_count": 0,
+        "ssim": 0.07163606584072113,
+        "ssim_per_plane": [
+          0.06859772652387619,
+          0.07513245195150375,
+          0.07279262691736221,
+          0.07002150267362595
+        ],
+        "ssim_p10": 0.03935174271464348,
+        "global_ssim": 0.18482869863510132,
+        "global_ssim_per_plane": [
+          0.15807141363620758,
+          0.18063367903232574,
+          0.1939620077610016,
+          0.20664770901203156
+        ],
+        "global_ssim_p10": 0.07774391770362854,
+        "mse": 0.042454563081264496,
+        "mse_per_plane": [
+          0.042170070111751556,
+          0.04013387858867645,
+          0.041891977190971375,
+          0.0456223264336586
+        ],
+        "mse_p10": 0.03625532612204552,
+        "raw_mse": 0.042456142604351044,
+        "raw_mse_per_plane": [
+          0.04216952994465828,
+          0.040133558213710785,
+          0.04189358651638031,
+          0.0456278957426548
+        ],
+        "raw_mse_p10": 0.036270301789045334,
+        "clipped_fraction": 0.0001780986785888672,
+        "clipped_fraction_per_plane": [
+          3.7670135498046875e-05,
+          7.963180541992188e-05,
+          0.00019788742065429688,
+          0.0003972053527832031
+        ],
+        "clipped_fraction_p10": 0.0
+      }
+    },
+    {
+      "run": "r22_forward_only500",
+      "training_steps": 500,
+      "selected_step": 500,
+      "synthetic_steps": 500,
+      "checkpoint_sha256": "fa4b98f88e5f37333305992b704cfd826fdfcde92268bf8d76ae39188a4ca897",
+      "metrics": {
+        "pearson": 0.24299052357673645,
+        "pearson_per_plane": [
+          0.23517034947872162,
+          0.2813883423805237,
+          0.23472808301448822,
+          0.2206752896308899
+        ],
+        "pearson_p10": 0.1191270649433136,
+        "invalid_pearson_count": 0,
+        "ssim": 0.11072693020105362,
+        "ssim_per_plane": [
+          0.1155964583158493,
+          0.12767349183559418,
+          0.10446545481681824,
+          0.09517233818769455
+        ],
+        "ssim_p10": 0.059269122779369354,
+        "global_ssim": 0.2182559370994568,
+        "global_ssim_per_plane": [
+          0.2063593715429306,
+          0.23332640528678894,
+          0.21580982208251953,
+          0.2175283133983612
+        ],
+        "global_ssim_p10": 0.10002007335424423,
+        "mse": 0.04293164610862732,
+        "mse_per_plane": [
+          0.042026687413454056,
+          0.03992192819714546,
+          0.042944785207509995,
+          0.04683317989110947
+        ],
+        "mse_p10": 0.0359615758061409,
+        "raw_mse": 0.0429379865527153,
+        "raw_mse_per_plane": [
+          0.042027391493320465,
+          0.03992579132318497,
+          0.04295196011662483,
+          0.046846818178892136
+        ],
+        "raw_mse_p10": 0.03599536791443825,
+        "clipped_fraction": 0.00038301944732666016,
+        "clipped_fraction_per_plane": [
+          0.00016117095947265625,
+          0.0002627372741699219,
+          0.0004367828369140625,
+          0.00067138671875
+        ],
+        "clipped_fraction_p10": 0.0
+      }
+    }
+  ]
+}

@@ -1,0 +1,2521 @@
+{
+  "diagnostic_only": true,
+  "purpose": "Necessary normalized-intensity compatibility bound; no synthesis or mask optimization.",
+  "bound": "abs(mu_j(k)-mu_i(k)) <= max_n abs(exp(i*(delta_phase[n+k]-delta_phase[n]))-1)",
+  "l1_bound": "For any realizable intensity probabilities p, ||q_i-p_i||_1+||q_j-p_j||_1 >= positive target-moment violation.",
+  "not_a_bound_on": [
+    "SSIM",
+    "Pearson",
+    "amplitude MSE"
+  ],
+  "size": 128,
+  "wavelength_m": 5.32e-07,
+  "source_pitch_m": 1e-05,
+  "distances_m": [
+    0.0241,
+    0.0253,
+    0.0265,
+    0.0277
+  ],
+  "frequencies_kx_ky": [
+    [
+      1,
+      0
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      -1
+    ],
+    [
+      2,
+      0
+    ],
+    [
+      0,
+      2
+    ]
+  ],
+  "checks": {
+    "dense_commutator": {
+      "size": 8,
+      "matrices": 36,
+      "max_formula_vs_dense_svd_error": 3.5475095083725705e-16
+    },
+    "random_complex_fields": {
+      "fields": 32,
+      "seed": 20261108,
+      "dtype": "complex128",
+      "all_nonzero": true,
+      "max_observed_moment_difference_minus_bound": -0.12153100897323914,
+      "violations_at_1e_minus_10": 0
+    }
+  },
+  "provenance": {
+    "train_quartets": 128,
+    "train_sampler": "half homogeneous, half independent; original mixed sampler",
+    "selection_per_group": 64,
+    "data_seed": 42,
+    "train_seed": 50042,
+    "train_homogeneous_quartets": 70,
+    "protocol": "fresnel_png_v2_peak",
+    "moment_arithmetic": "float64; targets fetched and peak-normalized as normal float32 evaluator inputs",
+    "moment_origin": "array index zero, unnormalized FFT of q=A^2/sum(A^2); pair-difference magnitude is independent of common origin",
+    "violation_tolerance": 1e-07,
+    "test_used": false,
+    "reserve_used": false,
+    "manifest_sha256": "a282b28d585df3134925ba89e671a3494609f2c724cbd9fc4b0b4944ffc5e0dd",
+    "source_sha256": {
+      "scripts\\diagnose_moment_compatibility.py": "0a3fe43c090a6a18a760cd9f67084219c66a719bb453fea7d68d9bdda28d8671",
+      "src\\physics\\fresnel.py": "c7bfa47bd89af6ec167b72b27b3cdfeb6745f60738bd802feeb2ee921e561326",
+      "src\\models\\transport.py": "f1b4b885598d3be6e6f21e349188ab68fe6c0c881d8ba4a95f7cf9576e38c246",
+      "src\\data.py": "d3c58533a7f164d0af7eaa1857628314380e4f2368f825d6d73ed187a9b4b605",
+      "src\\protocol.py": "1e7f2f8f52b3067c1c2e21af4a3794a1e4e51adb955aa92b23b8f57c88576e75"
+    }
+  },
+  "groups": {
+    "TRAIN": {
+      "quartets": 128,
+      "zero_target_images": 0,
+      "quartets_with_any_violation": 128,
+      "fraction_with_any_violation": 1.0,
+      "mean_max_pair_intensity_l1_error_sum_lower_bound": 0.5290221244657087,
+      "pairs": [
+        {
+          "from_plane": 1,
+          "to_plane": 2,
+          "valid_quartets": 128,
+          "frequencies": [
+            {
+              "frequency_kx_ky": [
+                1,
+                0
+              ],
+              "commutator_bound": 0.14746581211312368,
+              "violation_count": 97,
+              "violation_fraction": 0.7578125,
+              "mean_intensity_l1_error_sum_lower_bound": 0.17172467938042546,
+              "max_violation": 0.8535277782069873
+            },
+            {
+              "frequency_kx_ky": [
+                0,
+                1
+              ],
+              "commutator_bound": 0.14746581211312368,
+              "violation_count": 99,
+              "violation_fraction": 0.7734375,
+              "mean_intensity_l1_error_sum_lower_bound": 0.21596608812225615,
+              "max_violation": 1.1568021747674309
+            },
+            {
+              "frequency_kx_ky": [
+                1,
+                1
+              ],
+              "commutator_bound": 0.2941288276320928,
+              "violation_count": 47,
+              "violation_fraction": 0.3671875,
+              "mean_intensity_l1_error_sum_lower_bound": 0.047862976952647955,
+              "max_violation": 0.45143701170784034
+            },
+            {
+              "frequency_kx_ky": [
+                1,
+                -1
+              ],
+              "commutator_bound": 0.2941288276320928,
+              "violation_count": 38,
+              "violation_fraction": 0.296875,
+              "mean_intensity_l1_error_sum_lower_bound": 0.04109160716942749,
+              "max_violation": 0.47808760083930846
+            },
+            {
+              "frequency_kx_ky": [
+                2,
+                0
+              ],
+              "commutator_bound": 0.29182949733429236,
+              "violation_count": 47,
+              "violation_fraction": 0.3671875,
+              "mean_intensity_l1_error_sum_lower_bound": 0.06911949812503829,
+              "max_violation": 0.7659935016564305
+            },
+            {
+              "frequency_kx_ky": [
+                0,
+                2
+              ],
+              "commutator_bound": 0.29182949733429236,
+              "violation_count": 55,
+              "violation_fraction": 0.4296875,
+              "mean_intensity_l1_error_sum_lower_bound": 0.08282701538267961,
+              "max_violation": 0.6820656148325075
+            }
+          ]
+        },
+        {
+          "from_plane": 1,
+          "to_plane": 3,
+          "valid_quartets": 128,
+          "frequencies": [
+            {
+              "frequency_kx_ky": [
+                1,
+                0
+              ],
+              "commutator_bound": 0.2809001773507263,
+              "violation_count": 73,
+              "violation_fraction": 0.5703125,
+              "mean_intensity_l1_error_sum_lower_bound": 0.1437383269193151,
+              "max_violation": 0.844048297639246
+            },
+            {
+              "frequency_kx_ky": [
+                0,
+                1
+              ],
+              "commutator_bound": 0.2809001773507263,
+              "violation_count": 62,
+              "violation_fraction": 0.484375,
+              "mean_intensity_l1_error_sum_lower_bound": 0.1150171930643412,
+              "max_violation": 0.8078887205842942
+            },
+            {
+              "frequency_kx_ky": [
+                1,
+                1
+              ],
+              "commutator_bound": 0.556231654778865,
+              "violation_count": 7,
+              "violation_fraction": 0.0546875,
+              "mean_intensity_l1_error_sum_lower_bound": 0.007054853384638021,
+              "max_violation": 0.20588031685790031
+            },
+            {
+              "frequency_kx_ky": [
+                1,
+                -1
+              ],
+              "commutator_bound": 0.556231654778865,
+              "violation_count": 1,
+              "violation_fraction": 0.0078125,
+              "mean_intensity_l1_error_sum_lower_bound": 0.001732721664572715,
+              "max_violation": 0.22178837306530752
+            },
+            {
+              "frequency_kx_ky": [
+                2,
+                0
+              ],
+              "commutator_bound": 0.5519670914064988,
+              "violation_count": 13,
+              "violation_fraction": 0.1015625,
+              "mean_intensity_l1_error_sum_lower_bound": 0.02609768121986241,
+              "max_violation": 0.5447728632623957
+            },
+            {
+              "frequency_kx_ky": [
+                0,
+                2
+              ],
+              "commutator_bound": 0.5519670914064988,
+              "violation_count": 10,
+              "violation_fraction": 0.078125,
+              "mean_intensity_l1_error_sum_lower_bound": 0.010290704303928736,
+              "max_violation": 0.33376509480574645
+            }
+          ]
+        },
+        {
+          "from_plane": 1,
+          "to_plane": 4,
+          "valid_quartets": 128,
+          "frequencies": [
+            {
+              "frequency_kx_ky": [
+                1,
+                0
+              ],
+              "commutator_bound": 0.4016832892014103,
+              "violation_count": 52,
+              "violation_fraction": 0.40625,
+              "mean_intensity_l1_error_sum_lower_bound": 0.07913193241294439,
+              "max_violation": 0.6892580406121344
+            },
+            {
+              "frequency_kx_ky": [
+                0,
+                1
+              ],
+              "commutator_bound": 0.4016832892014103,
+              "violation_count": 45,
+              "violation_fraction": 0.3515625,
+              "mean_intensity_l1_error_sum_lower_bound": 0.08254251048422287,
+              "max_violation": 0.8634321252887035
+            },
+            {
+              "frequency_kx_ky": [
+                1,
+                1
+              ],
+              "commutator_bound": 0.7869969564716818,
+              "violation_count": 2,
+              "violation_fraction": 0.015625,
+              "mean_intensity_l1_error_sum_lower_bound": 0.0004568102414634371,
+              "max_violation": 0.037835474999803775
+            },
+            {
+              "frequency_kx_ky": [
+                1,
+                -1
+              ],
+              "commutator_bound": 0.7869969564716818,
+              "violation_count": 1,
+              "violation_fraction": 0.0078125,
+              "mean_intensity_l1_error_sum_lower_bound": 0.0002779626391777885,
+              "max_violation": 0.035579217814756925
+            },
+            {
+              "frequency_kx_ky": [
+                2,
+                0
+              ],
+              "commutator_bound": 0.7811377571269479,
+              "violation_count": 7,
+              "violation_fraction": 0.0546875,
+              "mean_intensity_l1_error_sum_lower_bound": 0.012028594825553839,
+              "max_violation": 0.4458248654135598
+            },
+            {
+              "frequency_kx_ky": [
+                0,
+                2
+              ],
+              "commutator_bound": 0.7811377571269479,
+              "violation_count": 2,
+              "violation_fraction": 0.015625,
+              "mean_intensity_l1_error_sum_lower_bound": 0.0015866721031241211,
+              "max_violation": 0.1319795921382665
+            }
+          ]
+        },
+        {
+          "from_plane": 2,
+          "to_plane": 3,
+          "valid_quartets": 128,
+          "frequencies": [
+            {
+              "frequency_kx_ky": [
+                1,
+                0
+              ],
+              "commutator_bound": 0.13413147841001635,
+              "violation_count": 104,
+              "violation_fraction": 0.8125,
+              "mean_intensity_l1_error_sum_lower_bound": 0.22854984341579893,
+              "max_violation": 0.8869511041176442
+            },
+            {
+              "frequency_kx_ky": [
+                0,
+                1
+              ],
+              "commutator_bound": 0.13413147841001635,
+              "violation_count": 108,
+              "violation_fraction": 0.84375,
+              "mean_intensity_l1_error_sum_lower_bound": 0.21311642371158518,
+              "max_violation": 0.8957395232424498
+            },
+            {
+              "frequency_kx_ky": [
+                1,
+                1
+              ],
+              "commutator_bound": 0.2676589785516151,
+              "violation_count": 60,
+              "violation_fraction": 0.46875,
+              "mean_intensity_l1_error_sum_lower_bound": 0.0675984208168925,
+              "max_violation": 0.5346431772088929
+            },
+            {
+              "frequency_kx_ky": [
+                1,
+                -1
+              ],
+              "commutator_bound": 0.2676589785516151,
+              "violation_count": 36,
+              "violation_fraction": 0.28125,
+              "mean_intensity_l1_error_sum_lower_bound": 0.030521607201589227,
+              "max_violation": 0.38080698748920844
+            },
+            {
+              "frequency_kx_ky": [
+                2,
+                0
+              ],
+              "commutator_bound": 0.26556395181169945,
+              "violation_count": 57,
+              "violation_fraction": 0.4453125,
+              "mean_intensity_l1_error_sum_lower_bound": 0.07998505096851688,
+              "max_violation": 0.6044709148566827
+            },
+            {
+              "frequency_kx_ky": [
+                0,
+                2
+              ],
+              "commutator_bound": 0.26556395181169945,
+              "violation_count": 49,
+              "violation_fraction": 0.3828125,
+              "mean_intensity_l1_error_sum_lower_bound": 0.08259117613795501,
+              "max_violation": 0.8276227146303983
+            }
+          ]
+        },
+        {
+          "from_plane": 2,
+          "to_plane": 4,
+          "valid_quartets": 128,
+          "frequencies": [
+            {
+              "frequency_kx_ky": [
+                1,
+                0
+              ],
+              "commutator_bound": 0.256128909701894,
+              "violation_count": 64,
+              "violation_fraction": 0.5,
+              "mean_intensity_l1_error_sum_lower_bound": 0.10408927695576389,
+              "max_violation": 0.7739434559900369
+            },
+            {
+              "frequency_kx_ky": [
+                0,
+                1
+              ],
+              "commutator_bound": 0.256128909701894,
+              "violation_count": 71,
+              "violation_fraction": 0.5546875,
+              "mean_intensity_l1_error_sum_lower_bound": 0.14098408214889327,
+              "max_violation": 0.7898563642353804
+            },
+            {
+              "frequency_kx_ky": [
+                1,
+                1
+              ],
+              "commutator_bound": 0.5080398101763989,
+              "violation_count": 13,
+              "violation_fraction": 0.1015625,
+              "mean_intensity_l1_error_sum_lower_bound": 0.012035347685601836,
+              "max_violation": 0.47942014129228483
+            },
+            {
+              "frequency_kx_ky": [
+                1,
+                -1
+              ],
+              "commutator_bound": 0.5080398101763989,
+              "violation_count": 4,
+              "violation_fraction": 0.03125,
+              "mean_intensity_l1_error_sum_lower_bound": 0.0013766218934170562,
+              "max_violation": 0.0975491500146759
+            },
+            {
+              "frequency_kx_ky": [
+                2,
+                0
+              ],
+              "commutator_bound": 0.5041268084057449,
+              "violation_count": 17,
+              "violation_fraction": 0.1328125,
+              "mean_intensity_l1_error_sum_lower_bound": 0.018593314314207528,
+              "max_violation": 0.5817652627171472
+            },
+            {
+              "frequency_kx_ky": [
+                0,
+                2
+              ],
+              "commutator_bound": 0.5041268084057449,
+              "violation_count": 19,
+              "violation_fraction": 0.1484375,
+              "mean_intensity_l1_error_sum_lower_bound": 0.023717366547529723,
+              "max_violation": 0.4807203505112987
+            }
+          ]
+        },
+        {
+          "from_plane": 3,
+          "to_plane": 4,
+          "valid_quartets": 128,
+          "frequencies": [
+            {
+              "frequency_kx_ky": [
+                1,
+                0
+              ],
+              "commutator_bound": 0.12252523122356108,
+              "violation_count": 107,
+              "violation_fraction": 0.8359375,
+              "mean_intensity_l1_error_sum_lower_bound": 0.23620679311533305,
+              "max_violation": 1.0759940328348918
+            },
+            {
+              "frequency_kx_ky": [
+                0,
+                1
+              ],
+              "commutator_bound": 0.12252523122356108,
+              "violation_count": 105,
+              "violation_fraction": 0.8203125,
+              "mean_intensity_l1_error_sum_lower_bound": 0.2091660280105973,
+              "max_violation": 1.0858915038511767
+            },
+            {
+              "frequency_kx_ky": [
+                1,
+                1
+              ],
+              "commutator_bound": 0.24459017973411665,
+              "violation_count": 60,
+              "violation_fraction": 0.46875,
+              "mean_intensity_l1_error_sum_lower_bound": 0.09085957597265351,
+              "max_violation": 0.7759298253126997
+            },
+            {
+              "frequency_kx_ky": [
+                1,
+                -1
+              ],
+              "commutator_bound": 0.24459017973411665,
+              "violation_count": 46,
+              "violation_fraction": 0.359375,
+              "mean_intensity_l1_error_sum_lower_bound": 0.043171371328553775,
+              "max_violation": 0.35912312453481676
+            },
+            {
+              "frequency_kx_ky": [
+                2,
+                0
+              ],
+              "commutator_bound": 0.2426738184135643,
+              "violation_count": 65,
+              "violation_fraction": 0.5078125,
+              "mean_intensity_l1_error_sum_lower_bound": 0.11168613430471944,
+              "max_violation": 0.9754418973940316
+            },
+            {
+              "frequency_kx_ky": [
+                0,
+                2
+              ],
+              "commutator_bound": 0.2426738184135643,
+              "violation_count": 56,
+              "violation_fraction": 0.4375,
+              "mean_intensity_l1_error_sum_lower_bound": 0.08781301267708218,
+              "max_violation": 0.9223322303308025
+            }
+          ]
+        }
+      ],
+      "largest_violation_example": {
+        "quartet_index": 63,
+        "source_identities_dataset_index": [
+          [
+            2,
+            25469
+          ],
+          [
+            2,
+            29632
+          ],
+          [
+            2,
+            32408
+          ],
+          [
+            2,
+            33843
+          ]
+        ],
+        "planes_one_based": [
+          1,
+          2
+        ],
+        "frequency_kx_ky": [
+          0,
+          1
+        ],
+        "first_moment_real_imag": [
+          0.34511168761519867,
+          0.7012537792107691
+        ],
+        "second_moment_real_imag": [
+          -0.8586314671592792,
+          0.19914084476768862
+        ],
+        "moment_difference": 1.3042679868805545,
+        "bound": 0.14746581211312368,
+        "violation": 1.1568021747674309
+      }
+    },
+    "selection_CIFAR10": {
+      "quartets": 64,
+      "zero_target_images": 0,
+      "quartets_with_any_violation": 64,
+      "fraction_with_any_violation": 1.0,
+      "mean_max_pair_intensity_l1_error_sum_lower_bound": 0.33066794414854184,
+      "pairs": [
+        {
+          "from_plane": 1,
+          "to_plane": 2,
+          "valid_quartets": 64,
+          "frequencies": [
+            {
+              "frequency_kx_ky": [
+                1,
+                0
+              ],
+              "commutator_bound": 0.14746581211312368,
+              "violation_count": 38,
+              "violation_fraction": 0.59375,
+              "mean_intensity_l1_error_sum_lower_bound": 0.062128084543237885,
+              "max_violation": 0.4885701423485812
+            },
+            {
+              "frequency_kx_ky": [
+                0,
+                1
+              ],
+              "commutator_bound": 0.14746581211312368,
+              "violation_count": 51,
+              "violation_fraction": 0.796875,
+              "mean_intensity_l1_error_sum_lower_bound": 0.1485509200103567,
+              "max_violation": 0.5653335983343921
+            },
+            {
+              "frequency_kx_ky": [
+                1,
+                1
+              ],
+              "commutator_bound": 0.2941288276320928,
+              "violation_count": 4,
+              "violation_fraction": 0.0625,
+              "mean_intensity_l1_error_sum_lower_bound": 0.006376980455653061,
+              "max_violation": 0.28568932163993455
+            },
+            {
+              "frequency_kx_ky": [
+                1,
+                -1
+              ],
+              "commutator_bound": 0.2941288276320928,
+              "violation_count": 3,
+              "violation_fraction": 0.046875,
+              "mean_intensity_l1_error_sum_lower_bound": 0.0038400720657742315,
+              "max_violation": 0.14794453682774328
+            },
+            {
+              "frequency_kx_ky": [
+                2,
+                0
+              ],
+              "commutator_bound": 0.29182949733429236,
+              "violation_count": 1,
+              "violation_fraction": 0.015625,
+              "mean_intensity_l1_error_sum_lower_bound": 0.0013777164759596625,
+              "max_violation": 0.0881738544614184
+            },
+            {
+              "frequency_kx_ky": [
+                0,
+                2
+              ],
+              "commutator_bound": 0.29182949733429236,
+              "violation_count": 11,
+              "violation_fraction": 0.171875,
+              "mean_intensity_l1_error_sum_lower_bound": 0.012813826617893629,
+              "max_violation": 0.2084723314867752
+            }
+          ]
+        },
+        {
+          "from_plane": 1,
+          "to_plane": 3,
+          "valid_quartets": 64,
+          "frequencies": [
+            {
+              "frequency_kx_ky": [
+                1,
+                0
+              ],
+              "commutator_bound": 0.2809001773507263,
+              "violation_count": 15,
+              "violation_fraction": 0.234375,
+              "mean_intensity_l1_error_sum_lower_bound": 0.019267118524371768,
+              "max_violation": 0.20708131049900652
+            },
+            {
+              "frequency_kx_ky": [
+                0,
+                1
+              ],
+              "commutator_bound": 0.2809001773507263,
+              "violation_count": 28,
+              "violation_fraction": 0.4375,
+              "mean_intensity_l1_error_sum_lower_bound": 0.06283949301411584,
+              "max_violation": 0.2914035245059315
+            },
+            {
+              "frequency_kx_ky": [
+                1,
+                1
+              ],
+              "commutator_bound": 0.556231654778865,
+              "violation_count": 0,
+              "violation_fraction": 0.0,
+              "mean_intensity_l1_error_sum_lower_bound": 0.0,
+              "max_violation": 0.0
+            },
+            {
+              "frequency_kx_ky": [
+                1,
+                -1
+              ],
+              "commutator_bound": 0.556231654778865,
+              "violation_count": 0,
+              "violation_fraction": 0.0,
+              "mean_intensity_l1_error_sum_lower_bound": 0.0,
+              "max_violation": 0.0
+            },
+            {
+              "frequency_kx_ky": [
+                2,
+                0
+              ],
+              "commutator_bound": 0.5519670914064988,
+              "violation_count": 0,
+              "violation_fraction": 0.0,
+              "mean_intensity_l1_error_sum_lower_bound": 0.0,
+              "max_violation": 0.0
+            },
+            {
+              "frequency_kx_ky": [
+                0,
+                2
+              ],
+              "commutator_bound": 0.5519670914064988,
+              "violation_count": 0,
+              "violation_fraction": 0.0,
+              "mean_intensity_l1_error_sum_lower_bound": 0.0,
+              "max_violation": 0.0
+            }
+          ]
+        },
+        {
+          "from_plane": 1,
+          "to_plane": 4,
+          "valid_quartets": 64,
+          "frequencies": [
+            {
+              "frequency_kx_ky": [
+                1,
+                0
+              ],
+              "commutator_bound": 0.4016832892014103,
+              "violation_count": 12,
+              "violation_fraction": 0.1875,
+              "mean_intensity_l1_error_sum_lower_bound": 0.014588011641683052,
+              "max_violation": 0.18932398805260586
+            },
+            {
+              "frequency_kx_ky": [
+                0,
+                1
+              ],
+              "commutator_bound": 0.4016832892014103,
+              "violation_count": 14,
+              "violation_fraction": 0.21875,
+              "mean_intensity_l1_error_sum_lower_bound": 0.04280487045902926,
+              "max_violation": 0.39707763407909247
+            },
+            {
+              "frequency_kx_ky": [
+                1,
+                1
+              ],
+              "commutator_bound": 0.7869969564716818,
+              "violation_count": 0,
+              "violation_fraction": 0.0,
+              "mean_intensity_l1_error_sum_lower_bound": 0.0,
+              "max_violation": 0.0
+            },
+            {
+              "frequency_kx_ky": [
+                1,
+                -1
+              ],
+              "commutator_bound": 0.7869969564716818,
+              "violation_count": 0,
+              "violation_fraction": 0.0,
+              "mean_intensity_l1_error_sum_lower_bound": 0.0,
+              "max_violation": 0.0
+            },
+            {
+              "frequency_kx_ky": [
+                2,
+                0
+              ],
+              "commutator_bound": 0.7811377571269479,
+              "violation_count": 0,
+              "violation_fraction": 0.0,
+              "mean_intensity_l1_error_sum_lower_bound": 0.0,
+              "max_violation": 0.0
+            },
+            {
+              "frequency_kx_ky": [
+                0,
+                2
+              ],
+              "commutator_bound": 0.7811377571269479,
+              "violation_count": 0,
+              "violation_fraction": 0.0,
+              "mean_intensity_l1_error_sum_lower_bound": 0.0,
+              "max_violation": 0.0
+            }
+          ]
+        },
+        {
+          "from_plane": 2,
+          "to_plane": 3,
+          "valid_quartets": 64,
+          "frequencies": [
+            {
+              "frequency_kx_ky": [
+                1,
+                0
+              ],
+              "commutator_bound": 0.13413147841001635,
+              "violation_count": 44,
+              "violation_fraction": 0.6875,
+              "mean_intensity_l1_error_sum_lower_bound": 0.0674965095992662,
+              "max_violation": 0.38817545087566385
+            },
+            {
+              "frequency_kx_ky": [
+                0,
+                1
+              ],
+              "commutator_bound": 0.13413147841001635,
+              "violation_count": 53,
+              "violation_fraction": 0.828125,
+              "mean_intensity_l1_error_sum_lower_bound": 0.16240244442025814,
+              "max_violation": 0.4789606285677829
+            },
+            {
+              "frequency_kx_ky": [
+                1,
+                1
+              ],
+              "commutator_bound": 0.2676589785516151,
+              "violation_count": 5,
+              "violation_fraction": 0.078125,
+              "mean_intensity_l1_error_sum_lower_bound": 0.0031130820847372256,
+              "max_violation": 0.12776439634646525
+            },
+            {
+              "frequency_kx_ky": [
+                1,
+                -1
+              ],
+              "commutator_bound": 0.2676589785516151,
+              "violation_count": 6,
+              "violation_fraction": 0.09375,
+              "mean_intensity_l1_error_sum_lower_bound": 0.004346304915548443,
+              "max_violation": 0.15834393024475762
+            },
+            {
+              "frequency_kx_ky": [
+                2,
+                0
+              ],
+              "commutator_bound": 0.26556395181169945,
+              "violation_count": 2,
+              "violation_fraction": 0.03125,
+              "mean_intensity_l1_error_sum_lower_bound": 0.0021118810545778296,
+              "max_violation": 0.10388032111861167
+            },
+            {
+              "frequency_kx_ky": [
+                0,
+                2
+              ],
+              "commutator_bound": 0.26556395181169945,
+              "violation_count": 16,
+              "violation_fraction": 0.25,
+              "mean_intensity_l1_error_sum_lower_bound": 0.02134852374892472,
+              "max_violation": 0.21062097959070286
+            }
+          ]
+        },
+        {
+          "from_plane": 2,
+          "to_plane": 4,
+          "valid_quartets": 64,
+          "frequencies": [
+            {
+              "frequency_kx_ky": [
+                1,
+                0
+              ],
+              "commutator_bound": 0.256128909701894,
+              "violation_count": 25,
+              "violation_fraction": 0.390625,
+              "mean_intensity_l1_error_sum_lower_bound": 0.04409461047919032,
+              "max_violation": 0.2983833958118009
+            },
+            {
+              "frequency_kx_ky": [
+                0,
+                1
+              ],
+              "commutator_bound": 0.256128909701894,
+              "violation_count": 38,
+              "violation_fraction": 0.59375,
+              "mean_intensity_l1_error_sum_lower_bound": 0.09076504657687066,
+              "max_violation": 0.45079685724374746
+            },
+            {
+              "frequency_kx_ky": [
+                1,
+                1
+              ],
+              "commutator_bound": 0.5080398101763989,
+              "violation_count": 1,
+              "violation_fraction": 0.015625,
+              "mean_intensity_l1_error_sum_lower_bound": 0.00045134613510561077,
+              "max_violation": 0.02888615264675909
+            },
+            {
+              "frequency_kx_ky": [
+                1,
+                -1
+              ],
+              "commutator_bound": 0.5080398101763989,
+              "violation_count": 0,
+              "violation_fraction": 0.0,
+              "mean_intensity_l1_error_sum_lower_bound": 0.0,
+              "max_violation": 0.0
+            },
+            {
+              "frequency_kx_ky": [
+                2,
+                0
+              ],
+              "commutator_bound": 0.5041268084057449,
+              "violation_count": 0,
+              "violation_fraction": 0.0,
+              "mean_intensity_l1_error_sum_lower_bound": 0.0,
+              "max_violation": 0.0
+            },
+            {
+              "frequency_kx_ky": [
+                0,
+                2
+              ],
+              "commutator_bound": 0.5041268084057449,
+              "violation_count": 1,
+              "violation_fraction": 0.015625,
+              "mean_intensity_l1_error_sum_lower_bound": 0.0015520817866747534,
+              "max_violation": 0.09933323434718422
+            }
+          ]
+        },
+        {
+          "from_plane": 3,
+          "to_plane": 4,
+          "valid_quartets": 64,
+          "frequencies": [
+            {
+              "frequency_kx_ky": [
+                1,
+                0
+              ],
+              "commutator_bound": 0.12252523122356108,
+              "violation_count": 50,
+              "violation_fraction": 0.78125,
+              "mean_intensity_l1_error_sum_lower_bound": 0.12241114658325225,
+              "max_violation": 0.5246643886146493
+            },
+            {
+              "frequency_kx_ky": [
+                0,
+                1
+              ],
+              "commutator_bound": 0.12252523122356108,
+              "violation_count": 57,
+              "violation_fraction": 0.890625,
+              "mean_intensity_l1_error_sum_lower_bound": 0.2293184462333781,
+              "max_violation": 0.7804478334765758
+            },
+            {
+              "frequency_kx_ky": [
+                1,
+                1
+              ],
+              "commutator_bound": 0.24459017973411665,
+              "violation_count": 13,
+              "violation_fraction": 0.203125,
+              "mean_intensity_l1_error_sum_lower_bound": 0.016212881474792582,
+              "max_violation": 0.2517035647309305
+            },
+            {
+              "frequency_kx_ky": [
+                1,
+                -1
+              ],
+              "commutator_bound": 0.24459017973411665,
+              "violation_count": 13,
+              "violation_fraction": 0.203125,
+              "mean_intensity_l1_error_sum_lower_bound": 0.01786181332195264,
+              "max_violation": 0.19297671429467375
+            },
+            {
+              "frequency_kx_ky": [
+                2,
+                0
+              ],
+              "commutator_bound": 0.2426738184135643,
+              "violation_count": 6,
+              "violation_fraction": 0.09375,
+              "mean_intensity_l1_error_sum_lower_bound": 0.003534265220373342,
+              "max_violation": 0.1064502817143119
+            },
+            {
+              "frequency_kx_ky": [
+                0,
+                2
+              ],
+              "commutator_bound": 0.2426738184135643,
+              "violation_count": 21,
+              "violation_fraction": 0.328125,
+              "mean_intensity_l1_error_sum_lower_bound": 0.034508306613669805,
+              "max_violation": 0.282804895583745
+            }
+          ]
+        }
+      ],
+      "largest_violation_example": {
+        "quartet_index": 0,
+        "source_identities_dataset_index": [
+          [
+            0,
+            32098
+          ],
+          [
+            0,
+            33460
+          ],
+          [
+            0,
+            36253
+          ],
+          [
+            0,
+            23920
+          ]
+        ],
+        "planes_one_based": [
+          3,
+          4
+        ],
+        "frequency_kx_ky": [
+          0,
+          1
+        ],
+        "first_moment_real_imag": [
+          -0.15509553154722444,
+          -0.23428026744468175
+        ],
+        "second_moment_real_imag": [
+          0.26790711028403674,
+          0.5634848111202622
+        ],
+        "moment_difference": 0.9029730647001368,
+        "bound": 0.12252523122356108,
+        "violation": 0.7804478334765758
+      }
+    },
+    "selection_MNIST": {
+      "quartets": 64,
+      "zero_target_images": 0,
+      "quartets_with_any_violation": 64,
+      "fraction_with_any_violation": 1.0,
+      "mean_max_pair_intensity_l1_error_sum_lower_bound": 0.426668054781258,
+      "pairs": [
+        {
+          "from_plane": 1,
+          "to_plane": 2,
+          "valid_quartets": 64,
+          "frequencies": [
+            {
+              "frequency_kx_ky": [
+                1,
+                0
+              ],
+              "commutator_bound": 0.14746581211312368,
+              "violation_count": 40,
+              "violation_fraction": 0.625,
+              "mean_intensity_l1_error_sum_lower_bound": 0.08535684166824982,
+              "max_violation": 0.45104613481977174
+            },
+            {
+              "frequency_kx_ky": [
+                0,
+                1
+              ],
+              "commutator_bound": 0.14746581211312368,
+              "violation_count": 41,
+              "violation_fraction": 0.640625,
+              "mean_intensity_l1_error_sum_lower_bound": 0.06931639517417966,
+              "max_violation": 0.29211506508434726
+            },
+            {
+              "frequency_kx_ky": [
+                1,
+                1
+              ],
+              "commutator_bound": 0.2941288276320928,
+              "violation_count": 28,
+              "violation_fraction": 0.4375,
+              "mean_intensity_l1_error_sum_lower_bound": 0.07759562788234468,
+              "max_violation": 0.560630794492678
+            },
+            {
+              "frequency_kx_ky": [
+                1,
+                -1
+              ],
+              "commutator_bound": 0.2941288276320928,
+              "violation_count": 32,
+              "violation_fraction": 0.5,
+              "mean_intensity_l1_error_sum_lower_bound": 0.07983569699792258,
+              "max_violation": 0.4237095640933204
+            },
+            {
+              "frequency_kx_ky": [
+                2,
+                0
+              ],
+              "commutator_bound": 0.29182949733429236,
+              "violation_count": 43,
+              "violation_fraction": 0.671875,
+              "mean_intensity_l1_error_sum_lower_bound": 0.14972741768279266,
+              "max_violation": 0.8314528844710285
+            },
+            {
+              "frequency_kx_ky": [
+                0,
+                2
+              ],
+              "commutator_bound": 0.29182949733429236,
+              "violation_count": 36,
+              "violation_fraction": 0.5625,
+              "mean_intensity_l1_error_sum_lower_bound": 0.1167277130200303,
+              "max_violation": 0.5226518072199811
+            }
+          ]
+        },
+        {
+          "from_plane": 1,
+          "to_plane": 3,
+          "valid_quartets": 64,
+          "frequencies": [
+            {
+              "frequency_kx_ky": [
+                1,
+                0
+              ],
+              "commutator_bound": 0.2809001773507263,
+              "violation_count": 14,
+              "violation_fraction": 0.21875,
+              "mean_intensity_l1_error_sum_lower_bound": 0.021614557244881635,
+              "max_violation": 0.22247848369907647
+            },
+            {
+              "frequency_kx_ky": [
+                0,
+                1
+              ],
+              "commutator_bound": 0.2809001773507263,
+              "violation_count": 11,
+              "violation_fraction": 0.171875,
+              "mean_intensity_l1_error_sum_lower_bound": 0.01494789426939333,
+              "max_violation": 0.21828946496570728
+            },
+            {
+              "frequency_kx_ky": [
+                1,
+                1
+              ],
+              "commutator_bound": 0.556231654778865,
+              "violation_count": 6,
+              "violation_fraction": 0.09375,
+              "mean_intensity_l1_error_sum_lower_bound": 0.016139048909566453,
+              "max_violation": 0.3149119258689408
+            },
+            {
+              "frequency_kx_ky": [
+                1,
+                -1
+              ],
+              "commutator_bound": 0.556231654778865,
+              "violation_count": 6,
+              "violation_fraction": 0.09375,
+              "mean_intensity_l1_error_sum_lower_bound": 0.011149653264345439,
+              "max_violation": 0.21282386821378685
+            },
+            {
+              "frequency_kx_ky": [
+                2,
+                0
+              ],
+              "commutator_bound": 0.5519670914064988,
+              "violation_count": 13,
+              "violation_fraction": 0.203125,
+              "mean_intensity_l1_error_sum_lower_bound": 0.04062898892485923,
+              "max_violation": 0.5820911323136836
+            },
+            {
+              "frequency_kx_ky": [
+                0,
+                2
+              ],
+              "commutator_bound": 0.5519670914064988,
+              "violation_count": 10,
+              "violation_fraction": 0.15625,
+              "mean_intensity_l1_error_sum_lower_bound": 0.019312138805139305,
+              "max_violation": 0.48285977117053813
+            }
+          ]
+        },
+        {
+          "from_plane": 1,
+          "to_plane": 4,
+          "valid_quartets": 64,
+          "frequencies": [
+            {
+              "frequency_kx_ky": [
+                1,
+                0
+              ],
+              "commutator_bound": 0.4016832892014103,
+              "violation_count": 4,
+              "violation_fraction": 0.0625,
+              "mean_intensity_l1_error_sum_lower_bound": 0.0032014068546098477,
+              "max_violation": 0.17647132136589916
+            },
+            {
+              "frequency_kx_ky": [
+                0,
+                1
+              ],
+              "commutator_bound": 0.4016832892014103,
+              "violation_count": 2,
+              "violation_fraction": 0.03125,
+              "mean_intensity_l1_error_sum_lower_bound": 0.0018099758506943814,
+              "max_violation": 0.06984774339297711
+            },
+            {
+              "frequency_kx_ky": [
+                1,
+                1
+              ],
+              "commutator_bound": 0.7869969564716818,
+              "violation_count": 2,
+              "violation_fraction": 0.03125,
+              "mean_intensity_l1_error_sum_lower_bound": 0.0037445583145862115,
+              "max_violation": 0.17121980267378056
+            },
+            {
+              "frequency_kx_ky": [
+                1,
+                -1
+              ],
+              "commutator_bound": 0.7869969564716818,
+              "violation_count": 0,
+              "violation_fraction": 0.0,
+              "mean_intensity_l1_error_sum_lower_bound": 0.0,
+              "max_violation": 0.0
+            },
+            {
+              "frequency_kx_ky": [
+                2,
+                0
+              ],
+              "commutator_bound": 0.7811377571269479,
+              "violation_count": 2,
+              "violation_fraction": 0.03125,
+              "mean_intensity_l1_error_sum_lower_bound": 0.0009519944793421418,
+              "max_violation": 0.05474633938982254
+            },
+            {
+              "frequency_kx_ky": [
+                0,
+                2
+              ],
+              "commutator_bound": 0.7811377571269479,
+              "violation_count": 0,
+              "violation_fraction": 0.0,
+              "mean_intensity_l1_error_sum_lower_bound": 0.0,
+              "max_violation": 0.0
+            }
+          ]
+        },
+        {
+          "from_plane": 2,
+          "to_plane": 3,
+          "valid_quartets": 64,
+          "frequencies": [
+            {
+              "frequency_kx_ky": [
+                1,
+                0
+              ],
+              "commutator_bound": 0.13413147841001635,
+              "violation_count": 47,
+              "violation_fraction": 0.734375,
+              "mean_intensity_l1_error_sum_lower_bound": 0.09330930220342082,
+              "max_violation": 0.48871435682881215
+            },
+            {
+              "frequency_kx_ky": [
+                0,
+                1
+              ],
+              "commutator_bound": 0.13413147841001635,
+              "violation_count": 40,
+              "violation_fraction": 0.625,
+              "mean_intensity_l1_error_sum_lower_bound": 0.06108070505189783,
+              "max_violation": 0.31512385764347683
+            },
+            {
+              "frequency_kx_ky": [
+                1,
+                1
+              ],
+              "commutator_bound": 0.2676589785516151,
+              "violation_count": 35,
+              "violation_fraction": 0.546875,
+              "mean_intensity_l1_error_sum_lower_bound": 0.10658744066336018,
+              "max_violation": 0.5267367172681843
+            },
+            {
+              "frequency_kx_ky": [
+                1,
+                -1
+              ],
+              "commutator_bound": 0.2676589785516151,
+              "violation_count": 36,
+              "violation_fraction": 0.5625,
+              "mean_intensity_l1_error_sum_lower_bound": 0.08240306805203787,
+              "max_violation": 0.6330806516827419
+            },
+            {
+              "frequency_kx_ky": [
+                2,
+                0
+              ],
+              "commutator_bound": 0.26556395181169945,
+              "violation_count": 44,
+              "violation_fraction": 0.6875,
+              "mean_intensity_l1_error_sum_lower_bound": 0.17018027018235182,
+              "max_violation": 0.869916009389105
+            },
+            {
+              "frequency_kx_ky": [
+                0,
+                2
+              ],
+              "commutator_bound": 0.26556395181169945,
+              "violation_count": 38,
+              "violation_fraction": 0.59375,
+              "mean_intensity_l1_error_sum_lower_bound": 0.09131584069147428,
+              "max_violation": 0.4339743292314956
+            }
+          ]
+        },
+        {
+          "from_plane": 2,
+          "to_plane": 4,
+          "valid_quartets": 64,
+          "frequencies": [
+            {
+              "frequency_kx_ky": [
+                1,
+                0
+              ],
+              "commutator_bound": 0.256128909701894,
+              "violation_count": 18,
+              "violation_fraction": 0.28125,
+              "mean_intensity_l1_error_sum_lower_bound": 0.02346798641239957,
+              "max_violation": 0.2439451125636693
+            },
+            {
+              "frequency_kx_ky": [
+                0,
+                1
+              ],
+              "commutator_bound": 0.256128909701894,
+              "violation_count": 19,
+              "violation_fraction": 0.296875,
+              "mean_intensity_l1_error_sum_lower_bound": 0.016696674883342075,
+              "max_violation": 0.21075324985819882
+            },
+            {
+              "frequency_kx_ky": [
+                1,
+                1
+              ],
+              "commutator_bound": 0.5080398101763989,
+              "violation_count": 8,
+              "violation_fraction": 0.125,
+              "mean_intensity_l1_error_sum_lower_bound": 0.02349477598156248,
+              "max_violation": 0.43724558428638693
+            },
+            {
+              "frequency_kx_ky": [
+                1,
+                -1
+              ],
+              "commutator_bound": 0.5080398101763989,
+              "violation_count": 13,
+              "violation_fraction": 0.203125,
+              "mean_intensity_l1_error_sum_lower_bound": 0.023125952884075915,
+              "max_violation": 0.27698249715252865
+            },
+            {
+              "frequency_kx_ky": [
+                2,
+                0
+              ],
+              "commutator_bound": 0.5041268084057449,
+              "violation_count": 17,
+              "violation_fraction": 0.265625,
+              "mean_intensity_l1_error_sum_lower_bound": 0.031330426198123096,
+              "max_violation": 0.34279018497905034
+            },
+            {
+              "frequency_kx_ky": [
+                0,
+                2
+              ],
+              "commutator_bound": 0.5041268084057449,
+              "violation_count": 11,
+              "violation_fraction": 0.171875,
+              "mean_intensity_l1_error_sum_lower_bound": 0.017085317433429566,
+              "max_violation": 0.30828954130972974
+            }
+          ]
+        },
+        {
+          "from_plane": 3,
+          "to_plane": 4,
+          "valid_quartets": 64,
+          "frequencies": [
+            {
+              "frequency_kx_ky": [
+                1,
+                0
+              ],
+              "commutator_bound": 0.12252523122356108,
+              "violation_count": 45,
+              "violation_fraction": 0.703125,
+              "mean_intensity_l1_error_sum_lower_bound": 0.09399779538223905,
+              "max_violation": 0.44086963924889444
+            },
+            {
+              "frequency_kx_ky": [
+                0,
+                1
+              ],
+              "commutator_bound": 0.12252523122356108,
+              "violation_count": 45,
+              "violation_fraction": 0.703125,
+              "mean_intensity_l1_error_sum_lower_bound": 0.07750855755777498,
+              "max_violation": 0.2786652454837899
+            },
+            {
+              "frequency_kx_ky": [
+                1,
+                1
+              ],
+              "commutator_bound": 0.24459017973411665,
+              "violation_count": 37,
+              "violation_fraction": 0.578125,
+              "mean_intensity_l1_error_sum_lower_bound": 0.10767272447175277,
+              "max_violation": 0.7765891720299655
+            },
+            {
+              "frequency_kx_ky": [
+                1,
+                -1
+              ],
+              "commutator_bound": 0.24459017973411665,
+              "violation_count": 41,
+              "violation_fraction": 0.640625,
+              "mean_intensity_l1_error_sum_lower_bound": 0.11204839811926391,
+              "max_violation": 0.4793903864749899
+            },
+            {
+              "frequency_kx_ky": [
+                2,
+                0
+              ],
+              "commutator_bound": 0.2426738184135643,
+              "violation_count": 44,
+              "violation_fraction": 0.6875,
+              "mean_intensity_l1_error_sum_lower_bound": 0.16703058062957865,
+              "max_violation": 0.8530286931297365
+            },
+            {
+              "frequency_kx_ky": [
+                0,
+                2
+              ],
+              "commutator_bound": 0.2426738184135643,
+              "violation_count": 40,
+              "violation_fraction": 0.625,
+              "mean_intensity_l1_error_sum_lower_bound": 0.1282741298759937,
+              "max_violation": 0.7125059806947602
+            }
+          ]
+        }
+      ],
+      "largest_violation_example": {
+        "quartet_index": 19,
+        "source_identities_dataset_index": [
+          [
+            1,
+            45009
+          ],
+          [
+            1,
+            13542
+          ],
+          [
+            1,
+            40876
+          ],
+          [
+            1,
+            17802
+          ]
+        ],
+        "planes_one_based": [
+          2,
+          3
+        ],
+        "frequency_kx_ky": [
+          2,
+          0
+        ],
+        "first_moment_real_imag": [
+          0.846141593786792,
+          -0.2888383310926014
+        ],
+        "second_moment_real_imag": [
+          -0.27395832701803924,
+          -0.10258337222816968
+        ],
+        "moment_difference": 1.1354799612008044,
+        "bound": 0.26556395181169945,
+        "violation": 0.869916009389105
+      }
+    },
+    "selection_FashionMNIST": {
+      "quartets": 64,
+      "zero_target_images": 0,
+      "quartets_with_any_violation": 64,
+      "fraction_with_any_violation": 1.0,
+      "mean_max_pair_intensity_l1_error_sum_lower_bound": 0.5883436861031356,
+      "pairs": [
+        {
+          "from_plane": 1,
+          "to_plane": 2,
+          "valid_quartets": 64,
+          "frequencies": [
+            {
+              "frequency_kx_ky": [
+                1,
+                0
+              ],
+              "commutator_bound": 0.14746581211312368,
+              "violation_count": 52,
+              "violation_fraction": 0.8125,
+              "mean_intensity_l1_error_sum_lower_bound": 0.23078864173412206,
+              "max_violation": 0.8358456132425789
+            },
+            {
+              "frequency_kx_ky": [
+                0,
+                1
+              ],
+              "commutator_bound": 0.14746581211312368,
+              "violation_count": 54,
+              "violation_fraction": 0.84375,
+              "mean_intensity_l1_error_sum_lower_bound": 0.27771186002735515,
+              "max_violation": 0.9113095973833275
+            },
+            {
+              "frequency_kx_ky": [
+                1,
+                1
+              ],
+              "commutator_bound": 0.2941288276320928,
+              "violation_count": 20,
+              "violation_fraction": 0.3125,
+              "mean_intensity_l1_error_sum_lower_bound": 0.03588048961675789,
+              "max_violation": 0.26134317280981145
+            },
+            {
+              "frequency_kx_ky": [
+                1,
+                -1
+              ],
+              "commutator_bound": 0.2941288276320928,
+              "violation_count": 11,
+              "violation_fraction": 0.171875,
+              "mean_intensity_l1_error_sum_lower_bound": 0.012209866824406388,
+              "max_violation": 0.2128543380629514
+            },
+            {
+              "frequency_kx_ky": [
+                2,
+                0
+              ],
+              "commutator_bound": 0.29182949733429236,
+              "violation_count": 23,
+              "violation_fraction": 0.359375,
+              "mean_intensity_l1_error_sum_lower_bound": 0.06768908989270746,
+              "max_violation": 0.4518549743588462
+            },
+            {
+              "frequency_kx_ky": [
+                0,
+                2
+              ],
+              "commutator_bound": 0.29182949733429236,
+              "violation_count": 18,
+              "violation_fraction": 0.28125,
+              "mean_intensity_l1_error_sum_lower_bound": 0.08026124641641094,
+              "max_violation": 0.7770897874111602
+            }
+          ]
+        },
+        {
+          "from_plane": 1,
+          "to_plane": 3,
+          "valid_quartets": 64,
+          "frequencies": [
+            {
+              "frequency_kx_ky": [
+                1,
+                0
+              ],
+              "commutator_bound": 0.2809001773507263,
+              "violation_count": 39,
+              "violation_fraction": 0.609375,
+              "mean_intensity_l1_error_sum_lower_bound": 0.15404089171066193,
+              "max_violation": 0.8272573645427768
+            },
+            {
+              "frequency_kx_ky": [
+                0,
+                1
+              ],
+              "commutator_bound": 0.2809001773507263,
+              "violation_count": 43,
+              "violation_fraction": 0.671875,
+              "mean_intensity_l1_error_sum_lower_bound": 0.2004944202627827,
+              "max_violation": 0.6884444170993267
+            },
+            {
+              "frequency_kx_ky": [
+                1,
+                1
+              ],
+              "commutator_bound": 0.556231654778865,
+              "violation_count": 2,
+              "violation_fraction": 0.03125,
+              "mean_intensity_l1_error_sum_lower_bound": 0.009120875306775286,
+              "max_violation": 0.3286150883716039
+            },
+            {
+              "frequency_kx_ky": [
+                1,
+                -1
+              ],
+              "commutator_bound": 0.556231654778865,
+              "violation_count": 0,
+              "violation_fraction": 0.0,
+              "mean_intensity_l1_error_sum_lower_bound": 0.0,
+              "max_violation": 0.0
+            },
+            {
+              "frequency_kx_ky": [
+                2,
+                0
+              ],
+              "commutator_bound": 0.5519670914064988,
+              "violation_count": 4,
+              "violation_fraction": 0.0625,
+              "mean_intensity_l1_error_sum_lower_bound": 0.009119158889470952,
+              "max_violation": 0.27017378301798955
+            },
+            {
+              "frequency_kx_ky": [
+                0,
+                2
+              ],
+              "commutator_bound": 0.5519670914064988,
+              "violation_count": 11,
+              "violation_fraction": 0.171875,
+              "mean_intensity_l1_error_sum_lower_bound": 0.020073522728735985,
+              "max_violation": 0.2116783403604794
+            }
+          ]
+        },
+        {
+          "from_plane": 1,
+          "to_plane": 4,
+          "valid_quartets": 64,
+          "frequencies": [
+            {
+              "frequency_kx_ky": [
+                1,
+                0
+              ],
+              "commutator_bound": 0.4016832892014103,
+              "violation_count": 20,
+              "violation_fraction": 0.3125,
+              "mean_intensity_l1_error_sum_lower_bound": 0.05423476300223697,
+              "max_violation": 0.3570886510440663
+            },
+            {
+              "frequency_kx_ky": [
+                0,
+                1
+              ],
+              "commutator_bound": 0.4016832892014103,
+              "violation_count": 28,
+              "violation_fraction": 0.4375,
+              "mean_intensity_l1_error_sum_lower_bound": 0.11310237132829361,
+              "max_violation": 0.6207750076935549
+            },
+            {
+              "frequency_kx_ky": [
+                1,
+                1
+              ],
+              "commutator_bound": 0.7869969564716818,
+              "violation_count": 0,
+              "violation_fraction": 0.0,
+              "mean_intensity_l1_error_sum_lower_bound": 0.0,
+              "max_violation": 0.0
+            },
+            {
+              "frequency_kx_ky": [
+                1,
+                -1
+              ],
+              "commutator_bound": 0.7869969564716818,
+              "violation_count": 0,
+              "violation_fraction": 0.0,
+              "mean_intensity_l1_error_sum_lower_bound": 0.0,
+              "max_violation": 0.0
+            },
+            {
+              "frequency_kx_ky": [
+                2,
+                0
+              ],
+              "commutator_bound": 0.7811377571269479,
+              "violation_count": 0,
+              "violation_fraction": 0.0,
+              "mean_intensity_l1_error_sum_lower_bound": 0.0,
+              "max_violation": 0.0
+            },
+            {
+              "frequency_kx_ky": [
+                0,
+                2
+              ],
+              "commutator_bound": 0.7811377571269479,
+              "violation_count": 4,
+              "violation_fraction": 0.0625,
+              "mean_intensity_l1_error_sum_lower_bound": 0.005556817459878868,
+              "max_violation": 0.12898969774472946
+            }
+          ]
+        },
+        {
+          "from_plane": 2,
+          "to_plane": 3,
+          "valid_quartets": 64,
+          "frequencies": [
+            {
+              "frequency_kx_ky": [
+                1,
+                0
+              ],
+              "commutator_bound": 0.13413147841001635,
+              "violation_count": 58,
+              "violation_fraction": 0.90625,
+              "mean_intensity_l1_error_sum_lower_bound": 0.26704774835393336,
+              "max_violation": 0.9559862658847426
+            },
+            {
+              "frequency_kx_ky": [
+                0,
+                1
+              ],
+              "commutator_bound": 0.13413147841001635,
+              "violation_count": 53,
+              "violation_fraction": 0.828125,
+              "mean_intensity_l1_error_sum_lower_bound": 0.26856851833453554,
+              "max_violation": 0.8751692683142668
+            },
+            {
+              "frequency_kx_ky": [
+                1,
+                1
+              ],
+              "commutator_bound": 0.2676589785516151,
+              "violation_count": 24,
+              "violation_fraction": 0.375,
+              "mean_intensity_l1_error_sum_lower_bound": 0.04962539477823015,
+              "max_violation": 0.4111641661980548
+            },
+            {
+              "frequency_kx_ky": [
+                1,
+                -1
+              ],
+              "commutator_bound": 0.2676589785516151,
+              "violation_count": 14,
+              "violation_fraction": 0.21875,
+              "mean_intensity_l1_error_sum_lower_bound": 0.02644576149779681,
+              "max_violation": 0.3311785639332148
+            },
+            {
+              "frequency_kx_ky": [
+                2,
+                0
+              ],
+              "commutator_bound": 0.26556395181169945,
+              "violation_count": 24,
+              "violation_fraction": 0.375,
+              "mean_intensity_l1_error_sum_lower_bound": 0.088865673054477,
+              "max_violation": 0.5467377263805138
+            },
+            {
+              "frequency_kx_ky": [
+                0,
+                2
+              ],
+              "commutator_bound": 0.26556395181169945,
+              "violation_count": 22,
+              "violation_fraction": 0.34375,
+              "mean_intensity_l1_error_sum_lower_bound": 0.0759274331047811,
+              "max_violation": 0.5364062424908927
+            }
+          ]
+        },
+        {
+          "from_plane": 2,
+          "to_plane": 4,
+          "valid_quartets": 64,
+          "frequencies": [
+            {
+              "frequency_kx_ky": [
+                1,
+                0
+              ],
+              "commutator_bound": 0.256128909701894,
+              "violation_count": 40,
+              "violation_fraction": 0.625,
+              "mean_intensity_l1_error_sum_lower_bound": 0.147224389617349,
+              "max_violation": 0.6743903732378209
+            },
+            {
+              "frequency_kx_ky": [
+                0,
+                1
+              ],
+              "commutator_bound": 0.256128909701894,
+              "violation_count": 38,
+              "violation_fraction": 0.59375,
+              "mean_intensity_l1_error_sum_lower_bound": 0.19251499550619158,
+              "max_violation": 0.9285209639627576
+            },
+            {
+              "frequency_kx_ky": [
+                1,
+                1
+              ],
+              "commutator_bound": 0.5080398101763989,
+              "violation_count": 3,
+              "violation_fraction": 0.046875,
+              "mean_intensity_l1_error_sum_lower_bound": 0.0023730959761369443,
+              "max_violation": 0.0906044145433681
+            },
+            {
+              "frequency_kx_ky": [
+                1,
+                -1
+              ],
+              "commutator_bound": 0.5080398101763989,
+              "violation_count": 0,
+              "violation_fraction": 0.0,
+              "mean_intensity_l1_error_sum_lower_bound": 0.0,
+              "max_violation": 0.0
+            },
+            {
+              "frequency_kx_ky": [
+                2,
+                0
+              ],
+              "commutator_bound": 0.5041268084057449,
+              "violation_count": 9,
+              "violation_fraction": 0.140625,
+              "mean_intensity_l1_error_sum_lower_bound": 0.012647958224980273,
+              "max_violation": 0.188965857462009
+            },
+            {
+              "frequency_kx_ky": [
+                0,
+                2
+              ],
+              "commutator_bound": 0.5041268084057449,
+              "violation_count": 11,
+              "violation_fraction": 0.171875,
+              "mean_intensity_l1_error_sum_lower_bound": 0.0333657997403808,
+              "max_violation": 0.5103035390466524
+            }
+          ]
+        },
+        {
+          "from_plane": 3,
+          "to_plane": 4,
+          "valid_quartets": 64,
+          "frequencies": [
+            {
+              "frequency_kx_ky": [
+                1,
+                0
+              ],
+              "commutator_bound": 0.12252523122356108,
+              "violation_count": 59,
+              "violation_fraction": 0.921875,
+              "mean_intensity_l1_error_sum_lower_bound": 0.3106182233513115,
+              "max_violation": 0.9903742710204521
+            },
+            {
+              "frequency_kx_ky": [
+                0,
+                1
+              ],
+              "commutator_bound": 0.12252523122356108,
+              "violation_count": 60,
+              "violation_fraction": 0.9375,
+              "mean_intensity_l1_error_sum_lower_bound": 0.3501545834943578,
+              "max_violation": 0.8196475407551574
+            },
+            {
+              "frequency_kx_ky": [
+                1,
+                1
+              ],
+              "commutator_bound": 0.24459017973411665,
+              "violation_count": 31,
+              "violation_fraction": 0.484375,
+              "mean_intensity_l1_error_sum_lower_bound": 0.0757322612742265,
+              "max_violation": 0.35865992245885536
+            },
+            {
+              "frequency_kx_ky": [
+                1,
+                -1
+              ],
+              "commutator_bound": 0.24459017973411665,
+              "violation_count": 18,
+              "violation_fraction": 0.28125,
+              "mean_intensity_l1_error_sum_lower_bound": 0.026126612599862015,
+              "max_violation": 0.3587906847230633
+            },
+            {
+              "frequency_kx_ky": [
+                2,
+                0
+              ],
+              "commutator_bound": 0.2426738184135643,
+              "violation_count": 29,
+              "violation_fraction": 0.453125,
+              "mean_intensity_l1_error_sum_lower_bound": 0.10879440847790287,
+              "max_violation": 0.6388321741142314
+            },
+            {
+              "frequency_kx_ky": [
+                0,
+                2
+              ],
+              "commutator_bound": 0.2426738184135643,
+              "violation_count": 31,
+              "violation_fraction": 0.484375,
+              "mean_intensity_l1_error_sum_lower_bound": 0.11618955692928215,
+              "max_violation": 0.839700425626776
+            }
+          ]
+        }
+      ],
+      "largest_violation_example": {
+        "quartet_index": 34,
+        "source_identities_dataset_index": [
+          [
+            2,
+            19804
+          ],
+          [
+            2,
+            3354
+          ],
+          [
+            2,
+            5623
+          ],
+          [
+            2,
+            15967
+          ]
+        ],
+        "planes_one_based": [
+          3,
+          4
+        ],
+        "frequency_kx_ky": [
+          1,
+          0
+        ],
+        "first_moment_real_imag": [
+          0.13732861565026594,
+          0.49752165842813867
+        ],
+        "second_moment_real_imag": [
+          -0.8349713192936109,
+          -0.043937609294840585
+        ],
+        "moment_difference": 1.1128995022440131,
+        "bound": 0.12252523122356108,
+        "violation": 0.9903742710204521
+      }
+    },
+    "selection_mixed": {
+      "quartets": 64,
+      "zero_target_images": 0,
+      "quartets_with_any_violation": 64,
+      "fraction_with_any_violation": 1.0,
+      "mean_max_pair_intensity_l1_error_sum_lower_bound": 0.6498658858996792,
+      "pairs": [
+        {
+          "from_plane": 1,
+          "to_plane": 2,
+          "valid_quartets": 64,
+          "frequencies": [
+            {
+              "frequency_kx_ky": [
+                1,
+                0
+              ],
+              "commutator_bound": 0.14746581211312368,
+              "violation_count": 55,
+              "violation_fraction": 0.859375,
+              "mean_intensity_l1_error_sum_lower_bound": 0.31929031742270764,
+              "max_violation": 0.9605077307369291
+            },
+            {
+              "frequency_kx_ky": [
+                0,
+                1
+              ],
+              "commutator_bound": 0.14746581211312368,
+              "violation_count": 48,
+              "violation_fraction": 0.75,
+              "mean_intensity_l1_error_sum_lower_bound": 0.24118295393212172,
+              "max_violation": 0.9963421073753235
+            },
+            {
+              "frequency_kx_ky": [
+                1,
+                1
+              ],
+              "commutator_bound": 0.2941288276320928,
+              "violation_count": 22,
+              "violation_fraction": 0.34375,
+              "mean_intensity_l1_error_sum_lower_bound": 0.0509679026954257,
+              "max_violation": 0.3748853248450916
+            },
+            {
+              "frequency_kx_ky": [
+                1,
+                -1
+              ],
+              "commutator_bound": 0.2941288276320928,
+              "violation_count": 20,
+              "violation_fraction": 0.3125,
+              "mean_intensity_l1_error_sum_lower_bound": 0.036384878289156056,
+              "max_violation": 0.38028211466380457
+            },
+            {
+              "frequency_kx_ky": [
+                2,
+                0
+              ],
+              "commutator_bound": 0.29182949733429236,
+              "violation_count": 18,
+              "violation_fraction": 0.28125,
+              "mean_intensity_l1_error_sum_lower_bound": 0.08601082794341909,
+              "max_violation": 0.8555828668442766
+            },
+            {
+              "frequency_kx_ky": [
+                0,
+                2
+              ],
+              "commutator_bound": 0.29182949733429236,
+              "violation_count": 18,
+              "violation_fraction": 0.28125,
+              "mean_intensity_l1_error_sum_lower_bound": 0.06261127328291127,
+              "max_violation": 0.6684766895371714
+            }
+          ]
+        },
+        {
+          "from_plane": 1,
+          "to_plane": 3,
+          "valid_quartets": 64,
+          "frequencies": [
+            {
+              "frequency_kx_ky": [
+                1,
+                0
+              ],
+              "commutator_bound": 0.2809001773507263,
+              "violation_count": 43,
+              "violation_fraction": 0.671875,
+              "mean_intensity_l1_error_sum_lower_bound": 0.17591121356257822,
+              "max_violation": 0.7271996309405067
+            },
+            {
+              "frequency_kx_ky": [
+                0,
+                1
+              ],
+              "commutator_bound": 0.2809001773507263,
+              "violation_count": 43,
+              "violation_fraction": 0.671875,
+              "mean_intensity_l1_error_sum_lower_bound": 0.17532295520379254,
+              "max_violation": 1.1026920641286666
+            },
+            {
+              "frequency_kx_ky": [
+                1,
+                1
+              ],
+              "commutator_bound": 0.556231654778865,
+              "violation_count": 1,
+              "violation_fraction": 0.015625,
+              "mean_intensity_l1_error_sum_lower_bound": 0.001222465906626568,
+              "max_violation": 0.07823781802410035
+            },
+            {
+              "frequency_kx_ky": [
+                1,
+                -1
+              ],
+              "commutator_bound": 0.556231654778865,
+              "violation_count": 3,
+              "violation_fraction": 0.046875,
+              "mean_intensity_l1_error_sum_lower_bound": 0.006561089477570076,
+              "max_violation": 0.19952239468134225
+            },
+            {
+              "frequency_kx_ky": [
+                2,
+                0
+              ],
+              "commutator_bound": 0.5519670914064988,
+              "violation_count": 5,
+              "violation_fraction": 0.078125,
+              "mean_intensity_l1_error_sum_lower_bound": 0.016012118043557004,
+              "max_violation": 0.5495796366991689
+            },
+            {
+              "frequency_kx_ky": [
+                0,
+                2
+              ],
+              "commutator_bound": 0.5519670914064988,
+              "violation_count": 5,
+              "violation_fraction": 0.078125,
+              "mean_intensity_l1_error_sum_lower_bound": 0.012772430794419264,
+              "max_violation": 0.3131491396576178
+            }
+          ]
+        },
+        {
+          "from_plane": 1,
+          "to_plane": 4,
+          "valid_quartets": 64,
+          "frequencies": [
+            {
+              "frequency_kx_ky": [
+                1,
+                0
+              ],
+              "commutator_bound": 0.4016832892014103,
+              "violation_count": 26,
+              "violation_fraction": 0.40625,
+              "mean_intensity_l1_error_sum_lower_bound": 0.09533815974943383,
+              "max_violation": 0.6662730000379345
+            },
+            {
+              "frequency_kx_ky": [
+                0,
+                1
+              ],
+              "commutator_bound": 0.4016832892014103,
+              "violation_count": 28,
+              "violation_fraction": 0.4375,
+              "mean_intensity_l1_error_sum_lower_bound": 0.10702474435376852,
+              "max_violation": 0.7055038653393669
+            },
+            {
+              "frequency_kx_ky": [
+                1,
+                1
+              ],
+              "commutator_bound": 0.7869969564716818,
+              "violation_count": 1,
+              "violation_fraction": 0.015625,
+              "mean_intensity_l1_error_sum_lower_bound": 0.0021957029268742084,
+              "max_violation": 0.14052498731994933
+            },
+            {
+              "frequency_kx_ky": [
+                1,
+                -1
+              ],
+              "commutator_bound": 0.7869969564716818,
+              "violation_count": 0,
+              "violation_fraction": 0.0,
+              "mean_intensity_l1_error_sum_lower_bound": 0.0,
+              "max_violation": 0.0
+            },
+            {
+              "frequency_kx_ky": [
+                2,
+                0
+              ],
+              "commutator_bound": 0.7811377571269479,
+              "violation_count": 3,
+              "violation_fraction": 0.046875,
+              "mean_intensity_l1_error_sum_lower_bound": 0.010964441694278465,
+              "max_violation": 0.26100593276077044
+            },
+            {
+              "frequency_kx_ky": [
+                0,
+                2
+              ],
+              "commutator_bound": 0.7811377571269479,
+              "violation_count": 1,
+              "violation_fraction": 0.015625,
+              "mean_intensity_l1_error_sum_lower_bound": 0.0006253994913597762,
+              "max_violation": 0.04002556744702568
+            }
+          ]
+        },
+        {
+          "from_plane": 2,
+          "to_plane": 3,
+          "valid_quartets": 64,
+          "frequencies": [
+            {
+              "frequency_kx_ky": [
+                1,
+                0
+              ],
+              "commutator_bound": 0.13413147841001635,
+              "violation_count": 53,
+              "violation_fraction": 0.828125,
+              "mean_intensity_l1_error_sum_lower_bound": 0.3191202462295777,
+              "max_violation": 0.9739861794644297
+            },
+            {
+              "frequency_kx_ky": [
+                0,
+                1
+              ],
+              "commutator_bound": 0.13413147841001635,
+              "violation_count": 62,
+              "violation_fraction": 0.96875,
+              "mean_intensity_l1_error_sum_lower_bound": 0.31329808876651083,
+              "max_violation": 0.968922138751272
+            },
+            {
+              "frequency_kx_ky": [
+                1,
+                1
+              ],
+              "commutator_bound": 0.2676589785516151,
+              "violation_count": 34,
+              "violation_fraction": 0.53125,
+              "mean_intensity_l1_error_sum_lower_bound": 0.08017919281097766,
+              "max_violation": 0.5336436906075419
+            },
+            {
+              "frequency_kx_ky": [
+                1,
+                -1
+              ],
+              "commutator_bound": 0.2676589785516151,
+              "violation_count": 26,
+              "violation_fraction": 0.40625,
+              "mean_intensity_l1_error_sum_lower_bound": 0.058841176900009055,
+              "max_violation": 0.46834572956074866
+            },
+            {
+              "frequency_kx_ky": [
+                2,
+                0
+              ],
+              "commutator_bound": 0.26556395181169945,
+              "violation_count": 23,
+              "violation_fraction": 0.359375,
+              "mean_intensity_l1_error_sum_lower_bound": 0.08282553663833768,
+              "max_violation": 0.8830634625917351
+            },
+            {
+              "frequency_kx_ky": [
+                0,
+                2
+              ],
+              "commutator_bound": 0.26556395181169945,
+              "violation_count": 28,
+              "violation_fraction": 0.4375,
+              "mean_intensity_l1_error_sum_lower_bound": 0.06115339796323244,
+              "max_violation": 0.6143919193983589
+            }
+          ]
+        },
+        {
+          "from_plane": 2,
+          "to_plane": 4,
+          "valid_quartets": 64,
+          "frequencies": [
+            {
+              "frequency_kx_ky": [
+                1,
+                0
+              ],
+              "commutator_bound": 0.256128909701894,
+              "violation_count": 46,
+              "violation_fraction": 0.71875,
+              "mean_intensity_l1_error_sum_lower_bound": 0.19709015322011517,
+              "max_violation": 0.767830304127856
+            },
+            {
+              "frequency_kx_ky": [
+                0,
+                1
+              ],
+              "commutator_bound": 0.256128909701894,
+              "violation_count": 49,
+              "violation_fraction": 0.765625,
+              "mean_intensity_l1_error_sum_lower_bound": 0.16996741363983003,
+              "max_violation": 0.6617658350347877
+            },
+            {
+              "frequency_kx_ky": [
+                1,
+                1
+              ],
+              "commutator_bound": 0.5080398101763989,
+              "violation_count": 12,
+              "violation_fraction": 0.1875,
+              "mean_intensity_l1_error_sum_lower_bound": 0.026901230351771298,
+              "max_violation": 0.2542886936783538
+            },
+            {
+              "frequency_kx_ky": [
+                1,
+                -1
+              ],
+              "commutator_bound": 0.5080398101763989,
+              "violation_count": 4,
+              "violation_fraction": 0.0625,
+              "mean_intensity_l1_error_sum_lower_bound": 0.004621257483804405,
+              "max_violation": 0.12241889596407918
+            },
+            {
+              "frequency_kx_ky": [
+                2,
+                0
+              ],
+              "commutator_bound": 0.5041268084057449,
+              "violation_count": 10,
+              "violation_fraction": 0.15625,
+              "mean_intensity_l1_error_sum_lower_bound": 0.047593816551828365,
+              "max_violation": 0.49996163940659066
+            },
+            {
+              "frequency_kx_ky": [
+                0,
+                2
+              ],
+              "commutator_bound": 0.5041268084057449,
+              "violation_count": 8,
+              "violation_fraction": 0.125,
+              "mean_intensity_l1_error_sum_lower_bound": 0.014248784678752614,
+              "max_violation": 0.3001479640606918
+            }
+          ]
+        },
+        {
+          "from_plane": 3,
+          "to_plane": 4,
+          "valid_quartets": 64,
+          "frequencies": [
+            {
+              "frequency_kx_ky": [
+                1,
+                0
+              ],
+              "commutator_bound": 0.12252523122356108,
+              "violation_count": 59,
+              "violation_fraction": 0.921875,
+              "mean_intensity_l1_error_sum_lower_bound": 0.3280179518842758,
+              "max_violation": 0.9378569315953976
+            },
+            {
+              "frequency_kx_ky": [
+                0,
+                1
+              ],
+              "commutator_bound": 0.12252523122356108,
+              "violation_count": 59,
+              "violation_fraction": 0.921875,
+              "mean_intensity_l1_error_sum_lower_bound": 0.33268083377648827,
+              "max_violation": 0.9933371610784286
+            },
+            {
+              "frequency_kx_ky": [
+                1,
+                1
+              ],
+              "commutator_bound": 0.24459017973411665,
+              "violation_count": 36,
+              "violation_fraction": 0.5625,
+              "mean_intensity_l1_error_sum_lower_bound": 0.1284025176042946,
+              "max_violation": 0.7943675007879744
+            },
+            {
+              "frequency_kx_ky": [
+                1,
+                -1
+              ],
+              "commutator_bound": 0.24459017973411665,
+              "violation_count": 31,
+              "violation_fraction": 0.484375,
+              "mean_intensity_l1_error_sum_lower_bound": 0.08281293054761407,
+              "max_violation": 0.43672133545709213
+            },
+            {
+              "frequency_kx_ky": [
+                2,
+                0
+              ],
+              "commutator_bound": 0.2426738184135643,
+              "violation_count": 28,
+              "violation_fraction": 0.4375,
+              "mean_intensity_l1_error_sum_lower_bound": 0.08354389134540809,
+              "max_violation": 0.4888730577119118
+            },
+            {
+              "frequency_kx_ky": [
+                0,
+                2
+              ],
+              "commutator_bound": 0.2426738184135643,
+              "violation_count": 34,
+              "violation_fraction": 0.53125,
+              "mean_intensity_l1_error_sum_lower_bound": 0.09825955871736586,
+              "max_violation": 0.8164079786279056
+            }
+          ]
+        }
+      ],
+      "largest_violation_example": {
+        "quartet_index": 57,
+        "source_identities_dataset_index": [
+          [
+            2,
+            25395
+          ],
+          [
+            1,
+            57238
+          ],
+          [
+            0,
+            8070
+          ],
+          [
+            2,
+            44259
+          ]
+        ],
+        "planes_one_based": [
+          1,
+          3
+        ],
+        "frequency_kx_ky": [
+          0,
+          1
+        ],
+        "first_moment_real_imag": [
+          -0.762419886315364,
+          0.5117390568268058
+        ],
+        "second_moment_real_imag": [
+          0.2606697563949231,
+          -0.4197195164124488
+        ],
+        "moment_difference": 1.3835922414793929,
+        "bound": 0.2809001773507263,
+        "violation": 1.1026920641286666
+      }
+    }
+  },
+  "seconds": 1.876101000001654
+}

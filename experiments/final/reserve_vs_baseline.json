@@ -1,0 +1,490 @@
+{
+  "comparisons": [
+    {
+      "aggregate": {
+        "metrics": {
+          "pearson": {
+            "bootstrap_std": 0.0013023297761950495,
+            "candidate_mean": 0.5536509710184419,
+            "ci_high": 0.03807893724752489,
+            "ci_low": 0.032910737972154894,
+            "difference": 0.03542461109054784,
+            "reference_mean": 0.518226359927894
+          },
+          "ssim": {
+            "bootstrap_std": 0.0019333405933834621,
+            "candidate_mean": 0.3360681908852712,
+            "ci_high": 0.08630566635681589,
+            "ci_low": 0.07873485778500254,
+            "difference": 0.0824096472151723,
+            "reference_mean": 0.2536585436700989
+          }
+        },
+        "planes": 2048,
+        "quartets": 512
+      },
+      "candidate": {
+        "checkpoint_sha256": "ccb7f7cddccfd31ab85830f5ee20744d56389d31bccc825e9306463345ae361a",
+        "directory": "experiments/final/reserve/r72_spatial_frequency_control",
+        "files": [
+          {
+            "path": "experiments/final/reserve/r72_spatial_frequency_control/metrics.json",
+            "sha256": "5f7659d5a43f8495f5873842db946537995a1ba3be89cad18ed0c40859d19285"
+          },
+          {
+            "path": "experiments/final/reserve/r72_spatial_frequency_control/per_example_metrics.npz",
+            "sha256": "7e0a37f4e3bc9452769ddf35b7d071c32a8ee0030b41bba124b10698cf85ff6a"
+          },
+          {
+            "path": "experiments/final/reserve/r72_spatial_frequency_control/validation_tuples.json",
+            "sha256": "ae6f20d97b8823a22887bbb1be66f905eabdf578b07e3c5e274ab0c454f5035c"
+          },
+          {
+            "path": "experiments/final/reserve/r72_spatial_frequency_control/evaluation_config.json",
+            "sha256": "34d6fcdd7811c651715002afaa02c82985375143c9c286f0fc7dc23db662abd9"
+          },
+          {
+            "path": "experiments/final/reserve/r72_spatial_frequency_control/source_hashes.json",
+            "sha256": "6e164ef0a276dd98d6edb34318ff2393833a573bf092916229250352d95cc7a9"
+          }
+        ],
+        "manifest_hash_definition": "SHA256 of sorted-key compact UTF-8 JSON; row and plane order preserved",
+        "manifest_sha256": "445a134622d75f98595a7c123478548598c4d6a601adb43ca010baf5d454514c",
+        "test_used": false
+      },
+      "groups": {
+        "CIFAR10": {
+          "metrics": {
+            "pearson": {
+              "bootstrap_std": 0.0033818137202439647,
+              "candidate_mean": 0.3658860864688904,
+              "ci_high": 0.0250705000282494,
+              "ci_low": 0.011686951119401101,
+              "difference": 0.01819291107040044,
+              "reference_mean": 0.34769317539849
+            },
+            "ssim": {
+              "bootstrap_std": 0.0011236894177497356,
+              "candidate_mean": 0.4733077196869999,
+              "ci_high": 0.01132539423269918,
+              "ci_low": 0.006842607283033431,
+              "difference": 0.009069012710824609,
+              "reference_mean": 0.4642387069761753
+            }
+          },
+          "planes": 512,
+          "quartets": 128
+        },
+        "FashionMNIST": {
+          "metrics": {
+            "pearson": {
+              "bootstrap_std": 0.002348915307687489,
+              "candidate_mean": 0.6683172149059828,
+              "ci_high": 0.0495479237899417,
+              "ci_low": 0.040298960669315424,
+              "difference": 0.04487818048801273,
+              "reference_mean": 0.6234390344179701
+            },
+            "ssim": {
+              "bootstrap_std": 0.004238119689652227,
+              "candidate_mean": 0.2552903844771208,
+              "ci_high": 0.04404859160022168,
+              "ci_low": 0.027448690707387872,
+              "difference": 0.035737833197345026,
+              "reference_mean": 0.2195525512797758
+            }
+          },
+          "planes": 512,
+          "quartets": 128
+        },
+        "MNIST": {
+          "metrics": {
+            "pearson": {
+              "bootstrap_std": 0.0017724687443531023,
+              "candidate_mean": 0.659819771128241,
+              "ci_high": 0.054508432508737305,
+              "ci_low": 0.04759635482478188,
+              "difference": 0.05108151608146727,
+              "reference_mean": 0.6087382550467737
+            },
+            "ssim": {
+              "bootstrap_std": 0.003773295971543141,
+              "candidate_mean": 0.33557405168539844,
+              "ci_high": 0.26736835925776176,
+              "ci_low": 0.25265865475157623,
+              "difference": 0.25997566722071497,
+              "reference_mean": 0.07559838446468348
+            }
+          },
+          "planes": 512,
+          "quartets": 128
+        },
+        "mixed": {
+          "metrics": {
+            "pearson": {
+              "bootstrap_std": 0.0024385707950563863,
+              "candidate_mean": 0.5205808115706532,
+              "ci_high": 0.03237879868065646,
+              "ci_low": 0.022659876222701315,
+              "difference": 0.027545836722310924,
+              "reference_mean": 0.49303497484834224
+            },
+            "ssim": {
+              "bootstrap_std": 0.0053005403795654904,
+              "candidate_mean": 0.28010060769156553,
+              "ci_high": 0.03598116614984974,
+              "ci_low": 0.015303798761851796,
+              "difference": 0.024856075731804594,
+              "reference_mean": 0.25524453195976093
+            }
+          },
+          "planes": 512,
+          "quartets": 128
+        }
+      }
+    },
+    {
+      "aggregate": {
+        "metrics": {
+          "pearson": {
+            "bootstrap_std": 0.0012850833678622754,
+            "candidate_mean": 0.552860122888319,
+            "ci_high": 0.037253558838486356,
+            "ci_low": 0.03210616271211535,
+            "difference": 0.034633762960424974,
+            "reference_mean": 0.518226359927894
+          },
+          "ssim": {
+            "bootstrap_std": 0.001888508429378369,
+            "candidate_mean": 0.33447320998493524,
+            "ci_high": 0.08451814117686353,
+            "ci_low": 0.07719583705163587,
+            "difference": 0.08081466631483636,
+            "reference_mean": 0.2536585436700989
+          }
+        },
+        "planes": 2048,
+        "quartets": 512
+      },
+      "candidate": {
+        "checkpoint_sha256": "36b02b616d9cbe5bf65f3b38e5c9af2ab1918d5f9551164372092962d09961c7",
+        "directory": "experiments/final/reserve/r62_long_spatial_complex",
+        "files": [
+          {
+            "path": "experiments/final/reserve/r62_long_spatial_complex/metrics.json",
+            "sha256": "acc056ad34ec440355a0c472e0da54a7d4ea5cdccf5fd743c259ba88a9af1ba7"
+          },
+          {
+            "path": "experiments/final/reserve/r62_long_spatial_complex/per_example_metrics.npz",
+            "sha256": "402ba90e89318a5a353a0ba0a6053eaa4e13b22feb76bf3283590343c5d6bd99"
+          },
+          {
+            "path": "experiments/final/reserve/r62_long_spatial_complex/validation_tuples.json",
+            "sha256": "ae6f20d97b8823a22887bbb1be66f905eabdf578b07e3c5e274ab0c454f5035c"
+          },
+          {
+            "path": "experiments/final/reserve/r62_long_spatial_complex/evaluation_config.json",
+            "sha256": "4d6f92632b2da5b97e7686bab56f10cb1b8c4f1cfaf2eed995b2d8fb03a2e862"
+          },
+          {
+            "path": "experiments/final/reserve/r62_long_spatial_complex/source_hashes.json",
+            "sha256": "6e164ef0a276dd98d6edb34318ff2393833a573bf092916229250352d95cc7a9"
+          }
+        ],
+        "manifest_hash_definition": "SHA256 of sorted-key compact UTF-8 JSON; row and plane order preserved",
+        "manifest_sha256": "445a134622d75f98595a7c123478548598c4d6a601adb43ca010baf5d454514c",
+        "test_used": false
+      },
+      "groups": {
+        "CIFAR10": {
+          "metrics": {
+            "pearson": {
+              "bootstrap_std": 0.003265579827380145,
+              "candidate_mean": 0.3626858628081209,
+              "ci_high": 0.02160515085384986,
+              "ci_low": 0.008839093817232425,
+              "difference": 0.01499268740963089,
+              "reference_mean": 0.34769317539849
+            },
+            "ssim": {
+              "bootstrap_std": 0.001130632277409264,
+              "candidate_mean": 0.47357774039846845,
+              "ci_high": 0.01165106467087753,
+              "ci_low": 0.007102564117667498,
+              "difference": 0.009339033422293141,
+              "reference_mean": 0.4642387069761753
+            }
+          },
+          "planes": 512,
+          "quartets": 128
+        },
+        "FashionMNIST": {
+          "metrics": {
+            "pearson": {
+              "bootstrap_std": 0.0023855038701322733,
+              "candidate_mean": 0.668037391078542,
+              "ci_high": 0.049346549834808684,
+              "ci_low": 0.039980309148086236,
+              "difference": 0.04459835666057188,
+              "reference_mean": 0.6234390344179701
+            },
+            "ssim": {
+              "bootstrap_std": 0.0042105300483007615,
+              "candidate_mean": 0.25302157436090056,
+              "ci_high": 0.041756440350945924,
+              "ci_low": 0.025096571804715497,
+              "difference": 0.03346902308112476,
+              "reference_mean": 0.2195525512797758
+            }
+          },
+          "planes": 512,
+          "quartets": 128
+        },
+        "MNIST": {
+          "metrics": {
+            "pearson": {
+              "bootstrap_std": 0.0017691023811772396,
+              "candidate_mean": 0.660717832040973,
+              "ci_high": 0.05539226637920364,
+              "ci_low": 0.04858709004620323,
+              "difference": 0.051979576994199306,
+              "reference_mean": 0.6087382550467737
+            },
+            "ssim": {
+              "bootstrap_std": 0.003578278910628371,
+              "candidate_mean": 0.3319869401457254,
+              "ci_high": 0.2635719161682573,
+              "ci_low": 0.2495840927813333,
+              "difference": 0.2563885556810419,
+              "reference_mean": 0.07559838446468348
+            }
+          },
+          "planes": 512,
+          "quartets": 128
+        },
+        "mixed": {
+          "metrics": {
+            "pearson": {
+              "bootstrap_std": 0.0024341216059347,
+              "candidate_mean": 0.5199994056256401,
+              "ci_high": 0.031775777763778025,
+              "ci_low": 0.0220749890775096,
+              "difference": 0.02696443077729782,
+              "reference_mean": 0.49303497484834224
+            },
+            "ssim": {
+              "bootstrap_std": 0.005239274691035733,
+              "candidate_mean": 0.27930658503464656,
+              "ci_high": 0.03481788427579885,
+              "ci_low": 0.014606472628474877,
+              "difference": 0.024062053074885625,
+              "reference_mean": 0.25524453195976093
+            }
+          },
+          "planes": 512,
+          "quartets": 128
+        }
+      }
+    },
+    {
+      "aggregate": {
+        "metrics": {
+          "pearson": {
+            "bootstrap_std": 0.0012923114999302352,
+            "candidate_mean": 0.5529663422848898,
+            "ci_high": 0.03733806736856025,
+            "ci_low": 0.032242468668383144,
+            "difference": 0.034739982356995824,
+            "reference_mean": 0.518226359927894
+          },
+          "ssim": {
+            "bootstrap_std": 0.001821791705833985,
+            "candidate_mean": 0.33323025346180657,
+            "ci_high": 0.08300734495617235,
+            "ci_low": 0.07600497041057679,
+            "difference": 0.07957170979170769,
+            "reference_mean": 0.2536585436700989
+          }
+        },
+        "planes": 2048,
+        "quartets": 512
+      },
+      "candidate": {
+        "checkpoint_sha256": "cc89c87e2814ce7f7c903be9187df5656a19bccf36963e949fecbf668194a64b",
+        "directory": "experiments/final/reserve/r71_spatial_depth_frequency",
+        "files": [
+          {
+            "path": "experiments/final/reserve/r71_spatial_depth_frequency/metrics.json",
+            "sha256": "3d288af97b4cae8145b7bf4d520be1f648cfaed9fefb6a48c808e06acafcd689"
+          },
+          {
+            "path": "experiments/final/reserve/r71_spatial_depth_frequency/per_example_metrics.npz",
+            "sha256": "00e7a9d0a415610f6fc122bdf920c8ddfd06b5535e3926fc93cd3b51a8c7927e"
+          },
+          {
+            "path": "experiments/final/reserve/r71_spatial_depth_frequency/validation_tuples.json",
+            "sha256": "ae6f20d97b8823a22887bbb1be66f905eabdf578b07e3c5e274ab0c454f5035c"
+          },
+          {
+            "path": "experiments/final/reserve/r71_spatial_depth_frequency/evaluation_config.json",
+            "sha256": "a8e9716f8f4c62292b2b185a6755fa162b907331c3e9786776a9d0bc0cb45f1a"
+          },
+          {
+            "path": "experiments/final/reserve/r71_spatial_depth_frequency/source_hashes.json",
+            "sha256": "6e164ef0a276dd98d6edb34318ff2393833a573bf092916229250352d95cc7a9"
+          }
+        ],
+        "manifest_hash_definition": "SHA256 of sorted-key compact UTF-8 JSON; row and plane order preserved",
+        "manifest_sha256": "445a134622d75f98595a7c123478548598c4d6a601adb43ca010baf5d454514c",
+        "test_used": false
+      },
+      "groups": {
+        "CIFAR10": {
+          "metrics": {
+            "pearson": {
+              "bootstrap_std": 0.003278195493768119,
+              "candidate_mean": 0.3629181628166407,
+              "ci_high": 0.021860248742626705,
+              "ci_low": 0.008890052807282701,
+              "difference": 0.015224987418150704,
+              "reference_mean": 0.34769317539849
+            },
+            "ssim": {
+              "bootstrap_std": 0.0011420943407065658,
+              "candidate_mean": 0.473627934086835,
+              "ci_high": 0.01168417848239187,
+              "ci_low": 0.007134345988015412,
+              "difference": 0.009389227110659704,
+              "reference_mean": 0.4642387069761753
+            }
+          },
+          "planes": 512,
+          "quartets": 128
+        },
+        "FashionMNIST": {
+          "metrics": {
+            "pearson": {
+              "bootstrap_std": 0.0023469911572526767,
+              "candidate_mean": 0.6683573124464601,
+              "ci_high": 0.0496006944682449,
+              "ci_low": 0.04026987754696165,
+              "difference": 0.04491827802849002,
+              "reference_mean": 0.6234390344179701
+            },
+            "ssim": {
+              "bootstrap_std": 0.004013929005458809,
+              "candidate_mean": 0.25461532663030084,
+              "ci_high": 0.04293030242442909,
+              "ci_low": 0.027113164904221776,
+              "difference": 0.035062775350525044,
+              "reference_mean": 0.2195525512797758
+            }
+          },
+          "planes": 512,
+          "quartets": 128
+        },
+        "MNIST": {
+          "metrics": {
+            "pearson": {
+              "bootstrap_std": 0.0018587980394308007,
+              "candidate_mean": 0.6609539558994584,
+              "ci_high": 0.05583820181200281,
+              "ci_low": 0.048640693398192526,
+              "difference": 0.05221570085268468,
+              "reference_mean": 0.6087382550467737
+            },
+            "ssim": {
+              "bootstrap_std": 0.003729360515203604,
+              "candidate_mean": 0.3256326538103167,
+              "ci_high": 0.25742492060644506,
+              "ci_low": 0.24268952999209434,
+              "difference": 0.2500342693456332,
+              "reference_mean": 0.07559838446468348
+            }
+          },
+          "planes": 512,
+          "quartets": 128
+        },
+        "mixed": {
+          "metrics": {
+            "pearson": {
+              "bootstrap_std": 0.0024512630977840877,
+              "candidate_mean": 0.5196359379770001,
+              "ci_high": 0.031406600451691705,
+              "ci_low": 0.021768450637500793,
+              "difference": 0.026600963128657895,
+              "reference_mean": 0.49303497484834224
+            },
+            "ssim": {
+              "bootstrap_std": 0.004764215229556602,
+              "candidate_mean": 0.2790450993197737,
+              "ci_high": 0.03342630628603729,
+              "ci_low": 0.015129181740394418,
+              "difference": 0.023800567360012792,
+              "reference_mean": 0.25524453195976093
+            }
+          },
+          "planes": 512,
+          "quartets": 128
+        }
+      }
+    }
+  ],
+  "method": {
+    "aggregate_weighting": "each quartet has equal weight; four planes remain together",
+    "alignment_limit": "NPZ has no embedded source IDs; rows are assumed to follow the verified adjacent manifest and saved evaluator.",
+    "confidence": 0.95,
+    "difference": "candidate minus reference; positive is better",
+    "interpretation": "Intervals are conditional on the empirical distribution of sampled quartets. Sources can repeat across quartets/groups; these are not independent-source or population confidence intervals.",
+    "multiple_comparisons": "No multiplicity correction; descriptive exploratory intervals, not adjusted hypothesis tests",
+    "name": "paired_stratified_quartet_percentile_bootstrap",
+    "numpy": "1.26.4",
+    "repetitions": 2000,
+    "resampling": "whole quartets within each group; fixed original group sizes; identical draws for both metrics and every candidate",
+    "seed": 20261108
+  },
+  "reference": {
+    "checkpoint_sha256": "ba1a07f6018113bd122ca05119b40293672b4a5db01ce54fd0a09130713defb6",
+    "directory": "experiments/final/reserve/r31_peak_fourier",
+    "files": [
+      {
+        "path": "experiments/final/reserve/r31_peak_fourier/metrics.json",
+        "sha256": "9970ad6b0751d8ad59d33fa31912ed4402854ebbfaf438556ed48d2df3dec7af"
+      },
+      {
+        "path": "experiments/final/reserve/r31_peak_fourier/per_example_metrics.npz",
+        "sha256": "82a643f26abe48d7e53774af0522415f10cb0ebce0610c6d8c951b21034c629a"
+      },
+      {
+        "path": "experiments/final/reserve/r31_peak_fourier/validation_tuples.json",
+        "sha256": "ae6f20d97b8823a22887bbb1be66f905eabdf578b07e3c5e274ab0c454f5035c"
+      },
+      {
+        "path": "experiments/final/reserve/r31_peak_fourier/evaluation_config.json",
+        "sha256": "acb4a73f60dbb994073a50459d6424a7098c4f972c601ee707b9570b9cfffe4d"
+      },
+      {
+        "path": "experiments/final/reserve/r31_peak_fourier/source_hashes.json",
+        "sha256": "6e164ef0a276dd98d6edb34318ff2393833a573bf092916229250352d95cc7a9"
+      }
+    ],
+    "manifest_hash_definition": "SHA256 of sorted-key compact UTF-8 JSON; row and plane order preserved",
+    "manifest_sha256": "445a134622d75f98595a7c123478548598c4d6a601adb43ca010baf5d454514c",
+    "test_used": false
+  },
+  "shared_evaluation_identity": {
+    "evaluator_fingerprint": {
+      "src/data.py": "d3c58533a7f164d0af7eaa1857628314380e4f2368f825d6d73ed187a9b4b605",
+      "src/metrics.py": "70a0e4df536c79b5c0b9fb7bfb2595d47c51e63b244dfeda1a5f0723a7d96798",
+      "src/physics/fresnel.py": "c7bfa47bd89af6ec167b72b27b3cdfeb6745f60738bd802feeb2ee921e561326",
+      "src/protocol.py": "1e7f2f8f52b3067c1c2e21af4a3794a1e4e51adb955aa92b23b8f57c88576e75",
+      "src/train.py": "589641c5f67301c18fd20b30559eb64d47dbc06c37e039cc74f7bed007bffc23"
+    },
+    "model_input_protocol": "fresnel_png_v2_peak",
+    "protocol": "fresnel_png_v2_peak",
+    "source_identity": {
+      "namespace": "official_training_files_validation_rows",
+      "split_seed": 42
+    }
+  }
+}

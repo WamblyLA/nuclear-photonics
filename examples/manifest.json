@@ -1,0 +1,174 @@
+{
+  "selection_rule": "First five existing mixed selection-validation quartets with four distinct (dataset, class) pairs; no model scores used",
+  "split_seed": 42,
+  "source_manifest_sha256": "ce3c032e4ca3470815f052a929b5e03fbb5c8b1e6d5f4408eaeb00ead1e0d432",
+  "split": "selection_validation",
+  "test_used": false,
+  "sets": [
+    {
+      "set": 1,
+      "inputs": [
+        {
+          "path": "input_set1/image1.png",
+          "dataset": "CIFAR10",
+          "train_source_index": 41985,
+          "class_label": 7,
+          "sha256": "9651ca390891c8e4b9f01615ee4677767f8059f8ebbd124999a4d5872d4b7f84"
+        },
+        {
+          "path": "input_set1/image2.png",
+          "dataset": "FashionMNIST",
+          "train_source_index": 47258,
+          "class_label": 3,
+          "sha256": "20fed0d081918def6043d44dd1e05c216705a0000dc503efe93faa9408f253e4"
+        },
+        {
+          "path": "input_set1/image3.png",
+          "dataset": "CIFAR10",
+          "train_source_index": 7239,
+          "class_label": 6,
+          "sha256": "fc337e814a57c841bb784772a9502c039b1c068b5ef411adcc41cc46009f6f0f"
+        },
+        {
+          "path": "input_set1/image4.png",
+          "dataset": "FashionMNIST",
+          "train_source_index": 15029,
+          "class_label": 0,
+          "sha256": "9ce6131655857082ad982ea5891144f4524bc52a5dd5d7394d429dbf25cff857"
+        }
+      ]
+    },
+    {
+      "set": 2,
+      "inputs": [
+        {
+          "path": "input_set2/image1.png",
+          "dataset": "MNIST",
+          "train_source_index": 41360,
+          "class_label": 1,
+          "sha256": "a49caf02d09c96c2d8802a24a420d748469553bb18c22e7cb18751378ba063df"
+        },
+        {
+          "path": "input_set2/image2.png",
+          "dataset": "CIFAR10",
+          "train_source_index": 30667,
+          "class_label": 0,
+          "sha256": "0621ca2d2108b5cbf81fccdbf2f97588c32253f0835254749bddd117a9802e6a"
+        },
+        {
+          "path": "input_set2/image3.png",
+          "dataset": "MNIST",
+          "train_source_index": 7516,
+          "class_label": 6,
+          "sha256": "4707d52ed37cb6ed2e888b0268c339bb7958c8e7fbd30336554bb4464b2bfd22"
+        },
+        {
+          "path": "input_set2/image4.png",
+          "dataset": "FashionMNIST",
+          "train_source_index": 55927,
+          "class_label": 9,
+          "sha256": "7c8184f540d4d378d68e5b30058fc202d4a8283fe9aa042914e212b4cf504e5e"
+        }
+      ]
+    },
+    {
+      "set": 3,
+      "inputs": [
+        {
+          "path": "input_set3/image1.png",
+          "dataset": "MNIST",
+          "train_source_index": 3359,
+          "class_label": 9,
+          "sha256": "9b2b6af51734f9ebaabb345c47696c473e2fa678e6b29314113f2b2212096873"
+        },
+        {
+          "path": "input_set3/image2.png",
+          "dataset": "MNIST",
+          "train_source_index": 58575,
+          "class_label": 0,
+          "sha256": "dfabca07eb5d47d94049c0ef176ca81159809f0a277602eada1e5598a4d95666"
+        },
+        {
+          "path": "input_set3/image3.png",
+          "dataset": "CIFAR10",
+          "train_source_index": 4123,
+          "class_label": 6,
+          "sha256": "8d34d9b670b5985b6129a7b775cd83382085c3f849fd8c9af266a85a047fbc87"
+        },
+        {
+          "path": "input_set3/image4.png",
+          "dataset": "MNIST",
+          "train_source_index": 41607,
+          "class_label": 1,
+          "sha256": "e4bb4819cbad3a2cc3c4fa903f20e735882e8b0ab149aa7dcfaa8d9301ca4547"
+        }
+      ]
+    },
+    {
+      "set": 4,
+      "inputs": [
+        {
+          "path": "input_set4/image1.png",
+          "dataset": "MNIST",
+          "train_source_index": 11096,
+          "class_label": 9,
+          "sha256": "032fd296493a1b0baad442e8601cc34f9d94ef3181127c61ec067c69c658138c"
+        },
+        {
+          "path": "input_set4/image2.png",
+          "dataset": "CIFAR10",
+          "train_source_index": 36276,
+          "class_label": 4,
+          "sha256": "d110cc6756b02d9f47fb7df6836e0f48c6d8180b004f6b123d69f6c5c9fea8b9"
+        },
+        {
+          "path": "input_set4/image3.png",
+          "dataset": "FashionMNIST",
+          "train_source_index": 42521,
+          "class_label": 8,
+          "sha256": "f8a36e0167817c5cf1981db575b0667595207a628b4af4b80bdf016a517accb5"
+        },
+        {
+          "path": "input_set4/image4.png",
+          "dataset": "FashionMNIST",
+          "train_source_index": 33738,
+          "class_label": 0,
+          "sha256": "41f3a0888591e23fbef5574faeed7de935ba2e65df7dde1e27e188e5eedbc0a7"
+        }
+      ]
+    },
+    {
+      "set": 5,
+      "inputs": [
+        {
+          "path": "input_set5/image1.png",
+          "dataset": "MNIST",
+          "train_source_index": 34465,
+          "class_label": 4,
+          "sha256": "e998a59f66c03b29dfde84c7a11a4c5835d48ef6049eaa63a0d7180d4d6abbdb"
+        },
+        {
+          "path": "input_set5/image2.png",
+          "dataset": "FashionMNIST",
+          "train_source_index": 17946,
+          "class_label": 6,
+          "sha256": "3552f99f3d45f980085194ea93e98fbfd4b77889e190caacd7d93cd64a83ca58"
+        },
+        {
+          "path": "input_set5/image3.png",
+          "dataset": "FashionMNIST",
+          "train_source_index": 58774,
+          "class_label": 0,
+          "sha256": "df747780183ac9cdf0d6d5d9665207783c588961e7686220e57c31d14d1bd623"
+        },
+        {
+          "path": "input_set5/image4.png",
+          "dataset": "CIFAR10",
+          "train_source_index": 22666,
+          "class_label": 5,
+          "sha256": "8fbb5e91d07a673c93396350ead17f450686d473b3bedef9a35c2e0c21163377"
+        }
+      ]
+    }
+  ]
+}

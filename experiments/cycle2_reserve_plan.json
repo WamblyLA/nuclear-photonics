@@ -1,0 +1,26 @@
+{
+  "purpose": "Frozen comparison list before viewing cycle2 reserve metrics",
+  "protocol": "fresnel_png_v1",
+  "data_seed": 42,
+  "manifest_seed": 40042,
+  "quadruples_per_group": 128,
+  "selection_quadruples_per_group_excluded": 64,
+  "excluded_manifest": "outputs/r08_fourier_xy_3000/validation_reserve/validation_tuples.json",
+  "checkpoint_rule": "best selection local SSIM; no reserve checkpoint selection",
+  "runs": [
+    "r08_fourier_xy_3000",
+    "r14_fourier_xy_seed43",
+    "r20_circular_ssim",
+    "r23_wrapped_ssim",
+    "r24_tanh_ssim",
+    "r25_circular_rank",
+    "r26_circular_ssim_seed43",
+    "r27_tanh_ssim_seed43",
+    "r28_wrapped_ssim_seed43",
+    "r29_circular_rank_light",
+    "r30_circular_rank_light_seed43"
+  ],
+  "test_used": false,
+  "source_reuse_between_quadruples": true,
+  "interpretation": "Paired model comparisons on common source-disjoint validation reserve; two seeds for main heads and light ranking; strong ranking is one-seed exploratory. Once viewed, this reserve is no longer blind for future hypotheses."
+}

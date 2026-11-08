@@ -1,0 +1,204 @@
+{
+  "comparisons": [
+    {
+      "aggregate": {
+        "metrics": {
+          "pearson": {
+            "bootstrap_std": 0.0009239155682199807,
+            "candidate_mean": 0.5632710853951721,
+            "ci_high": 0.017105262789111463,
+            "ci_low": 0.013538799551486137,
+            "difference": 0.015315976465728909,
+            "reference_mean": 0.5479551089294432
+          },
+          "ssim": {
+            "bootstrap_std": 0.000549196608505654,
+            "candidate_mean": 0.3055772735278879,
+            "ci_high": 0.00802066964270125,
+            "ci_low": 0.0058853979320701915,
+            "difference": 0.006962451767321909,
+            "reference_mean": 0.298614821760566
+          }
+        },
+        "planes": 1024,
+        "quartets": 256
+      },
+      "candidate": {
+        "checkpoint_sha256": null,
+        "directory": "outputs/r70_peak_complex_globaltarget",
+        "files": [
+          {
+            "path": "outputs/r70_peak_complex_globaltarget/metrics.json",
+            "sha256": "7b607940b5fecf23181ee045b2b8dcea7b3d268fd27a266869b1ba4489c2504c"
+          },
+          {
+            "path": "outputs/r70_peak_complex_globaltarget/per_example_metrics.npz",
+            "sha256": "4be41a93f7673d417b1f3f07dfedc6f11bb1c02deea9ce7d3c19434b723a1bc4"
+          },
+          {
+            "path": "outputs/r70_peak_complex_globaltarget/validation_tuples.json",
+            "sha256": "ce3c032e4ca3470815f052a929b5e03fbb5c8b1e6d5f4408eaeb00ead1e0d432"
+          },
+          {
+            "path": "outputs/r70_peak_complex_globaltarget/config.json",
+            "sha256": "7e1dccc190da0826353012aa0c7a44f77d3a7f41f8678f315abafe1dcc25576b"
+          },
+          {
+            "path": "outputs/r70_peak_complex_globaltarget/source_hashes.json",
+            "sha256": "6e164ef0a276dd98d6edb34318ff2393833a573bf092916229250352d95cc7a9"
+          }
+        ],
+        "manifest_hash_definition": "SHA256 of sorted-key compact UTF-8 JSON; row and plane order preserved",
+        "manifest_sha256": "61c8b2920630902a357da167e455bd231e99ab9536dc5525ad167bc65034f9d1",
+        "test_used": false
+      },
+      "groups": {
+        "CIFAR10": {
+          "metrics": {
+            "pearson": {
+              "bootstrap_std": 0.0028752104364874807,
+              "candidate_mean": 0.38724756182818965,
+              "ci_high": 0.03895122421385508,
+              "ci_low": 0.0276300744185221,
+              "difference": 0.03323366361769331,
+              "reference_mean": 0.35401389821049634
+            },
+            "ssim": {
+              "bootstrap_std": 0.0009807898167265587,
+              "candidate_mean": 0.46759744884911925,
+              "ci_high": 0.00843489357503131,
+              "ci_low": 0.004550593809108251,
+              "difference": 0.006543587311170995,
+              "reference_mean": 0.46105386153794825
+            }
+          },
+          "planes": 256,
+          "quartets": 64
+        },
+        "FashionMNIST": {
+          "metrics": {
+            "pearson": {
+              "bootstrap_std": 0.0014488207559154081,
+              "candidate_mean": 0.6809312905243132,
+              "ci_high": 0.014720177688286637,
+              "ci_low": 0.008939646593353246,
+              "difference": 0.01162422468769364,
+              "reference_mean": 0.6693070658366196
+            },
+            "ssim": {
+              "bootstrap_std": 0.0009131983501808932,
+              "candidate_mean": 0.23313839844195172,
+              "ci_high": 0.007960739926784298,
+              "ci_low": 0.004362248058896512,
+              "difference": 0.00610126176616177,
+              "reference_mean": 0.22703713667578995
+            }
+          },
+          "planes": 256,
+          "quartets": 64
+        },
+        "MNIST": {
+          "metrics": {
+            "pearson": {
+              "bootstrap_std": 0.0005238086970960161,
+              "candidate_mean": 0.665995187475346,
+              "ci_high": -0.0006679931975668302,
+              "ci_low": -0.002706936007598415,
+              "difference": -0.001722334185615182,
+              "reference_mean": 0.6677175216609612
+            },
+            "ssim": {
+              "bootstrap_std": 0.0015687983028928,
+              "candidate_mean": 0.24185237640631385,
+              "ci_high": 0.014406817838607821,
+              "ci_low": 0.008150369158101967,
+              "difference": 0.011257191566983238,
+              "reference_mean": 0.2305951848393306
+            }
+          },
+          "planes": 256,
+          "quartets": 64
+        },
+        "mixed": {
+          "metrics": {
+            "pearson": {
+              "bootstrap_std": 0.0018928536633536835,
+              "candidate_mean": 0.5189103017528396,
+              "ci_high": 0.021871041992835672,
+              "ci_low": 0.014609260349607212,
+              "difference": 0.018128351743143867,
+              "reference_mean": 0.5007819500096957
+            },
+            "ssim": {
+              "bootstrap_std": 0.0007980533959063935,
+              "candidate_mean": 0.2797208704141667,
+              "ci_high": 0.005486964308147434,
+              "ci_low": 0.002398020480541163,
+              "difference": 0.003947766424971633,
+              "reference_mean": 0.2757731039891951
+            }
+          },
+          "planes": 256,
+          "quartets": 64
+        }
+      }
+    }
+  ],
+  "method": {
+    "aggregate_weighting": "each quartet has equal weight; four planes remain together",
+    "alignment_limit": "NPZ has no embedded source IDs; rows are assumed to follow the verified adjacent manifest and saved evaluator.",
+    "confidence": 0.95,
+    "difference": "candidate minus reference; positive is better",
+    "interpretation": "Intervals are conditional on the empirical distribution of sampled quartets. Sources can repeat across quartets/groups; these are not independent-source or population confidence intervals.",
+    "multiple_comparisons": "No multiplicity correction; descriptive exploratory intervals, not adjusted hypothesis tests",
+    "name": "paired_stratified_quartet_percentile_bootstrap",
+    "numpy": "1.26.4",
+    "repetitions": 2000,
+    "resampling": "whole quartets within each group; fixed original group sizes; identical draws for both metrics and every candidate",
+    "seed": 20261108
+  },
+  "reference": {
+    "checkpoint_sha256": null,
+    "directory": "outputs/r59_peak_complex_control",
+    "files": [
+      {
+        "path": "outputs/r59_peak_complex_control/metrics.json",
+        "sha256": "17ef63ebc24daad711aee1020cf9ffb7545db70598de9bdefce53a255b2cacbe"
+      },
+      {
+        "path": "outputs/r59_peak_complex_control/per_example_metrics.npz",
+        "sha256": "6a1196ce920666eeae2c634f1515c41c875e11f2c2ed5f5a9f4569038ee9f1ab"
+      },
+      {
+        "path": "outputs/r59_peak_complex_control/validation_tuples.json",
+        "sha256": "ce3c032e4ca3470815f052a929b5e03fbb5c8b1e6d5f4408eaeb00ead1e0d432"
+      },
+      {
+        "path": "outputs/r59_peak_complex_control/config.json",
+        "sha256": "a124c0eb2eaaad17685c61eef3c9b6dedf23cb31e908222dca89a64fe1bd5a5d"
+      },
+      {
+        "path": "outputs/r59_peak_complex_control/source_hashes.json",
+        "sha256": "c2a63bed0afca70128d9a563b299bb2533c196e11f5241f9e93ca0f79a592f20"
+      }
+    ],
+    "manifest_hash_definition": "SHA256 of sorted-key compact UTF-8 JSON; row and plane order preserved",
+    "manifest_sha256": "61c8b2920630902a357da167e455bd231e99ab9536dc5525ad167bc65034f9d1",
+    "test_used": false
+  },
+  "shared_evaluation_identity": {
+    "evaluator_fingerprint": {
+      "src/data.py": "d3c58533a7f164d0af7eaa1857628314380e4f2368f825d6d73ed187a9b4b605",
+      "src/metrics.py": "70a0e4df536c79b5c0b9fb7bfb2595d47c51e63b244dfeda1a5f0723a7d96798",
+      "src/physics/fresnel.py": "c7bfa47bd89af6ec167b72b27b3cdfeb6745f60738bd802feeb2ee921e561326",
+      "src/protocol.py": "1e7f2f8f52b3067c1c2e21af4a3794a1e4e51adb955aa92b23b8f57c88576e75",
+      "src/train.py": "589641c5f67301c18fd20b30559eb64d47dbc06c37e039cc74f7bed007bffc23"
+    },
+    "model_input_protocol": "fresnel_png_v2_peak",
+    "protocol": "fresnel_png_v2_peak",
+    "source_identity": {
+      "namespace": "official_training_files_validation_rows",
+      "split_seed": 42
+    }
+  }
+}

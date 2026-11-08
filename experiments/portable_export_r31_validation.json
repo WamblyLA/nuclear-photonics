@@ -1,0 +1,19 @@
+{
+  "validation_only_not_final_candidate": true,
+  "source_checkpoint": "outputs/r31_peak_fourier/best.pt",
+  "exported_checkpoint": "outputs/export_portability_r31/solution.pt",
+  "reference_prediction": "outputs/cpu_runtime_r31",
+  "exported_prediction": "outputs/export_portability_r31/prediction",
+  "png_bytes_identical": {
+    "phase.png": true,
+    "reconstruction_1.png": true,
+    "reconstruction_2.png": true,
+    "reconstruction_3.png": true,
+    "reconstruction_4.png": true
+  },
+  "all_per_plane_metrics_identical": true,
+  "all_mean_metrics_identical": true,
+  "weights_only_load": true,
+  "python": "3.11.18",
+  "torch": "2.6.0+cpu"
+}

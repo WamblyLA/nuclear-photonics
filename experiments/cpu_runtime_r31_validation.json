@@ -1,0 +1,108 @@
+{
+  "run": "r31_peak_fourier",
+  "environment": {
+    "python": "3.11.18",
+    "torch": "2.6.0+cpu",
+    "numpy": "1.26.4",
+    "pillow": "11.3.0"
+  },
+  "comparison": "CPU batch1 inference vs saved CUDA batch16 evaluation; first MNIST quadruple",
+  "protocol": "fresnel_png_v2_peak",
+  "checkpoint_sha256": "ba1a07f6018113bd122ca05119b40293672b4a5db01ce54fd0a09130713defb6",
+  "png": {
+    "phase.png": {
+      "max_code_difference": 255,
+      "changed_pixels": 406,
+      "mean_code_difference": 0.0712890625,
+      "max_circular_code_difference": 1,
+      "max_circular_phase_error_radians": 0.024639942381096416
+    },
+    "reconstruction_1.png": {
+      "max_code_difference": 1,
+      "changed_pixels": 3379,
+      "mean_code_difference": 0.20623779296875
+    },
+    "reconstruction_2.png": {
+      "max_code_difference": 1,
+      "changed_pixels": 2906,
+      "mean_code_difference": 0.1773681640625
+    },
+    "reconstruction_3.png": {
+      "max_code_difference": 1,
+      "changed_pixels": 2856,
+      "mean_code_difference": 0.17431640625
+    },
+    "reconstruction_4.png": {
+      "max_code_difference": 1,
+      "changed_pixels": 3044,
+      "mean_code_difference": 0.185791015625
+    }
+  },
+  "metrics": {
+    "ssim": {
+      "expected_per_plane": [
+        0.11726206541061401,
+        0.06921034306287766,
+        0.08969159424304962,
+        0.08443469554185867
+      ],
+      "cpu_per_plane": [
+        0.11739576607942581,
+        0.06918750703334808,
+        0.08975653350353241,
+        0.08432839810848236
+      ],
+      "max_abs_difference": 0.0001337006688117981,
+      "mean_difference": 1.7376616597175598e-05
+    },
+    "pearson": {
+      "expected_per_plane": [
+        0.5699000358581543,
+        0.5746700167655945,
+        0.5607972741127014,
+        0.6020344495773315
+      ],
+      "cpu_per_plane": [
+        0.5699639916419983,
+        0.5745719075202942,
+        0.5607467889785767,
+        0.6019443869590759
+      ],
+      "max_abs_difference": 9.810924530029297e-05,
+      "mean_difference": -4.367530345916748e-05
+    },
+    "global_ssim": {
+      "expected_per_plane": [
+        0.28920120000839233,
+        0.27294862270355225,
+        0.33022844791412354,
+        0.3713131248950958
+      ],
+      "cpu_per_plane": [
+        0.2892751097679138,
+        0.27293264865875244,
+        0.3302242159843445,
+        0.3710669279098511
+      ],
+      "max_abs_difference": 0.000246196985244751,
+      "mean_difference": -4.8123300075531006e-05
+    },
+    "mse": {
+      "expected_per_plane": [
+        0.08947984129190445,
+        0.08805814385414124,
+        0.08207198977470398,
+        0.07992337644100189
+      ],
+      "cpu_per_plane": [
+        0.08958667516708374,
+        0.08812520653009415,
+        0.08210646361112595,
+        0.07988078892230988
+      ],
+      "max_abs_difference": 0.00010683387517929077,
+      "mean_difference": 4.1445717215538025e-05
+    }
+  },
+  "status": "PASS"
+}

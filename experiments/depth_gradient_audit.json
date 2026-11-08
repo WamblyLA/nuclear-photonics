@@ -1,0 +1,1412 @@
+{
+  "schema_version": 1,
+  "scope": "Read-only CPU diagnostics of saved research checkpoints; not new training, a held-out test, or a final model choice.",
+  "test_used": false,
+  "reserve_used": false,
+  "phase_optimization": false,
+  "parameter_optimization": false,
+  "protocol": "fresnel_png_v2_peak",
+  "device": "cpu",
+  "threads": 2,
+  "evaluation_precision": "float32 network, physics and metrics; phase/reconstruction uint8 quantization in memory for diagnostic scores; continuous unquantized phase/reconstruction for gradients",
+  "selection_manifest": {
+    "namespace": "official_training_files_validation_rows",
+    "data_seed": 42,
+    "dataset_order": [
+      "CIFAR10",
+      "MNIST",
+      "FashionMNIST"
+    ],
+    "quartets_per_group": 4,
+    "total_quartets": 16,
+    "records": {
+      "CIFAR10": [
+        [
+          [
+            0,
+            32098
+          ],
+          [
+            0,
+            33460
+          ],
+          [
+            0,
+            36253
+          ],
+          [
+            0,
+            23920
+          ]
+        ],
+        [
+          [
+            0,
+            13403
+          ],
+          [
+            0,
+            15006
+          ],
+          [
+            0,
+            15785
+          ],
+          [
+            0,
+            47358
+          ]
+        ],
+        [
+          [
+            0,
+            42038
+          ],
+          [
+            0,
+            37497
+          ],
+          [
+            0,
+            44892
+          ],
+          [
+            0,
+            44227
+          ]
+        ],
+        [
+          [
+            0,
+            30988
+          ],
+          [
+            0,
+            29580
+          ],
+          [
+            0,
+            3172
+          ],
+          [
+            0,
+            40964
+          ]
+        ]
+      ],
+      "MNIST": [
+        [
+          [
+            1,
+            47704
+          ],
+          [
+            1,
+            46819
+          ],
+          [
+            1,
+            33439
+          ],
+          [
+            1,
+            28199
+          ]
+        ],
+        [
+          [
+            1,
+            32828
+          ],
+          [
+            1,
+            19499
+          ],
+          [
+            1,
+            43077
+          ],
+          [
+            1,
+            59082
+          ]
+        ],
+        [
+          [
+            1,
+            6753
+          ],
+          [
+            1,
+            37506
+          ],
+          [
+            1,
+            884
+          ],
+          [
+            1,
+            54203
+          ]
+        ],
+        [
+          [
+            1,
+            36816
+          ],
+          [
+            1,
+            49525
+          ],
+          [
+            1,
+            15443
+          ],
+          [
+            1,
+            1803
+          ]
+        ]
+      ],
+      "FashionMNIST": [
+        [
+          [
+            2,
+            20787
+          ],
+          [
+            2,
+            36832
+          ],
+          [
+            2,
+            40717
+          ],
+          [
+            2,
+            8201
+          ]
+        ],
+        [
+          [
+            2,
+            56017
+          ],
+          [
+            2,
+            55448
+          ],
+          [
+            2,
+            21580
+          ],
+          [
+            2,
+            19123
+          ]
+        ],
+        [
+          [
+            2,
+            39480
+          ],
+          [
+            2,
+            59204
+          ],
+          [
+            2,
+            51848
+          ],
+          [
+            2,
+            59116
+          ]
+        ],
+        [
+          [
+            2,
+            30480
+          ],
+          [
+            2,
+            28346
+          ],
+          [
+            2,
+            19760
+          ],
+          [
+            2,
+            9571
+          ]
+        ]
+      ],
+      "mixed": [
+        [
+          [
+            0,
+            41985
+          ],
+          [
+            2,
+            47258
+          ],
+          [
+            0,
+            7239
+          ],
+          [
+            2,
+            15029
+          ]
+        ],
+        [
+          [
+            1,
+            41360
+          ],
+          [
+            0,
+            30667
+          ],
+          [
+            1,
+            7516
+          ],
+          [
+            2,
+            55927
+          ]
+        ],
+        [
+          [
+            1,
+            3359
+          ],
+          [
+            1,
+            58575
+          ],
+          [
+            0,
+            4123
+          ],
+          [
+            1,
+            41607
+          ]
+        ],
+        [
+          [
+            1,
+            54728
+          ],
+          [
+            0,
+            39596
+          ],
+          [
+            1,
+            54579
+          ],
+          [
+            1,
+            24580
+          ]
+        ]
+      ]
+    },
+    "canonical_sha256": "6d3ae6eeedad330e258992075d61f0a0705a6fb74588730df22c177862e7017d",
+    "hash_definition": "Sorted-key compact JSON, UTF-8; row and plane order retained",
+    "full_selection_manifest": {
+      "path": "outputs/r49_peak_complex_guard_continue/validation_tuples.json",
+      "sha256": "ce3c032e4ca3470815f052a929b5e03fbb5c8b1e6d5f4408eaeb00ead1e0d432"
+    }
+  },
+  "source_artifacts": [
+    {
+      "path": "outputs/architecture_bottleneck_audit/results.json",
+      "sha256": "afd0be53736cf80c113dfc53f7b9c33f1228d1a57ff2e2390f7578f40411e528",
+      "included_in_public_copy": false
+    },
+    {
+      "path": "outputs/architecture_bottleneck_audit/gradient_controls.json",
+      "sha256": "00db37c8031f1f8ad5ec0f199d15a5964034cc589ea7f95205a09be875e65da4",
+      "included_in_public_copy": false
+    },
+    {
+      "path": "outputs/architecture_bottleneck_audit/edge_gradients.json",
+      "sha256": "c52df65349c4cf3b1f70b38069e422d2b3b3ff2a944cd639faf28a59ef92a975",
+      "included_in_public_copy": false
+    },
+    {
+      "path": "outputs/architecture_bottleneck_audit/analysis.py",
+      "sha256": "94e4ca141365bfe219d58d3f89e0fd55bf5df97128b8e668a23767ab03f8b442",
+      "included_in_public_copy": false
+    },
+    {
+      "path": "outputs/architecture_bottleneck_audit/gradient_controls.py",
+      "sha256": "d49895038ea69be82427c9c2f8ab4b291cd8d0684409ec537b0886161415818c",
+      "included_in_public_copy": false
+    },
+    {
+      "path": "outputs/architecture_bottleneck_audit/edge_gradients.py",
+      "sha256": "163a4d3ad77f2f9bd3365bd5f94f7e8765388c194e40499cfe7c19853de28e3b",
+      "included_in_public_copy": false
+    },
+    {
+      "path": "outputs/architecture_bottleneck_audit/notes.md",
+      "sha256": "cbc176a3d28eaf533dc1e0d3b6ae909c452185a19fc8fe0c565ec44c8abab8a1",
+      "included_in_public_copy": false
+    }
+  ],
+  "r49_training_source_sha256": {
+    "src/amplitude_losses.py": "7ecaed1fe9d68310a58a438a2938f4ffddd41ad800f54d1f94a8d39b1be57831",
+    "src/data.py": "d3c58533a7f164d0af7eaa1857628314380e4f2368f825d6d73ed187a9b4b605",
+    "src/losses.py": "8328a18292498d970dab739fba4126de9503aa8667d95439cb54a2680da69175",
+    "src/metrics.py": "70a0e4df536c79b5c0b9fb7bfb2595d47c51e63b244dfeda1a5f0723a7d96798",
+    "src/models/complex_decoder.py": "29478a477a7f6b44a3badb46f23eadbf44b93a2bac5386dbd643cfd383d04196",
+    "src/models/transport.py": "91dfcaa28085f0d305f8f21268f208d9f6cc544cc4781ffe490fe6d323e9e12e",
+    "src/physics/fresnel.py": "c7bfa47bd89af6ec167b72b27b3cdfeb6745f60738bd802feeb2ee921e561326",
+    "src/protocol.py": "1e7f2f8f52b3067c1c2e21af4a3794a1e4e51adb955aa92b23b8f57c88576e75",
+    "src/shape_losses.py": "c93b8f5436bfc0641a0eb72a7d5e1aa9dbc829a460cc27b8d231698818f5b85d"
+  },
+  "source_snapshot_note": "These are the R49 training snapshot hashes. Temporary audit scripts are identified by their own hashes; neither scripts nor weights are copied into this public summary.",
+  "definitions": {
+    "guarded_base": "mean((R-T)^2) + mean(1-SSIM(R,T)) + 0.5*mean(1-Pearson(R,T)) + 2*balanced_pixel_mse(R,T) + 0.1*excess_concentration_loss(A,T); R=A/max(A), target T uses own peak normalization",
+    "balanced_mse": "Per-image equal weighting of foreground (T>0.1) and background pixel MSE; absent classes are omitted without halving the other class",
+    "concentration": "Squared positive excess of log(L8(A)/RMS(A)) over target log(L8(T)/RMS(T)); zero targets omitted",
+    "ranking": "Mean positive part of margin*(1-corr(T_i,T_j))-corr(R_i,T_i)+corr(R_i,T_j), i!=j, margin=0.2; undefined target correlations omitted",
+    "contrast_peak": "mean(((R-mean_planes(R))-(T-mean_planes(T)))^2)",
+    "pair_difference_direction": "Mean 1-cos(R_i-R_j,T_i-T_j) over six unordered pairs; target detached; per-pair norm floor1e-6; undefined zero target differences omitted",
+    "rms_pair_difference_direction": "Previous direction loss after independently dividing each raw amplitude and target by its own RMS, floor1e-6",
+    "highpass_depth_rms": "Normalize each raw amplitude/target by own RMS (floor1e-6), subtract per-pixel four-plane mean, apply H(X)=X-avgpool5(X) with valid pixel counts at boundaries, then mean squared difference",
+    "sobel": "Signed x/y amplitude derivatives with normalized 3x3 Sobel kernels, reflect padding",
+    "parameter_gradient_ratio": "Euclidean norm of additional-loss gradient / norm of guarded-base gradient with respect to all common trainable parameters, before clipping and AdamW",
+    "phase_gradient_ratio": "Same norm ratio with respect to continuous output phase; this need not match parameter-gradient ratios",
+    "mixture": "First weight and sum group gradient vectors; then compute norm/cosine. 0.5: homogeneous groups1/6 each, independent mixed1/2. 0.75: four groups1/4 each.",
+    "scaled_weights": "Rank3/rank5/highpass5 rows are exact linear scaling of measured gradients at frozen weights, not separately trained trials",
+    "pair_difference_pearson": "Pearson of reconstructed and target image differences for each of six unordered plane pairs, averaged over valid pairs",
+    "depth_variation_rms_ratio": "RMS(R-mean_planes(R))/RMS(T-mean_planes(T)) across the diagnostic sample",
+    "correct_minus_wrong": "Mean diagonal reconstruction-target Pearson minus mean off-diagonal Pearson within each quartet"
+  },
+  "models_diagnostic_scores": [
+    {
+      "run": "r34_peak_full_spectral_bias",
+      "checkpoint": "best.pt",
+      "checkpoint_sha256": "6543343b7c57f7b29f6c881248c4111609a303b28996c23aeaf4198c83037227",
+      "step": 5000,
+      "config": {
+        "model": "full_spectral_bias",
+        "width": 16,
+        "phase_head": "circular",
+        "protocol": "fresnel_png_v2_peak",
+        "steps": 5000,
+        "resume": "",
+        "balanced_weight": null,
+        "concentration_weight": null,
+        "rank_weight": 0.0
+      },
+      "aggregate": {
+        "ssim": 0.2594705820083618,
+        "pearson": 0.5111276507377625,
+        "correct_minus_wrong_mean": 0.03688734769821167,
+        "correct_is_top1_fraction": 0.375,
+        "pair_difference_pearson": 0.09185090661048889,
+        "invalid_pair_correlations": 0,
+        "depth_variation_rms_ratio": 0.2883204519748688
+      },
+      "groups": {
+        "CIFAR10": {
+          "ssim": 0.46693724393844604,
+          "pearson": 0.32656407356262207,
+          "correct_minus_wrong_mean": 0.022675544023513794,
+          "correct_is_top1_fraction": 0.375,
+          "pair_difference_pearson": 0.0499323271214962,
+          "invalid_pair_correlations": 0,
+          "depth_variation_rms_ratio": 0.3708503544330597,
+          "phase_coherence_after_target_cycle": 0.6750168204307556,
+          "cycled_target_pearson": 0.3664132058620453,
+          "cycled_prediction_old_target_pearson": 0.28616759181022644
+        },
+        "MNIST": {
+          "ssim": 0.08892080187797546,
+          "pearson": 0.6044769287109375,
+          "correct_minus_wrong_mean": 0.04662215709686279,
+          "correct_is_top1_fraction": 0.4375,
+          "pair_difference_pearson": 0.09633473306894302,
+          "invalid_pair_correlations": 0,
+          "depth_variation_rms_ratio": 0.23742364346981049,
+          "phase_coherence_after_target_cycle": 0.8606672286987305,
+          "cycled_target_pearson": 0.6017376184463501,
+          "cycled_prediction_old_target_pearson": 0.555849552154541
+        },
+        "FashionMNIST": {
+          "ssim": 0.24858123064041138,
+          "pearson": 0.6508897542953491,
+          "correct_minus_wrong_mean": 0.047665417194366455,
+          "correct_is_top1_fraction": 0.3125,
+          "pair_difference_pearson": 0.13509981334209442,
+          "invalid_pair_correlations": 0,
+          "depth_variation_rms_ratio": 0.32900986075401306,
+          "phase_coherence_after_target_cycle": 0.8172272443771362,
+          "cycled_target_pearson": 0.6436045169830322,
+          "cycled_prediction_old_target_pearson": 0.6219978332519531
+        },
+        "mixed": {
+          "ssim": 0.233443021774292,
+          "pearson": 0.46257996559143066,
+          "correct_minus_wrong_mean": 0.03058639168739319,
+          "correct_is_top1_fraction": 0.375,
+          "pair_difference_pearson": 0.08603673428297043,
+          "invalid_pair_correlations": 0,
+          "depth_variation_rms_ratio": 0.2158762365579605,
+          "phase_coherence_after_target_cycle": 0.6970192193984985,
+          "cycled_target_pearson": 0.4764382243156433,
+          "cycled_prediction_old_target_pearson": 0.4164801239967346
+        }
+      },
+      "spectral_gains": {
+        "base_generator.full_encoder1.spectral_gain": 0.0352228507399559,
+        "base_generator.full_encoder2.spectral_gain": 0.149299755692482,
+        "base_generator.full_encoder3.spectral_gain": 0.18574152886867523,
+        "base_generator.full_bottleneck.spectral_gain": 0.22135226428508759,
+        "base_generator.full_decoder3.spectral_gain": 0.23964817821979523,
+        "base_generator.full_decoder2.spectral_gain": 0.09492260962724686,
+        "base_generator.full_decoder1.spectral_gain": 0.001464230241253972
+      },
+      "head_conditioning_first_one_quartet_per_group": {
+        "radius_quantiles": [
+          0.018207916989922523,
+          0.025890756398439407,
+          0.15755613148212433,
+          0.45109203457832336,
+          0.5521567463874817
+        ],
+        "near_origin_fraction": 0.0,
+        "head_jacobian_norm_median": 6.346902370452881
+      }
+    },
+    {
+      "run": "r46_peak_transport_complex_guard",
+      "checkpoint": "best.pt",
+      "checkpoint_sha256": "df7e9900503e4afb6374097e09e86ba3bbbfb6adbe734a2d426756f1b0ea0ed9",
+      "step": 5000,
+      "config": {
+        "model": "transport_complex",
+        "width": 16,
+        "phase_head": "circular",
+        "protocol": "fresnel_png_v2_peak",
+        "steps": 5000,
+        "resume": "",
+        "balanced_weight": 2.0,
+        "concentration_weight": 0.1,
+        "rank_weight": 0.0
+      },
+      "aggregate": {
+        "ssim": 0.2749141454696655,
+        "pearson": 0.5242853760719299,
+        "correct_minus_wrong_mean": 0.03675287961959839,
+        "correct_is_top1_fraction": 0.296875,
+        "pair_difference_pearson": 0.11761059612035751,
+        "invalid_pair_correlations": 0,
+        "depth_variation_rms_ratio": 0.2998409569263458
+      },
+      "groups": {
+        "CIFAR10": {
+          "ssim": 0.4553017318248749,
+          "pearson": 0.323045015335083,
+          "correct_minus_wrong_mean": 0.025474101305007935,
+          "correct_is_top1_fraction": 0.3125,
+          "pair_difference_pearson": 0.069993756711483,
+          "invalid_pair_correlations": 0,
+          "depth_variation_rms_ratio": 0.40264809131622314,
+          "phase_coherence_after_target_cycle": 0.8894656896591187,
+          "cycled_target_pearson": 0.3494791090488434,
+          "cycled_prediction_old_target_pearson": 0.2849341630935669
+        },
+        "MNIST": {
+          "ssim": 0.18927738070487976,
+          "pearson": 0.6437466144561768,
+          "correct_minus_wrong_mean": 0.04628986120223999,
+          "correct_is_top1_fraction": 0.25,
+          "pair_difference_pearson": 0.12834620475769043,
+          "invalid_pair_correlations": 0,
+          "depth_variation_rms_ratio": 0.3271406888961792,
+          "phase_coherence_after_target_cycle": 0.5915486812591553,
+          "cycled_target_pearson": 0.6402420401573181,
+          "cycled_prediction_old_target_pearson": 0.6033636331558228
+        },
+        "FashionMNIST": {
+          "ssim": 0.22882965207099915,
+          "pearson": 0.663999080657959,
+          "correct_minus_wrong_mean": 0.038009464740753174,
+          "correct_is_top1_fraction": 0.3125,
+          "pair_difference_pearson": 0.17249691486358643,
+          "invalid_pair_correlations": 0,
+          "depth_variation_rms_ratio": 0.26870429515838623,
+          "phase_coherence_after_target_cycle": 0.674798846244812,
+          "cycled_target_pearson": 0.6575234532356262,
+          "cycled_prediction_old_target_pearson": 0.6378681659698486
+        },
+        "mixed": {
+          "ssim": 0.22624802589416504,
+          "pearson": 0.4663510024547577,
+          "correct_minus_wrong_mean": 0.03723856806755066,
+          "correct_is_top1_fraction": 0.3125,
+          "pair_difference_pearson": 0.09960546344518661,
+          "invalid_pair_correlations": 0,
+          "depth_variation_rms_ratio": 0.23708561062812805,
+          "phase_coherence_after_target_cycle": 0.6308226585388184,
+          "cycled_target_pearson": 0.47791507840156555,
+          "cycled_prediction_old_target_pearson": 0.4224727749824524
+        }
+      },
+      "spectral_gains": {},
+      "head_conditioning_first_one_quartet_per_group": {
+        "radius_quantiles": [
+          0.0015968349762260914,
+          0.2812488377094269,
+          1.7025372982025146,
+          2.8539657592773438,
+          3.884079933166504
+        ],
+        "near_origin_fraction": 0.0,
+        "head_jacobian_norm_median": 0.5873540639877319
+      }
+    },
+    {
+      "run": "r49_peak_complex_guard_continue",
+      "checkpoint": "best.pt",
+      "checkpoint_sha256": "79a53b222d679f5ba51f1e087611483833c7206f85cd6566d53a2b63d5677311",
+      "step": 4000,
+      "config": {
+        "model": "transport_complex",
+        "width": 16,
+        "phase_head": "circular",
+        "protocol": "fresnel_png_v2_peak",
+        "steps": 5000,
+        "resume": "outputs/r46_peak_transport_complex_guard/best.pt",
+        "balanced_weight": 2.0,
+        "concentration_weight": 0.1,
+        "rank_weight": 0.0
+      },
+      "aggregate": {
+        "ssim": 0.2843039035797119,
+        "pearson": 0.5301988124847412,
+        "correct_minus_wrong_mean": 0.033453941345214844,
+        "correct_is_top1_fraction": 0.296875,
+        "pair_difference_pearson": 0.11432411521673203,
+        "invalid_pair_correlations": 0,
+        "depth_variation_rms_ratio": 0.27102425694465637
+      },
+      "groups": {
+        "CIFAR10": {
+          "ssim": 0.4638976454734802,
+          "pearson": 0.32082200050354004,
+          "correct_minus_wrong_mean": 0.015285134315490723,
+          "correct_is_top1_fraction": 0.25,
+          "pair_difference_pearson": 0.04448746144771576,
+          "invalid_pair_correlations": 0,
+          "depth_variation_rms_ratio": 0.32845044136047363,
+          "phase_coherence_after_target_cycle": 0.8400094509124756,
+          "cycled_target_pearson": 0.35701969265937805,
+          "cycled_prediction_old_target_pearson": 0.2860925793647766
+        },
+        "MNIST": {
+          "ssim": 0.20922082662582397,
+          "pearson": 0.6478172540664673,
+          "correct_minus_wrong_mean": 0.049735963344573975,
+          "correct_is_top1_fraction": 0.3125,
+          "pair_difference_pearson": 0.14254377782344818,
+          "invalid_pair_correlations": 0,
+          "depth_variation_rms_ratio": 0.2974887490272522,
+          "phase_coherence_after_target_cycle": 0.5566487908363342,
+          "cycled_target_pearson": 0.6397560834884644,
+          "cycled_prediction_old_target_pearson": 0.6104575395584106
+        },
+        "FashionMNIST": {
+          "ssim": 0.23709338903427124,
+          "pearson": 0.6747222542762756,
+          "correct_minus_wrong_mean": 0.03162872791290283,
+          "correct_is_top1_fraction": 0.3125,
+          "pair_difference_pearson": 0.163664773106575,
+          "invalid_pair_correlations": 0,
+          "depth_variation_rms_ratio": 0.26339593529701233,
+          "phase_coherence_after_target_cycle": 0.5159997940063477,
+          "cycled_target_pearson": 0.6691896319389343,
+          "cycled_prediction_old_target_pearson": 0.6477022767066956
+        },
+        "mixed": {
+          "ssim": 0.22700390219688416,
+          "pearson": 0.47743356227874756,
+          "correct_minus_wrong_mean": 0.03716585040092468,
+          "correct_is_top1_fraction": 0.3125,
+          "pair_difference_pearson": 0.10660040378570557,
+          "invalid_pair_correlations": 0,
+          "depth_variation_rms_ratio": 0.2239074409008026,
+          "phase_coherence_after_target_cycle": 0.5454961061477661,
+          "cycled_target_pearson": 0.4831599295139313,
+          "cycled_prediction_old_target_pearson": 0.43408405780792236
+        }
+      },
+      "spectral_gains": {},
+      "head_conditioning_first_one_quartet_per_group": {
+        "radius_quantiles": [
+          0.012224655598402023,
+          0.5090500712394714,
+          1.6805534362792969,
+          3.001835346221924,
+          4.3532867431640625
+        ],
+        "near_origin_fraction": 0.0,
+        "head_jacobian_norm_median": 0.5950414538383484
+      }
+    },
+    {
+      "run": "r52_long_full_spectral_guard",
+      "checkpoint": "best.pt",
+      "checkpoint_sha256": "934250acdc4bc351b903f3c58ab7160a9fbbba9125b1895ad67ffa35ee2fda0c",
+      "step": 7000,
+      "config": {
+        "model": "full_spectral_bias",
+        "width": 16,
+        "phase_head": "circular",
+        "protocol": "fresnel_png_v2_peak",
+        "steps": 30000,
+        "resume": "",
+        "balanced_weight": 2.0,
+        "concentration_weight": 0.1,
+        "rank_weight": 0.1
+      },
+      "aggregate": {
+        "ssim": 0.31501704454421997,
+        "pearson": 0.45796141028404236,
+        "correct_minus_wrong_mean": 0.023447394371032715,
+        "correct_is_top1_fraction": 0.296875,
+        "pair_difference_pearson": 0.06942705065011978,
+        "invalid_pair_correlations": 0,
+        "depth_variation_rms_ratio": 0.3288859724998474
+      },
+      "groups": {
+        "CIFAR10": {
+          "ssim": 0.46966737508773804,
+          "pearson": 0.33762288093566895,
+          "correct_minus_wrong_mean": 0.017370611429214478,
+          "correct_is_top1_fraction": 0.3125,
+          "pair_difference_pearson": 0.04247114062309265,
+          "invalid_pair_correlations": 0,
+          "depth_variation_rms_ratio": 0.30915799736976624,
+          "phase_coherence_after_target_cycle": 0.6733203530311584,
+          "cycled_target_pearson": 0.380140483379364,
+          "cycled_prediction_old_target_pearson": 0.3036857843399048
+        },
+        "MNIST": {
+          "ssim": 0.2737671434879303,
+          "pearson": 0.4854808747768402,
+          "correct_minus_wrong_mean": 0.016852229833602905,
+          "correct_is_top1_fraction": 0.3125,
+          "pair_difference_pearson": 0.03049982525408268,
+          "invalid_pair_correlations": 0,
+          "depth_variation_rms_ratio": 0.4028662145137787,
+          "phase_coherence_after_target_cycle": 0.9236676692962646,
+          "cycled_target_pearson": 0.48881447315216064,
+          "cycled_prediction_old_target_pearson": 0.47087639570236206
+        },
+        "FashionMNIST": {
+          "ssim": 0.26072385907173157,
+          "pearson": 0.6097400188446045,
+          "correct_minus_wrong_mean": 0.045730412006378174,
+          "correct_is_top1_fraction": 0.25,
+          "pair_difference_pearson": 0.14724062383174896,
+          "invalid_pair_correlations": 0,
+          "depth_variation_rms_ratio": 0.35451674461364746,
+          "phase_coherence_after_target_cycle": 0.849817156791687,
+          "cycled_target_pearson": 0.5916787385940552,
+          "cycled_prediction_old_target_pearson": 0.5869868993759155
+        },
+        "mixed": {
+          "ssim": 0.25590988993644714,
+          "pearson": 0.3990018963813782,
+          "correct_minus_wrong_mean": 0.013836532831192017,
+          "correct_is_top1_fraction": 0.3125,
+          "pair_difference_pearson": 0.05749664828181267,
+          "invalid_pair_correlations": 0,
+          "depth_variation_rms_ratio": 0.2682279050350189,
+          "phase_coherence_after_target_cycle": 0.7782086730003357,
+          "cycled_target_pearson": 0.41890716552734375,
+          "cycled_prediction_old_target_pearson": 0.37368640303611755
+        }
+      },
+      "spectral_gains": {
+        "base_generator.full_encoder1.spectral_gain": 0.032368481159210205,
+        "base_generator.full_encoder2.spectral_gain": 0.14874501526355743,
+        "base_generator.full_encoder3.spectral_gain": 0.2211262434720993,
+        "base_generator.full_bottleneck.spectral_gain": 0.2497672140598297,
+        "base_generator.full_decoder3.spectral_gain": 0.2540651261806488,
+        "base_generator.full_decoder2.spectral_gain": 0.09596686065196991,
+        "base_generator.full_decoder1.spectral_gain": 0.001400258974172175
+      },
+      "head_conditioning_first_one_quartet_per_group": {
+        "radius_quantiles": [
+          0.012867184355854988,
+          0.05701135843992233,
+          0.29391151666641235,
+          0.9279106855392456,
+          1.3096890449523926
+        ],
+        "near_origin_fraction": 0.0,
+        "head_jacobian_norm_median": 3.402369976043701
+      }
+    },
+    {
+      "run": "r52_long_full_spectral_guard",
+      "checkpoint": "best_pearson.pt",
+      "checkpoint_sha256": "fdc54070151cd18050ecb3bae0e9dc52b064e95464199f0936fb2413a436d4b3",
+      "step": 16000,
+      "config": {
+        "model": "full_spectral_bias",
+        "width": 16,
+        "phase_head": "circular",
+        "protocol": "fresnel_png_v2_peak",
+        "steps": 30000,
+        "resume": "",
+        "balanced_weight": 2.0,
+        "concentration_weight": 0.1,
+        "rank_weight": 0.1
+      },
+      "aggregate": {
+        "ssim": 0.2662278115749359,
+        "pearson": 0.5432418584823608,
+        "correct_minus_wrong_mean": 0.040890276432037354,
+        "correct_is_top1_fraction": 0.375,
+        "pair_difference_pearson": 0.12511977553367615,
+        "invalid_pair_correlations": 0,
+        "depth_variation_rms_ratio": 0.27917879819869995
+      },
+      "groups": {
+        "CIFAR10": {
+          "ssim": 0.47408172488212585,
+          "pearson": 0.3682902157306671,
+          "correct_minus_wrong_mean": 0.029605180025100708,
+          "correct_is_top1_fraction": 0.375,
+          "pair_difference_pearson": 0.06788481026887894,
+          "invalid_pair_correlations": 0,
+          "depth_variation_rms_ratio": 0.3296119272708893,
+          "phase_coherence_after_target_cycle": 0.35133975744247437,
+          "cycled_target_pearson": 0.41254985332489014,
+          "cycled_prediction_old_target_pearson": 0.3325192332267761
+        },
+        "MNIST": {
+          "ssim": 0.10655795782804489,
+          "pearson": 0.6350886225700378,
+          "correct_minus_wrong_mean": 0.05712556838989258,
+          "correct_is_top1_fraction": 0.3125,
+          "pair_difference_pearson": 0.15462733805179596,
+          "invalid_pair_correlations": 0,
+          "depth_variation_rms_ratio": 0.3155499994754791,
+          "phase_coherence_after_target_cycle": 0.6859103441238403,
+          "cycled_target_pearson": 0.6288542747497559,
+          "cycled_prediction_old_target_pearson": 0.5784186124801636
+        },
+        "FashionMNIST": {
+          "ssim": 0.2513028383255005,
+          "pearson": 0.6752377152442932,
+          "correct_minus_wrong_mean": 0.040482401847839355,
+          "correct_is_top1_fraction": 0.4375,
+          "pair_difference_pearson": 0.17200426757335663,
+          "invalid_pair_correlations": 0,
+          "depth_variation_rms_ratio": 0.2863217294216156,
+          "phase_coherence_after_target_cycle": 0.5412605404853821,
+          "cycled_target_pearson": 0.6717989444732666,
+          "cycled_prediction_old_target_pearson": 0.6557461023330688
+        },
+        "mixed": {
+          "ssim": 0.23296864330768585,
+          "pearson": 0.49435073137283325,
+          "correct_minus_wrong_mean": 0.03634771704673767,
+          "correct_is_top1_fraction": 0.375,
+          "pair_difference_pearson": 0.10596267133951187,
+          "invalid_pair_correlations": 0,
+          "depth_variation_rms_ratio": 0.21546874940395355,
+          "phase_coherence_after_target_cycle": 0.4027554988861084,
+          "cycled_target_pearson": 0.5112133026123047,
+          "cycled_prediction_old_target_pearson": 0.4492003917694092
+        }
+      },
+      "spectral_gains": {
+        "base_generator.full_encoder1.spectral_gain": 0.058801840990781784,
+        "base_generator.full_encoder2.spectral_gain": 0.15933175384998322,
+        "base_generator.full_encoder3.spectral_gain": 0.23210987448692322,
+        "base_generator.full_bottleneck.spectral_gain": 0.31264448165893555,
+        "base_generator.full_decoder3.spectral_gain": 0.3123660087585449,
+        "base_generator.full_decoder2.spectral_gain": 0.04024839401245117,
+        "base_generator.full_decoder1.spectral_gain": 0.0013209976023063064
+      },
+      "head_conditioning_first_one_quartet_per_group": {
+        "radius_quantiles": [
+          0.004995387047529221,
+          0.01709512621164322,
+          0.13724151253700256,
+          0.6401106119155884,
+          0.7874941825866699
+        ],
+        "near_origin_fraction": 0.0,
+        "head_jacobian_norm_median": 7.286377429962158
+      }
+    }
+  ],
+  "r49_phase_gradients_by_group": {
+    "CIFAR10": {
+      "mse": {
+        "weighted_loss": 0.0597747340798378,
+        "phase_gradient_norm": 0.008957279846072197,
+        "norm_ratio_to_guarded_base": 0.22115284204483032,
+        "cosine_with_guarded_base": 0.5478291511535645
+      },
+      "ssim": {
+        "weighted_loss": 0.534747302532196,
+        "phase_gradient_norm": 0.01258524227887392,
+        "norm_ratio_to_guarded_base": 0.31072625517845154,
+        "cosine_with_guarded_base": 0.7202844023704529
+      },
+      "pearson_x0.5": {
+        "weighted_loss": 0.33953535556793213,
+        "phase_gradient_norm": 0.0009366851300001144,
+        "norm_ratio_to_guarded_base": 0.023126505315303802,
+        "cosine_with_guarded_base": 0.03464369848370552
+      },
+      "balanced_x2": {
+        "weighted_loss": 0.1615770012140274,
+        "phase_gradient_norm": 0.027913952246308327,
+        "norm_ratio_to_guarded_base": 0.6891880035400391,
+        "cosine_with_guarded_base": 0.9492878913879395
+      },
+      "concentration_x0.1": {
+        "weighted_loss": 4.875871309195645e-05,
+        "phase_gradient_norm": 8.05431409389712e-06,
+        "norm_ratio_to_guarded_base": 0.00019885886285919696,
+        "cosine_with_guarded_base": -0.021510787308216095
+      },
+      "ranking_x0.1": {
+        "weighted_loss": 0.021131612360477448,
+        "phase_gradient_norm": 0.0002564291935414076,
+        "norm_ratio_to_guarded_base": 0.006331168115139008,
+        "cosine_with_guarded_base": 0.00029548461316153407
+      },
+      "pair_difference_direction_x0.1": {
+        "weighted_loss": 0.09717633575201035,
+        "phase_gradient_norm": 0.017727060243487358,
+        "norm_ratio_to_guarded_base": 0.4376763701438904,
+        "cosine_with_guarded_base": 0.49438729882240295
+      },
+      "plane_contrast_mse_x1": {
+        "weighted_loss": 0.049049261957407,
+        "phase_gradient_norm": 0.008141507394611835,
+        "norm_ratio_to_guarded_base": 0.20101162791252136,
+        "cosine_with_guarded_base": 0.7684001326560974
+      },
+      "rms_pair_difference_direction_x0.1": {
+        "weighted_loss": 0.09806075692176819,
+        "phase_gradient_norm": 0.00041235607932321727,
+        "norm_ratio_to_guarded_base": 0.010180961340665817,
+        "cosine_with_guarded_base": 0.003978348802775145
+      }
+    },
+    "MNIST": {
+      "mse": {
+        "weighted_loss": 0.04826667904853821,
+        "phase_gradient_norm": 0.0013720440911129117,
+        "norm_ratio_to_guarded_base": 0.12988997995853424,
+        "cosine_with_guarded_base": 0.2867856025695801
+      },
+      "ssim": {
+        "weighted_loss": 0.7896720767021179,
+        "phase_gradient_norm": 0.010931638069450855,
+        "norm_ratio_to_guarded_base": 1.0348867177963257,
+        "cosine_with_guarded_base": 0.9078214168548584
+      },
+      "pearson_x0.5": {
+        "weighted_loss": 0.17608070373535156,
+        "phase_gradient_norm": 0.00020782259525731206,
+        "norm_ratio_to_guarded_base": 0.01967434771358967,
+        "cosine_with_guarded_base": -0.037608552724123
+      },
+      "balanced_x2": {
+        "weighted_loss": 0.15630866587162018,
+        "phase_gradient_norm": 0.004456204362213612,
+        "norm_ratio_to_guarded_base": 0.42186421155929565,
+        "cosine_with_guarded_base": 0.056809380650520325
+      },
+      "concentration_x0.1": {
+        "weighted_loss": 7.483281024178723e-06,
+        "phase_gradient_norm": 8.187073035514913e-06,
+        "norm_ratio_to_guarded_base": 0.0007750616641715169,
+        "cosine_with_guarded_base": 0.041370902210474014
+      },
+      "ranking_x0.1": {
+        "weighted_loss": 0.011383027769625187,
+        "phase_gradient_norm": 5.7755263696890324e-05,
+        "norm_ratio_to_guarded_base": 0.005467630457133055,
+        "cosine_with_guarded_base": -0.0021528841461986303
+      },
+      "pair_difference_direction_x0.1": {
+        "weighted_loss": 0.08592501282691956,
+        "phase_gradient_norm": 0.0025191938038915396,
+        "norm_ratio_to_guarded_base": 0.23848944902420044,
+        "cosine_with_guarded_base": 0.2659797668457031
+      },
+      "plane_contrast_mse_x1": {
+        "weighted_loss": 0.04333866015076637,
+        "phase_gradient_norm": 0.0009617718169465661,
+        "norm_ratio_to_guarded_base": 0.0910499319434166,
+        "cosine_with_guarded_base": 0.28058555722236633
+      },
+      "rms_pair_difference_direction_x0.1": {
+        "weighted_loss": 0.08492834866046906,
+        "phase_gradient_norm": 0.00019233707280363888,
+        "norm_ratio_to_guarded_base": 0.018208349123597145,
+        "cosine_with_guarded_base": 0.00192099844571203
+      }
+    },
+    "FashionMNIST": {
+      "mse": {
+        "weighted_loss": 0.07197831571102142,
+        "phase_gradient_norm": 0.007752205245196819,
+        "norm_ratio_to_guarded_base": 0.37075039744377136,
+        "cosine_with_guarded_base": 0.9107464551925659
+      },
+      "ssim": {
+        "weighted_loss": 0.7623541355133057,
+        "phase_gradient_norm": 0.007069090846925974,
+        "norm_ratio_to_guarded_base": 0.33808034658432007,
+        "cosine_with_guarded_base": 0.43649381399154663
+      },
+      "pearson_x0.5": {
+        "weighted_loss": 0.16262081265449524,
+        "phase_gradient_norm": 0.00035821847268380225,
+        "norm_ratio_to_guarded_base": 0.017131853848695755,
+        "cosine_with_guarded_base": 0.056549448519945145
+      },
+      "balanced_x2": {
+        "weighted_loss": 0.13114997744560242,
+        "phase_gradient_norm": 0.01131555624306202,
+        "norm_ratio_to_guarded_base": 0.541168212890625,
+        "cosine_with_guarded_base": 0.9493256211280823
+      },
+      "concentration_x0.1": {
+        "weighted_loss": 0.0002736760361585766,
+        "phase_gradient_norm": 2.3419506760546938e-05,
+        "norm_ratio_to_guarded_base": 0.0011200414737686515,
+        "cosine_with_guarded_base": 0.05094928294420242
+      },
+      "ranking_x0.1": {
+        "weighted_loss": 0.014379560947418213,
+        "phase_gradient_norm": 0.00010346429917262867,
+        "norm_ratio_to_guarded_base": 0.00494819600135088,
+        "cosine_with_guarded_base": 0.004158668220043182
+      },
+      "pair_difference_direction_x0.1": {
+        "weighted_loss": 0.07811117172241211,
+        "phase_gradient_norm": 0.01610601879656315,
+        "norm_ratio_to_guarded_base": 0.7702727913856506,
+        "cosine_with_guarded_base": 0.858954668045044
+      },
+      "plane_contrast_mse_x1": {
+        "weighted_loss": 0.06481719762086868,
+        "phase_gradient_norm": 0.007059445604681969,
+        "norm_ratio_to_guarded_base": 0.3376190662384033,
+        "cosine_with_guarded_base": 0.8740423321723938
+      },
+      "rms_pair_difference_direction_x0.1": {
+        "weighted_loss": 0.09004411101341248,
+        "phase_gradient_norm": 0.00029473297763615847,
+        "norm_ratio_to_guarded_base": 0.014095650054514408,
+        "cosine_with_guarded_base": 0.023157572373747826
+      }
+    },
+    "mixed": {
+      "mse": {
+        "weighted_loss": 0.09222224354743958,
+        "phase_gradient_norm": 0.009692799299955368,
+        "norm_ratio_to_guarded_base": 0.37451618909835815,
+        "cosine_with_guarded_base": 0.8571659326553345
+      },
+      "ssim": {
+        "weighted_loss": 0.7725827693939209,
+        "phase_gradient_norm": 0.005297042895108461,
+        "norm_ratio_to_guarded_base": 0.20467032492160797,
+        "cosine_with_guarded_base": 0.39940422773361206
+      },
+      "pearson_x0.5": {
+        "weighted_loss": 0.26125216484069824,
+        "phase_gradient_norm": 0.0005008031730540097,
+        "norm_ratio_to_guarded_base": 0.019350333139300346,
+        "cosine_with_guarded_base": 0.04467598721385002
+      },
+      "balanced_x2": {
+        "weighted_loss": 0.18406860530376434,
+        "phase_gradient_norm": 0.016114911064505577,
+        "norm_ratio_to_guarded_base": 0.6226575970649719,
+        "cosine_with_guarded_base": 0.9575687646865845
+      },
+      "concentration_x0.1": {
+        "weighted_loss": 0.0004891202552244067,
+        "phase_gradient_norm": 2.8985134122194722e-05,
+        "norm_ratio_to_guarded_base": 0.001119944965466857,
+        "cosine_with_guarded_base": 0.11795404553413391
+      },
+      "ranking_x0.1": {
+        "weighted_loss": 0.023905999958515167,
+        "phase_gradient_norm": 0.00016248349857050925,
+        "norm_ratio_to_guarded_base": 0.006278134882450104,
+        "cosine_with_guarded_base": 0.01300447154790163
+      },
+      "pair_difference_direction_x0.1": {
+        "weighted_loss": 0.08083885163068771,
+        "phase_gradient_norm": 0.01609775982797146,
+        "norm_ratio_to_guarded_base": 0.6219949126243591,
+        "cosine_with_guarded_base": 0.7088455557823181
+      },
+      "plane_contrast_mse_x1": {
+        "weighted_loss": 0.0796273723244667,
+        "phase_gradient_norm": 0.009203407913446426,
+        "norm_ratio_to_guarded_base": 0.3556067943572998,
+        "cosine_with_guarded_base": 0.8723969459533691
+      },
+      "rms_pair_difference_direction_x0.1": {
+        "weighted_loss": 0.09050238132476807,
+        "phase_gradient_norm": 0.0002306781243532896,
+        "norm_ratio_to_guarded_base": 0.008913080208003521,
+        "cosine_with_guarded_base": 0.011627459898591042
+      }
+    }
+  },
+  "r49_edge_and_parameter_gradients_by_group": {
+    "CIFAR10": {
+      "rank_x1": {
+        "loss": 0.21131612360477448,
+        "phase_gradient_norm": 0.002564291702583432,
+        "norm_ratio_to_guarded_base": 0.06331167370080948,
+        "cosine_with_guarded_base": 0.00029534418717958033,
+        "cosine_with_rank": 1.000001072883606
+      },
+      "contrast_peak_x1": {
+        "loss": 0.049049261957407,
+        "phase_gradient_norm": 0.008141507394611835,
+        "norm_ratio_to_guarded_base": 0.20101162791252136,
+        "cosine_with_guarded_base": 0.7684001326560974,
+        "cosine_with_rank": 0.0048126764595508575
+      },
+      "sobel_peak_x1": {
+        "loss": 0.0005765631794929504,
+        "phase_gradient_norm": 4.938209895044565e-05,
+        "norm_ratio_to_guarded_base": 0.0012192308204248548,
+        "cosine_with_guarded_base": -0.0520540215075016,
+        "cosine_with_rank": -0.04481397569179535
+      },
+      "sobel_rms_x1": {
+        "loss": 0.002099869307130575,
+        "phase_gradient_norm": 4.393930794321932e-05,
+        "norm_ratio_to_guarded_base": 0.0010848497040569782,
+        "cosine_with_guarded_base": 0.05010686442255974,
+        "cosine_with_rank": -0.2637653946876526
+      },
+      "sobel_depth_rms_x1": {
+        "loss": 0.0016436848090961576,
+        "phase_gradient_norm": 3.732335244421847e-05,
+        "norm_ratio_to_guarded_base": 0.0009215035825036466,
+        "cosine_with_guarded_base": 0.05496509000658989,
+        "cosine_with_rank": -0.15041044354438782
+      },
+      "highpass_depth_rms_x1": {
+        "loss": 0.0009733981569297612,
+        "phase_gradient_norm": 8.282499038614333e-05,
+        "norm_ratio_to_guarded_base": 0.0020449268631637096,
+        "cosine_with_guarded_base": 0.056816212832927704,
+        "cosine_with_rank": -0.20146533846855164
+      },
+      "parameter_gradient_audit": {
+        "guarded_base_norm": 2.064178466796875,
+        "components": {
+          "rank_x1": {
+            "norm_ratio_to_guarded_base": 0.47192856669425964,
+            "cosine_with_guarded_base": 0.11068017035722733
+          },
+          "contrast_peak_x1": {
+            "norm_ratio_to_guarded_base": 0.15436404943466187,
+            "cosine_with_guarded_base": 0.7183927297592163
+          },
+          "highpass_depth_rms_x1": {
+            "norm_ratio_to_guarded_base": 0.006478655152022839,
+            "cosine_with_guarded_base": -0.1044749915599823
+          }
+        }
+      }
+    },
+    "MNIST": {
+      "rank_x1": {
+        "loss": 0.11383027583360672,
+        "phase_gradient_norm": 0.0005775525933131576,
+        "norm_ratio_to_guarded_base": 0.054676301777362823,
+        "cosine_with_guarded_base": -0.002152569591999054,
+        "cosine_with_rank": 0.9999995827674866
+      },
+      "contrast_peak_x1": {
+        "loss": 0.04333866015076637,
+        "phase_gradient_norm": 0.0009617718169465661,
+        "norm_ratio_to_guarded_base": 0.0910499319434166,
+        "cosine_with_guarded_base": 0.28058555722236633,
+        "cosine_with_rank": 0.03192292898893356
+      },
+      "sobel_peak_x1": {
+        "loss": 0.0013796489220112562,
+        "phase_gradient_norm": 2.9799311960232444e-05,
+        "norm_ratio_to_guarded_base": 0.0028210696764290333,
+        "cosine_with_guarded_base": 0.15568414330482483,
+        "cosine_with_rank": 0.0013316274853423238
+      },
+      "sobel_rms_x1": {
+        "loss": 0.016642041504383087,
+        "phase_gradient_norm": 0.00013903732178732753,
+        "norm_ratio_to_guarded_base": 0.013162517920136452,
+        "cosine_with_guarded_base": -0.038872119039297104,
+        "cosine_with_rank": -0.05040322244167328
+      },
+      "sobel_depth_rms_x1": {
+        "loss": 0.014063315466046333,
+        "phase_gradient_norm": 0.0001244394516106695,
+        "norm_ratio_to_guarded_base": 0.011780552566051483,
+        "cosine_with_guarded_base": -0.03176722675561905,
+        "cosine_with_rank": 0.05192950740456581
+      },
+      "highpass_depth_rms_x1": {
+        "loss": 0.01130676455795765,
+        "phase_gradient_norm": 0.00029287359211593866,
+        "norm_ratio_to_guarded_base": 0.027726037427783012,
+        "cosine_with_guarded_base": -0.07124295830726624,
+        "cosine_with_rank": -0.04164264351129532
+      },
+      "parameter_gradient_audit": {
+        "guarded_base_norm": 6.011466979980469,
+        "components": {
+          "rank_x1": {
+            "norm_ratio_to_guarded_base": 0.05920787528157234,
+            "cosine_with_guarded_base": 0.12605604529380798
+          },
+          "contrast_peak_x1": {
+            "norm_ratio_to_guarded_base": 0.010115981101989746,
+            "cosine_with_guarded_base": -0.21490918099880219
+          },
+          "highpass_depth_rms_x1": {
+            "norm_ratio_to_guarded_base": 0.01889055222272873,
+            "cosine_with_guarded_base": 0.14458288252353668
+          }
+        }
+      }
+    },
+    "FashionMNIST": {
+      "rank_x1": {
+        "loss": 0.14379560947418213,
+        "phase_gradient_norm": 0.001034642686136067,
+        "norm_ratio_to_guarded_base": 0.049481943249702454,
+        "cosine_with_guarded_base": 0.004158966243267059,
+        "cosine_with_rank": 1.0000014305114746
+      },
+      "contrast_peak_x1": {
+        "loss": 0.06481719762086868,
+        "phase_gradient_norm": 0.007059445604681969,
+        "norm_ratio_to_guarded_base": 0.3376190662384033,
+        "cosine_with_guarded_base": 0.8740423321723938,
+        "cosine_with_rank": 0.002812451682984829
+      },
+      "sobel_peak_x1": {
+        "loss": 0.0012422254076227546,
+        "phase_gradient_norm": 4.8603920731693506e-05,
+        "norm_ratio_to_guarded_base": 0.002324489876627922,
+        "cosine_with_guarded_base": 0.3546999394893646,
+        "cosine_with_rank": 0.014176147989928722
+      },
+      "sobel_rms_x1": {
+        "loss": 0.006981745362281799,
+        "phase_gradient_norm": 8.84259061422199e-05,
+        "norm_ratio_to_guarded_base": 0.004228982608765364,
+        "cosine_with_guarded_base": 0.058024317026138306,
+        "cosine_with_rank": 0.04984873905777931
+      },
+      "sobel_depth_rms_x1": {
+        "loss": 0.005838518030941486,
+        "phase_gradient_norm": 8.387043635593727e-05,
+        "norm_ratio_to_guarded_base": 0.004011116456240416,
+        "cosine_with_guarded_base": 0.05105491355061531,
+        "cosine_with_rank": 0.10073111206293106
+      },
+      "highpass_depth_rms_x1": {
+        "loss": 0.0049440450966358185,
+        "phase_gradient_norm": 0.0001937222114065662,
+        "norm_ratio_to_guarded_base": 0.009264794178307056,
+        "cosine_with_guarded_base": 0.05109432712197304,
+        "cosine_with_rank": 0.017827874049544334
+      },
+      "parameter_gradient_audit": {
+        "guarded_base_norm": 2.044227361679077,
+        "components": {
+          "rank_x1": {
+            "norm_ratio_to_guarded_base": 0.362666517496109,
+            "cosine_with_guarded_base": -0.03520919010043144
+          },
+          "contrast_peak_x1": {
+            "norm_ratio_to_guarded_base": 0.22777456045150757,
+            "cosine_with_guarded_base": 0.4357728660106659
+          },
+          "highpass_depth_rms_x1": {
+            "norm_ratio_to_guarded_base": 0.04449506103992462,
+            "cosine_with_guarded_base": 0.5953658223152161
+          }
+        }
+      }
+    },
+    "mixed": {
+      "rank_x1": {
+        "loss": 0.23905999958515167,
+        "phase_gradient_norm": 0.0016248344909399748,
+        "norm_ratio_to_guarded_base": 0.06278133392333984,
+        "cosine_with_guarded_base": 0.013004465959966183,
+        "cosine_with_rank": 1.0000007152557373
+      },
+      "contrast_peak_x1": {
+        "loss": 0.0796273723244667,
+        "phase_gradient_norm": 0.009203407913446426,
+        "norm_ratio_to_guarded_base": 0.3556067943572998,
+        "cosine_with_guarded_base": 0.8723969459533691,
+        "cosine_with_rank": -0.002341202227398753
+      },
+      "sobel_peak_x1": {
+        "loss": 0.0009426290635019541,
+        "phase_gradient_norm": 3.8575126382056624e-05,
+        "norm_ratio_to_guarded_base": 0.0014904888812452555,
+        "cosine_with_guarded_base": 0.01770995557308197,
+        "cosine_with_rank": -0.0434560663998127
+      },
+      "sobel_rms_x1": {
+        "loss": 0.008749936707317829,
+        "phase_gradient_norm": 8.806962432572618e-05,
+        "norm_ratio_to_guarded_base": 0.003402886912226677,
+        "cosine_with_guarded_base": 0.030854498967528343,
+        "cosine_with_rank": -0.2146337777376175
+      },
+      "sobel_depth_rms_x1": {
+        "loss": 0.0072868322022259235,
+        "phase_gradient_norm": 7.872201240388677e-05,
+        "norm_ratio_to_guarded_base": 0.0030417083762586117,
+        "cosine_with_guarded_base": 0.029935358092188835,
+        "cosine_with_rank": -0.07130708545446396
+      },
+      "highpass_depth_rms_x1": {
+        "loss": 0.004046774003654718,
+        "phase_gradient_norm": 0.00018006778554990888,
+        "norm_ratio_to_guarded_base": 0.006957567296922207,
+        "cosine_with_guarded_base": 0.019287679344415665,
+        "cosine_with_rank": -0.09916701167821884
+      },
+      "parameter_gradient_audit": {
+        "guarded_base_norm": 1.0650862455368042,
+        "components": {
+          "rank_x1": {
+            "norm_ratio_to_guarded_base": 0.7964588403701782,
+            "cosine_with_guarded_base": 0.1115206927061081
+          },
+          "contrast_peak_x1": {
+            "norm_ratio_to_guarded_base": 0.35836419463157654,
+            "cosine_with_guarded_base": 0.7547293901443481
+          },
+          "highpass_depth_rms_x1": {
+            "norm_ratio_to_guarded_base": 0.07377937436103821,
+            "cosine_with_guarded_base": 0.04594380781054497
+          }
+        }
+      }
+    }
+  },
+  "r49_mixture_parameter_gradients": {
+    "0.5": {
+      "group_weights": {
+        "CIFAR10": 0.16666666666666666,
+        "MNIST": 0.16666666666666666,
+        "FashionMNIST": 0.16666666666666666,
+        "mixed": 0.5
+      },
+      "guarded_base_norm": 1.5038783550262451,
+      "components": {
+        "rank_x1": {
+          "norm_ratio_to_guarded_base": 0.35083892941474915,
+          "cosine_with_guarded_base": -0.056428998708724976
+        },
+        "contrast_peak_x1": {
+          "norm_ratio_to_guarded_base": 0.14851483702659607,
+          "cosine_with_guarded_base": 0.38560751080513
+        },
+        "highpass_depth_rms_x1": {
+          "norm_ratio_to_guarded_base": 0.031240995973348618,
+          "cosine_with_guarded_base": 0.0860527977347374
+        }
+      }
+    },
+    "0.75": {
+      "group_weights": {
+        "CIFAR10": 0.25,
+        "MNIST": 0.25,
+        "FashionMNIST": 0.25,
+        "mixed": 0.25
+      },
+      "guarded_base_norm": 2.0340466499328613,
+      "components": {
+        "rank_x1": {
+          "norm_ratio_to_guarded_base": 0.21706973016262054,
+          "cosine_with_guarded_base": -0.0034588249400258064
+        },
+        "contrast_peak_x1": {
+          "norm_ratio_to_guarded_base": 0.08592469990253448,
+          "cosine_with_guarded_base": 0.2160484492778778
+        },
+        "highpass_depth_rms_x1": {
+          "norm_ratio_to_guarded_base": 0.019177880138158798,
+          "cosine_with_guarded_base": 0.2682340741157532
+        }
+      }
+    }
+  },
+  "scaled_parameter_gradient_norm_ratios": {
+    "0.5": {
+      "ranking_weight_1": 0.35083892941474915,
+      "ranking_weight_3_scaled": 1.0525167882442474,
+      "ranking_weight_5_scaled": 1.7541946470737457,
+      "contrast_weight_1": 0.14851483702659607,
+      "highpass_depth_rms_weight_5_scaled": 0.1562049798667431
+    },
+    "0.75": {
+      "ranking_weight_1": 0.21706973016262054,
+      "ranking_weight_3_scaled": 0.6512091904878616,
+      "ranking_weight_5_scaled": 1.0853486508131027,
+      "contrast_weight_1": 0.08592469990253448,
+      "highpass_depth_rms_weight_5_scaled": 0.09588940069079399
+    }
+  },
+  "toy_loss_identity_and_limitation": {
+    "depth_difference_scale": 0.2,
+    "contrast_mse": 0.041948387382086554,
+    "pair_mse": 0.1118623663522308,
+    "pair_to_contrast_mse_ratio": 2.6666666666666665,
+    "direction_loss": -3.700743415417188e-17,
+    "interpretation": "Pairwise MSE is exactly 8/3 times existing plane-contrast MSE. Direction loss differs but has a weak-depth-contrast loophole, so it is not suitable alone."
+  },
+  "limitations": [
+    "Four selection quartets per group; no population-confidence claim",
+    "Checkpoint and architectural comparisons also differ in budgets/losses and are diagnostic, not isolated causal tests",
+    "Gradient norms are measured before clipping/AdamW and do not predict quality gains",
+    "No standalone direction-loss recommendation: correct differences scaled down to20% produce zero cosine loss",
+    "No SSIM/Pearson score here is a physical upper bound"
+  ],
+  "recommendation_at_audit_time": "First controlled5000-update continuation: change rank_weight to1, margin0.2; preserve other loss/architecture/sampler settings and compare a matched continuation. Hypothesis only, not a reported outcome."
+}

@@ -1,0 +1,256 @@
+{
+  "comparisons": [
+    {
+      "aggregate": {
+        "metrics": {
+          "pearson": {
+            "bootstrap_std": 0.0009635574011023486,
+            "candidate_mean": 0.5620464819594524,
+            "ci_high": 0.039416657862330326,
+            "ci_low": 0.03553970946557357,
+            "difference": 0.037472955647626094,
+            "reference_mean": 0.5245735263118263
+          },
+          "ssim": {
+            "bootstrap_std": 0.0013868539773351412,
+            "candidate_mean": 0.33800249285377504,
+            "ci_high": 0.08469051300783122,
+            "ci_low": 0.07924276073342754,
+            "difference": 0.08188401275174328,
+            "reference_mean": 0.25611848010203175
+          }
+        },
+        "planes": 4096,
+        "quartets": 1024
+      },
+      "candidate": {
+        "checkpoint_sha256": "ccb7f7cddccfd31ab85830f5ee20744d56389d31bccc825e9306463345ae361a",
+        "directory": "experiments/final/test/r72_spatial_frequency_control",
+        "files": [
+          {
+            "path": "experiments/final/test/r72_spatial_frequency_control/metrics.json",
+            "sha256": "fbe868dd5f82616e6d07cb1819f31b6c2672ff99f56748f326b76ffefbbb41ee"
+          },
+          {
+            "path": "experiments/final/test/r72_spatial_frequency_control/per_example_metrics.npz",
+            "sha256": "cbee2d032e8ee022ed93528a83d345e35ed26aea91a5e782f2f548b6d34207d0"
+          },
+          {
+            "path": "experiments/final/test/r72_spatial_frequency_control/test_tuples.json",
+            "sha256": "d4baeb4a7dcf95739eb4b5f7e545381f928c10d938f5c4ef1a5d946858a8abfa"
+          },
+          {
+            "path": "experiments/final/test/r72_spatial_frequency_control/evaluation_config.json",
+            "sha256": "1da48be8691571321d80fa8eb8122edc53a80c97f43c9912470feec0b5e736c2"
+          },
+          {
+            "path": "experiments/final/test/r72_spatial_frequency_control/source_hashes.json",
+            "sha256": "6e164ef0a276dd98d6edb34318ff2393833a573bf092916229250352d95cc7a9"
+          },
+          {
+            "path": "experiments/final/test/r72_spatial_frequency_control/test_provenance.json",
+            "sha256": "19c72dfc6b8f8247df5eb17c95fe5dbaec3d212db0dec9b8ac4c28c91fc80bd4"
+          }
+        ],
+        "manifest_hash_definition": "SHA256 of sorted-key compact UTF-8 JSON; row and plane order preserved",
+        "manifest_sha256": "c4e41308b62d4f2a66c599a3bda9546c88c8fede77e0e67dc52e788132bc08cc",
+        "test_used": true
+      },
+      "groups": {
+        "CIFAR10": {
+          "metrics": {
+            "pearson": {
+              "bootstrap_std": 0.002679887861744113,
+              "candidate_mean": 0.375518001910379,
+              "ci_high": 0.03308338803667148,
+              "ci_low": 0.022581391696389376,
+              "difference": 0.02755768274657555,
+              "reference_mean": 0.34796031916380343
+            },
+            "ssim": {
+              "bootstrap_std": 0.0007427566043551674,
+              "candidate_mean": 0.4696516229014378,
+              "ci_high": 0.00877181749056035,
+              "ci_low": 0.005856798768945738,
+              "difference": 0.007343854973441921,
+              "reference_mean": 0.4623077679279959
+            }
+          },
+          "planes": 1024,
+          "quartets": 256
+        },
+        "FashionMNIST": {
+          "metrics": {
+            "pearson": {
+              "bootstrap_std": 0.0017226024876441663,
+              "candidate_mean": 0.6787955045583658,
+              "ci_high": 0.04991197684794315,
+              "ci_low": 0.04311924081557663,
+              "difference": 0.04660924425115809,
+              "reference_mean": 0.6321862603072077
+            },
+            "ssim": {
+              "bootstrap_std": 0.0028731534409241017,
+              "candidate_mean": 0.26180873651173897,
+              "ci_high": 0.03482936105347107,
+              "ci_low": 0.023733539957811446,
+              "difference": 0.02927728408758412,
+              "reference_mean": 0.23253145242415485
+            }
+          },
+          "planes": 1024,
+          "quartets": 256
+        },
+        "MNIST": {
+          "metrics": {
+            "pearson": {
+              "bootstrap_std": 0.0012051522484549772,
+              "candidate_mean": 0.6701058399921749,
+              "ci_high": 0.05452345782250632,
+              "ci_low": 0.04991704412386753,
+              "difference": 0.05229463617433794,
+              "reference_mean": 0.6178112038178369
+            },
+            "ssim": {
+              "bootstrap_std": 0.0025261649121046986,
+              "candidate_mean": 0.3431676907057408,
+              "ci_high": 0.27063484642817454,
+              "ci_low": 0.2606031643711958,
+              "difference": 0.26572362718798104,
+              "reference_mean": 0.07744406351775979
+            }
+          },
+          "planes": 1024,
+          "quartets": 256
+        },
+        "mixed": {
+          "metrics": {
+            "pearson": {
+              "bootstrap_std": 0.0017173431434659772,
+              "candidate_mean": 0.5237665813768899,
+              "ci_high": 0.02683182593553113,
+              "ci_low": 0.020059129814711696,
+              "difference": 0.023430259418432797,
+              "reference_mean": 0.5003363219584571
+            },
+            "ssim": {
+              "bootstrap_std": 0.0040271062999312655,
+              "candidate_mean": 0.27738192129618255,
+              "ci_high": 0.03305063128827896,
+              "ci_low": 0.01746822762647753,
+              "difference": 0.02519128475796606,
+              "reference_mean": 0.2521906365382165
+            }
+          },
+          "planes": 1024,
+          "quartets": 256
+        }
+      }
+    }
+  ],
+  "method": {
+    "aggregate_weighting": "each quartet has equal weight; four planes remain together",
+    "alignment_limit": "NPZ has no embedded source IDs; rows are assumed to follow the verified adjacent manifest and saved evaluator.",
+    "confidence": 0.95,
+    "difference": "candidate minus reference; positive is better",
+    "interpretation": "Intervals are conditional on the empirical distribution of sampled quartets. Sources can repeat across quartets/groups; these are not independent-source or population confidence intervals.",
+    "multiple_comparisons": "No multiplicity correction; descriptive exploratory intervals, not adjusted hypothesis tests",
+    "name": "paired_stratified_quartet_percentile_bootstrap",
+    "numpy": "1.26.4",
+    "repetitions": 2000,
+    "resampling": "whole quartets within each group; fixed original group sizes; identical draws for both metrics and every candidate",
+    "seed": 20261108
+  },
+  "reference": {
+    "checkpoint_sha256": "ba1a07f6018113bd122ca05119b40293672b4a5db01ce54fd0a09130713defb6",
+    "directory": "experiments/final/test/r31_peak_fourier",
+    "files": [
+      {
+        "path": "experiments/final/test/r31_peak_fourier/metrics.json",
+        "sha256": "5b66d0e67818977fe1d55cd178401151ecf45a1324cc37b112d9229c017b4954"
+      },
+      {
+        "path": "experiments/final/test/r31_peak_fourier/per_example_metrics.npz",
+        "sha256": "20f8646ff63bfb3f76b4d69aeff1005d7b0a49b6700fe62d01567d80651fdcc5"
+      },
+      {
+        "path": "experiments/final/test/r31_peak_fourier/test_tuples.json",
+        "sha256": "d4baeb4a7dcf95739eb4b5f7e545381f928c10d938f5c4ef1a5d946858a8abfa"
+      },
+      {
+        "path": "experiments/final/test/r31_peak_fourier/evaluation_config.json",
+        "sha256": "7886d48e7356754a86d9fcfee86e866a36e620fdcec617a5e067181932c72ed8"
+      },
+      {
+        "path": "experiments/final/test/r31_peak_fourier/source_hashes.json",
+        "sha256": "6e164ef0a276dd98d6edb34318ff2393833a573bf092916229250352d95cc7a9"
+      },
+      {
+        "path": "experiments/final/test/r31_peak_fourier/test_provenance.json",
+        "sha256": "19c72dfc6b8f8247df5eb17c95fe5dbaec3d212db0dec9b8ac4c28c91fc80bd4"
+      }
+    ],
+    "manifest_hash_definition": "SHA256 of sorted-key compact UTF-8 JSON; row and plane order preserved",
+    "manifest_sha256": "c4e41308b62d4f2a66c599a3bda9546c88c8fede77e0e67dc52e788132bc08cc",
+    "test_used": true
+  },
+  "shared_evaluation_identity": {
+    "evaluator_fingerprint": {
+      "src/data.py": "d3c58533a7f164d0af7eaa1857628314380e4f2368f825d6d73ed187a9b4b605",
+      "src/metrics.py": "70a0e4df536c79b5c0b9fb7bfb2595d47c51e63b244dfeda1a5f0723a7d96798",
+      "src/physics/fresnel.py": "c7bfa47bd89af6ec167b72b27b3cdfeb6745f60738bd802feeb2ee921e561326",
+      "src/protocol.py": "1e7f2f8f52b3067c1c2e21af4a3794a1e4e51adb955aa92b23b8f57c88576e75",
+      "src/train.py": "589641c5f67301c18fd20b30559eb64d47dbc06c37e039cc74f7bed007bffc23"
+    },
+    "model_input_protocol": "fresnel_png_v2_peak",
+    "protocol": "fresnel_png_v2_peak",
+    "source_identity": {
+      "namespace": "public_dataset_official_test",
+      "preprocessing": "gray-f64-rint_bilinear-align-false_rint-u8_v1",
+      "sources": [
+        {
+          "array_shape": [
+            10000,
+            32,
+            32
+          ],
+          "dataset": "CIFAR10",
+          "dataset_index": 0,
+          "file": "cifar-10-batches-py/test_batch",
+          "namespace": "public_dataset_official_test",
+          "sha256": "f53d8d457504f7cff4ea9e021afcf0e0ad8e24a91f3fc42091b8adef61157831",
+          "source_index": "zero-based row in the named official test file, not a training-file row",
+          "source_rows": 10000
+        },
+        {
+          "array_shape": [
+            10000,
+            28,
+            28
+          ],
+          "dataset": "MNIST",
+          "dataset_index": 1,
+          "file": "MNIST/raw/t10k-images-idx3-ubyte",
+          "namespace": "public_dataset_official_test",
+          "sha256": "0fa7898d509279e482958e8ce81c8e77db3f2f8254e26661ceb7762c4d494ce7",
+          "source_index": "zero-based row in the named official test file, not a training-file row",
+          "source_rows": 10000
+        },
+        {
+          "array_shape": [
+            10000,
+            28,
+            28
+          ],
+          "dataset": "FashionMNIST",
+          "dataset_index": 2,
+          "file": "FashionMNIST/raw/t10k-images-idx3-ubyte",
+          "namespace": "public_dataset_official_test",
+          "sha256": "5b4141f0afbad91edebe8549f8fcffe087ea10ca49f1dbef5c9a5cd8815ce37b",
+          "source_index": "zero-based row in the named official test file, not a training-file row",
+          "source_rows": 10000
+        }
+      ]
+    }
+  }
+}
